@@ -1,5 +1,7 @@
 # PdRacks
 
+ <img src="./medias/images/collections/trailer/PdRacksTrailer.png" alt="PdRacksTariler" width=491 height=263>
+
 Environnement de traitement sonore temps réel dans pure data.
 
 S'inspirant de projets comme DIY2 (Matt Davey, aka  hard.off) et ArgoPd (Gérard Paresys), PdRacks propose des modules de traitement/synthèse sonore avec interface graphique utilisateur intégrée, donc avec un niveau d'abstraction et d'accessibilité plus élevé par rapport aux objets de base de puredata. 
