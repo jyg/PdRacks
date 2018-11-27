@@ -1,0 +1,43 @@
+#N canvas 545 170 1044 523 16;
+#X obj 41 26 glocal.space \$0;
+#X obj 36 343 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 37 373 glocal.send test;
+#X obj 36 411 glocal.receive test;
+#X obj 36 448 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 236 411 glocal.receive test;
+#X obj 236 448 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 237 32 defines GLOBALity / LOCALity for glocal.send/receive/value
+objects that are inside the patch containing this object or inside
+any subpatch of this parent patch;
+#N canvas 654 129 896 296 global 0;
+#X text 27 18 globals : GLOCAL.instances \, GLOCAL.current \, GLOCAL.base
+;
+#X text 227 82 gives the number of glocal.space instances;
+#X floatatom 28 115 5 0 0 0 - - -;
+#X obj 28 86 v GLOCAL.instances;
+#X obj 31 59 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 289 109 == 1 : GLOBAL mode for glocal.send \, glocal.receive
+and glocal.value objects;
+#X text 293 150 > 1 : LOCAL mode for glocal.send \, glocal.receive
+and glocal.value objects \, relative to parent patch containing glocal.space
+object;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X restore 657 420 pd global service variables;
+#X text 657 379 needs iemguts for editing;
+#X obj 255 368 send test;
+#X obj 261 341 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 233 245 The LOCAL mode for the glocal.send/receive/value objects
+is activated when there are 2 or more main patches containing one glocal.state
+object;
+#X text 234 125 this allows to play 2 instances ore more of same patch
+with independant preset \, midi-mapping and control values.;
+#X connect 1 0 2 0;
+#X connect 3 0 4 0;
+#X connect 5 0 6 0;
+#X connect 11 0 10 0;

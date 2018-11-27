@@ -1,0 +1,71 @@
+#N struct mappings float y symbol module_name symbol param_name float
+ccnum float min float max symbol mapping;
+#N canvas 110 389 1060 528 16;
+#X declare -path pdr/modules/basic;
+#X declare -path ../extensions/automatonism;
+#X declare -path ../extensions/automatonism/modular/patch_editor_abs
+;
+#X declare -path ../extensions/automatonism;
+#X declare -path ../extensions/automatonism/modular/patch_editor_abs
+;
+#X declare -path pdr/modules/automatonism;
+#X declare -path pdr/modules/automatonism/modular/patch_editor_abs
+;
+#X obj 509 44 pdr;
+#X obj 803 188 multitouch.enable;
+#X obj 509 119 PdRacks.savestate;
+#A saved scene_name ;
+#N canvas 0 50 450 300 \$0-PdRacks.declare 0;
+#X obj 10 10 declare -path pdr/modules/basic;
+#X obj 10 60 pdr/core/stuff/u_glocal.enable \$0;
+#A saved module basic;
+#A saved module automatonism;
+#X obj 100 130 declare -path ../extensions/automatonism;
+#X obj 100 130 declare -path ../extensions/automatonism/modular/patch_editor_abs
+;
+#X obj 100 130 declare -path ../extensions/automatonism;
+#X obj 100 130 declare -path ../extensions/automatonism/modular/patch_editor_abs
+;
+#X obj 100 130 declare -path pdr/modules/automatonism;
+#X obj 100 130 declare -path pdr/modules/automatonism/modular/patch_editor_abs
+;
+#X restore 488 87 pd \$0-PdRacks.declare;
+#X obj 100 158 bwl-osc;
+#X obj 104 476 audio_out;
+#X obj 508 214 PdRacks.midilearn;
+#X text 386 348 https://www.automatonism.com/;
+#X obj 284 79 bwl-osc;
+#X obj 77 289 fx_dubdel2;
+#X obj 406 412 PdRacks.presets;
+#X obj 716 256 PdRacks.presets;
+#X obj 103 389 fx_dattorroverb;
+#X obj 28 24 note_16steps;
+#X obj 253 8 route note;
+#X obj 253 35 unpack f f;
+#X obj 253 61 spigot;
+#X obj 203 96 / 127;
+#X obj 730 38 PdRacks.transport;
+#X obj 183 120 lop~ 1000;
+#X obj 253 88 - 40;
+#X obj 297 257 PdRacks.morphing;
+#X obj 755 373 audio_in;
+#X obj 755 453 audio_out;
+#X connect 4 0 9 0;
+#X connect 4 0 9 1;
+#X connect 8 0 4 2;
+#X connect 9 0 12 0;
+#X connect 9 1 12 1;
+#X connect 12 0 5 0;
+#X connect 12 1 5 1;
+#X connect 13 2 14 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 15 1 16 1;
+#X connect 16 0 20 0;
+#X connect 17 0 19 0;
+#X connect 19 0 4 0;
+#X connect 19 0 8 0;
+#X connect 20 0 17 0;
+#X connect 22 0 23 0;
+#X connect 22 1 23 1;
+#X connect 22 2 23 2;

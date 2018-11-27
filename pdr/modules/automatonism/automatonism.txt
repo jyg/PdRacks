@@ -1,0 +1,26 @@
+# *******************************************;
+# * AUTOMATONISM MODULE FOR PDR (PdRacks)   *;
+# *******************************************;
+
+# line of comments begins with a # alone;
+# all lines MUST end with a semicolon ;
+
+
+# ********************************************************;
+# * declare modules that have to be added to the project *;
+# ********************************************************;
+declare -path pdr/modules/automatonism;
+declare -path pdr/modules/automatonism/modular/patch_editor_abs;
+
+# ********************************************************;
+# * objects  that have to be displayed in the popup menu *;
+# * first item : category                                *;
+# * second item : object name                            *;
+# * following items : contextual description of object   *;
+# ********************************************************;
+utils inst_modular for use with dynamic PdRacks;
+utils inst_modular_standalone for use with static PdRacks;
+automatonism ahr envelope generator (Attack release);
+automatonism bwl-osc band limited oscillator;
+automatonism lp-filter low-pass filter;
+automatonism overdrive distorsion effect;

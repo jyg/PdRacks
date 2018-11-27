@@ -1,0 +1,27 @@
+#N canvas 750 250 450 300 10;
+#X declare -path pdr/core;
+#X declare -path pdr/core/stuff;
+#X declare -path pdr/core/rj;
+#X obj 86 155 u_r \$1 overdrive-drive s r 0 127 lin 0;
+#X obj 87 181 u_r \$1 overdrive-tone s r 0 127 lin 0;
+#X text 28 15 wrapper for using automatonism abstractions inside PdRacks
+presets and midi-mapping framework;
+#X text 28 64 license creative commons Jean-Yves Gratius 2018;
+#X obj 84 126 module_loader overdrive \$1 \$2;
+#N canvas 1 56 450 300 declarative-stuff 0;
+#X obj 118 152 r \$1-ID;
+#X obj 117 244 s \$1-instance-num;
+#X obj 118 197 makefilename %d;
+#X msg 118 222 label \$1;
+#X obj 118 175 pipe f 10;
+#X text 139 121 Affichage du numero d'instance;
+#X obj 118 35 declare -path pdr/core;
+#X obj 119 61 declare -path pdr/core/stuff;
+#X obj 119 81 declare -path pdr/core/rj;
+#X connect 0 0 4 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 4 0 2 0;
+#X restore 83 93 pd declarative-stuff;
+#X connect 0 0 1 0;
+#X connect 4 0 0 0;

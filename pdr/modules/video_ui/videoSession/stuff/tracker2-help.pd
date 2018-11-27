@@ -1,0 +1,52 @@
+#N canvas 232 133 826 541 12;
+#X text 43 47 You can track one or more variables;
+#X text 28 14 tracker2 : general purpose vector tracker;
+#X text 505 23 updated for pd 0.47;
+#X text 283 173 argument 1 : nb of voices;
+#X obj 50 173 bng 15 250 50 0 empty empty process 17 7 0 10 -262144
+-1 -1;
+#X text 102 446 <sid> remove;
+#X obj 77 104 t b b;
+#X obj 46 77 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 61 376 For each tracked vector there is an index (<sid>) relating
+to voice number;
+#X text 280 212 argument 2 (optional) : release time (ms) \, default
+= 200;
+#X text 280 232 argument 3 (optional) : max distance for continuous
+tracking \, default = 0.02;
+#X text 279 273 argument 4 (optional) : dimension of vector for comparison
+;
+#X obj 80 196 tracker2 4 5000 10 2;
+#X msg 209 88 21 40 7787 \, 21 17 8999;
+#X msg 327 141 49 39 1;
+#X obj 138 127 t b b;
+#X obj 281 121 t b b;
+#X obj 143 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 256 117 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 177 160 20 40 111;
+#X text 129 323 TODO Prévoir possibilité de "freezer" un tracker_unit
+par message extérieur;
+#X obj 80 221 print add/remove;
+#X obj 132 269 print update;
+#X text 29 431 outlet1 : <sid> add [input_vector];
+#X text 22 493 outlet2;
+#X text 101 497 <sid> update [tracked_vector] [index_of_tracked_vector_in_incoming_list]
+, f 77;
+#X connect 4 0 12 0;
+#X connect 6 0 4 0;
+#X connect 6 1 13 0;
+#X connect 7 0 6 0;
+#X connect 12 0 21 0;
+#X connect 12 1 22 0;
+#X connect 13 0 12 1;
+#X connect 14 0 12 1;
+#X connect 15 0 12 0;
+#X connect 15 1 19 0;
+#X connect 16 0 12 0;
+#X connect 16 1 14 0;
+#X connect 17 0 15 0;
+#X connect 18 0 16 0;
+#X connect 19 0 12 1;

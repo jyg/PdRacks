@@ -1,0 +1,16 @@
+#N canvas 92 117 450 300 10;
+#X declare -lib Gem;
+#X obj 53 38 gemhead;
+#X obj 50 13 r render;
+#X obj 53 107 s video;
+#X obj 61 68 pix_video;
+#X obj 229 179 videoSession2;
+#X msg 172 95 device 0;
+#X msg 182 125 device 1;
+#X obj 185 35 declare -lib Gem;
+#X msg 121 21;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 3 0 2 0;
+#X connect 5 0 3 0;
+#X connect 6 0 3 0;

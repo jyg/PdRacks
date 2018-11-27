@@ -1,0 +1,158 @@
+#N canvas 234 23 1046 725 10;
+#X obj 349 34 inlet incoming_vectors;
+#X obj 48 21 inlet done;
+#X obj 396 86 s \$0-incoming_vectors;
+#X obj 48 43 t b b b b;
+#X obj 359 127 list;
+#X obj 69 124 list append;
+#X obj 317 169 list length;
+#X obj 69 168 list length;
+#X obj 69 190 /;
+#X obj 152 69 r \$0-reset;
+#X obj 69 212 until;
+#X obj 69 234 f;
+#X obj 122 235 + 1;
+#X obj 69 146 t l b l;
+#X msg 131 210 0;
+#X msg 168 337 clear;
+#X obj 257 319 r \$0-tracker_vector;
+#X obj 265 341 list split 1;
+#X obj 299 370 list prepend add;
+#X obj 299 392 list trim;
+#X obj 279 490 tabwrite \$0-indexes;
+#X obj 274 451 t f b;
+#X obj 365 455 f;
+#X obj 418 448 + 1;
+#X msg 212 358 0;
+#X obj 69 256 t b f b b;
+#X obj 100 596 tabread \$0-indexes;
+#X obj 20 358 list split;
+#X obj 115 357 list;
+#X obj 28 326 list append;
+#X obj 23 489 route -1;
+#X obj 26 466 list prepend -1;
+#X obj 176 518 list split 1;
+#X obj 158 621 list append;
+#X obj 173 564 list prepend update;
+#X obj 16 598 t l b;
+#X obj 16 620 list trim;
+#X obj 250 624 v \$0-done;
+#X msg 250 595 0;
+#X obj 349 61 t l l l;
+#X obj 32 76 s \$0-reset;
+#X obj 151 457 r \$0-reset;
+#X msg 151 479 -1;
+#X obj 20 380 t l l;
+#X obj 90 294 s \$0-get_trackers_matches_for_incoming_vector_n;
+#X obj 108 98 s \$0-eval_incoming_vectors;
+#X obj 252 125 list prepend;
+#X obj 352 240 table \$0-indexes \$1;
+#X obj 10 570 list prepend all add;
+#X obj 40 511 r \$0-rejected;
+#X obj 104 432 choice2 0 \$4;
+#X obj 216 541 list prepend 0;
+#X text 525 35 1- les vecteurs candidats sont chargés séquentiellement
+\, dans chacune des unités tracker2_unit actives;
+#X text 129 18 process;
+#X text 525 116 2- bang sur l'inlet process;
+#X text 106 195 <- calcul du nombre de vecteurs entrants candidats
+;
+#X text 575 196 2.2- démarrage d'une boucle parcourant tous les indices
+des vecteurs candidats;
+#X text 599 238 2.2.1- pour chaque indice \, demander à toutes les
+unités active de se manifester et de renvoyer leur vecteur mémorisé
+si elles avaient sélectionné l'indice courant (message s \$0-get_trackers_matches_for_incoming_vector_n)
+;
+#X text 576 139 2.1- demande à toutes les unités actives (message
+s \$0-eval_incoming_vectors) d'évaluer le vecteur candidat le plus
+proche de leur vecteur mémorisé (\$0-local_vector) et de mémoriser
+l'indice correspondant;
+#X text 607 306 2.2.2- chaque vecteur renvoyé (tracker_vector) est
+ajouté à l'objet choice central \, l'indice du tracker correspondant
+est stocké dans le tableau d'indices \$0-indexes;
+#X text 200 428 <- objet choice central;
+#X text 612 364 2.2.3- le vecteur candidat est présenté à l'objet
+choice central \, le numéro du tracker_unit est récupéré grâce
+à tabread \$0-indexes \, et on envoie un message update + vecteur
+entrant au tracker_unit sélectionné;
+#X text 610 436 2.2.4- si aucun tracker_unit n'eest valide ou si celui-ci
+rejette l'update (vecteur entrant trop distant du vecteur stocké)
+\, on demande à une nouvelle tracker_unit libre de s'activer (message
+add);
+#X obj 422 615 print;
+#X obj 20 665 outlet add;
+#X obj 117 664 outlet remove;
+#X obj 226 669 outlet update;
+#X obj 404 674 outlet id;
+#X obj 20 643 clone -s 1 tracker3_unit \$1 \$0 \$2 \$3 \$4;
+#X connect 0 0 39 0;
+#X connect 1 0 3 0;
+#X connect 3 0 40 0;
+#X connect 3 2 5 0;
+#X connect 3 3 45 0;
+#X connect 4 0 46 1;
+#X connect 5 0 13 0;
+#X connect 6 0 8 1;
+#X connect 6 0 27 1;
+#X connect 7 0 8 0;
+#X connect 8 0 10 0;
+#X connect 9 0 4 0;
+#X connect 9 0 5 1;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 11 0 25 0;
+#X connect 12 0 11 1;
+#X connect 13 0 7 0;
+#X connect 13 1 14 0;
+#X connect 13 2 29 1;
+#X connect 14 0 11 1;
+#X connect 15 0 50 0;
+#X connect 16 0 17 0;
+#X connect 17 0 21 0;
+#X connect 17 1 18 0;
+#X connect 18 0 19 0;
+#X connect 19 0 50 0;
+#X connect 21 0 20 0;
+#X connect 21 1 22 0;
+#X connect 22 0 23 0;
+#X connect 22 0 20 1;
+#X connect 23 0 22 1;
+#X connect 24 0 22 1;
+#X connect 25 0 29 0;
+#X connect 25 1 44 0;
+#X connect 25 1 51 1;
+#X connect 25 2 15 0;
+#X connect 25 3 24 0;
+#X connect 26 0 33 0;
+#X connect 27 0 43 0;
+#X connect 27 1 28 0;
+#X connect 28 0 29 1;
+#X connect 29 0 27 0;
+#X connect 30 0 48 0;
+#X connect 30 1 32 0;
+#X connect 31 0 30 0;
+#X connect 32 0 26 0;
+#X connect 32 1 51 0;
+#X connect 33 0 68 0;
+#X connect 34 0 33 1;
+#X connect 35 0 36 0;
+#X connect 35 1 38 0;
+#X connect 36 0 68 0;
+#X connect 38 0 37 0;
+#X connect 39 0 46 0;
+#X connect 39 1 6 0;
+#X connect 39 2 2 0;
+#X connect 41 0 42 0;
+#X connect 42 0 31 1;
+#X connect 43 0 31 0;
+#X connect 43 1 50 0;
+#X connect 46 0 4 0;
+#X connect 46 0 5 1;
+#X connect 48 0 35 0;
+#X connect 49 0 48 0;
+#X connect 50 0 31 1;
+#X connect 51 0 34 0;
+#X connect 68 0 64 0;
+#X connect 68 1 65 0;
+#X connect 68 2 66 0;
+#X connect 68 3 67 0;

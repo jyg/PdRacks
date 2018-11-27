@@ -1,0 +1,74 @@
+#N struct 1027-symarray float x array symbols 1027-sym;
+#N struct 1027-sym symbol name float on;
+#N canvas 355 56 840 629 10;
+#X obj 69 87 data_cyclogroove;
+#X text 43 354 measure : durée du cycle en nombre de mesures entières.
+Le chiffre après la virgule indique le nombre de noires supplémentaires
+. ex 2.1 = deux mesures entières + 1 noire;
+#X text 42 44 data_out : note [ + messages aftertouch ];
+#X text 45 161 Crée des séquences à partir des caractéristiques
+géométriques de contours;
+#X obj 47 279 vradio 15 1 0 3 \$0-mode \$0-mode-rcv empty 0 -8 0 10
+-262144 -1 -1 2;
+#X text 47 251 output mode;
+#X text 64 278 note;
+#X text 64 294 aftertouch;
+#X text 64 308 touchEvent;
+#X text 46 201 Nécessite en amont un module data_feuille (en connexion
+avec le process video 'videoSession2') ou bien un module data_ofelia
+, f 48;
+#N canvas 0 50 450 300 mode_note 0;
+#X text 23 93 la position en x du COG définit le débit de note adopté
+(noires/croches \, doubles \, etc...);
+#X text 25 150 compatible avec inst_taboc \, inst_bassdrum \, inst_8bits
+\, inst_rhodey \, inst_sampler \, inst_turntable (à vérifier) \,
+inst_pcm \, inst_oneshot \, inst_pvoc, f 43;
+#X text 35 22 * Mode note out;
+#X text 24 45 La hauteur de note générée est définie par la distance
+du point courant du contour au centre de gravité du contour \, + un
+offset défini par la position en y du COG;
+#X restore 154 276 pd mode_note;
+#N canvas 0 50 541 379 mode_aftertouch 0;
+#X text 25 87 * Si la case grid est désactivée \, le numero de note
+= base_note+numero_instance_blob;
+#X text 25 117 * Si la case grid est activée \, le numero de note
+= base_note+grid_offset;
+#X text 4 31 à l'apparition d'un sous-contour \, un événement noteon
+est créé. Le numéro de la note est fonction de base_note + position
+du C.O.G. de ce contour sur la grille définie \, avec deux cas de
+figure :;
+#X text 76 257 paramètres grain : 24 = noire \, 12 = croche \, etc...
+;
+#X text 7 179 Puis \, à une cadence définie par aftertouch grain
+\, les messages aftertouch sont envoyés \, en fonction des paramètres
+définis sur le deuxième onglet (source \, target....);
+#X text 34 313 compatible avec inst_pvoc \, inst_sampler;
+#X text 8 7 * mode aftertouch;
+#X restore 155 297 pd mode_aftertouch;
+#N canvas 0 50 541 379 mode_touchEvent 0;
+#X text 54 175 paramètres grain : 24 = noire \, 12 = croche \, etc...
+;
+#X text 18 38 à l'apparition d'un sous-contour \, un événement addCursor
+est créé, f 66;
+#X text 23 66 Puis \, à une cadence définie par aftertouch grain
+\, les messages updateCursor sont envoyés;
+#X text 18 108 à la disparition de ce sous-contour \, un événement
+removeCursor est créé, f 66;
+#X text 44 256 compatible avec fx_bonkpitch;
+#X text 14 9 * Mode touchEvent;
+#X restore 155 317 pd mode_touchEvent;
+#X msg 297 448 CYCLO blob <id> get_index <value>;
+#X text 19 20 séquenceur polyphonique 8 voies;
+#X text 39 463 sur le canal TO_VIDEO. (0 < value < 1 et correspond
+à l'index du point courant sur le contour traité), f 75;
+#X msg 347 503 CYCLO blob <id> value@index <x> <y>;
+#X text 40 519 sur le canal CYCLOGROOVE;
+#X text 39 433 * data_cyclogroove communique avec le process video
+ou le module data_ofelia en envoyant des messages, f 75;
+#X text 41 503 * En retour \, il attend une réponse du type;
+#X text 43 536 <x> et <y> en pixels par rapport au centre du conteneur
+parent (feuille_A4 ou centre de la fenêtre data_ofelia);
+#N canvas 1 56 450 300 structure_messages_aftertouch 0;
+#X text 35 71 aftertouch <noteid> <target_name> <value>;
+#X restore 383 296 pd structure_messages_aftertouch;
+#X text 20 410 Intercommunication avec d'autres modules :;

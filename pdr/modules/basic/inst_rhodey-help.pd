@@ -1,0 +1,8 @@
+#N canvas 448 85 894 552 10;
+#X text 174 95 + --> Out;
+#X text 124 107 2->1--/;
+#X text 5 93 Algorithm 5 is : 4->3--;
+#X text 6 62 4-op FM Rhodey piano based on algorithm 5:;
+#X text 6 133 Clone of the STK Rhodey;
+#X obj 16 202 inst_rhodey;
+#X coords 0 552 1 551 190 70 0;

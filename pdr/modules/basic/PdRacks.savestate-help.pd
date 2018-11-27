@@ -1,0 +1,30 @@
+#N canvas 537 163 915 634 12;
+#X text 67 270 configuration audio (nb d'entrées/sorties \, noms des
+bus);
+#X text 67 293 réglage de la latence;
+#X text 35 375 Autres modules de service (facultatifs);
+#X text 35 456 * PdRacks.morphing : gestion du morphing entre 2 instantanés
+de réglages pour tous les modules du patch. Attention : ces 2 instantanés
+ne sont pas sauvegardés avec la scène.;
+#X text 34 406 * PdRacks.transport : métronome \, tempo \, commandes
+play / stop \, synchro externe / ableton_link (expérimental) \, pour
+tous les modules nécessitant une référence de temps commune.;
+#X text 34 502 * PdRacks.midilearn : gestion des mappings avec des
+contrôleurs externes (messages CTLIN uniquement) \, interface 'show_midi_devices'
+pour afficher rapidement les périphériques midi disponibles;
+#X text 34 565 * PdRacks.midi : pour mapper des événements noteon
+/ off externes vers des messages CTLIN \, afin ensuite de contrôler
+certains paramètres des modules avec ces déclencheurs noteON/OFF.
+;
+#X text 23 7 PdRack.savestate;
+#X obj 138 55 PdRacks.savestate;
+#A saved scene_name ;
+#X text 30 161 PdRacks.savestate contient tous les éléments globaux
+(variables \, tableaux \, text define \, send~/receive~) permettant
+une utilisation en standalone (statique) des modules de PdRacks. C'est
+le module prérequis pour pouvoir utiliser le reste.;
+#X text 172 11 !!! necessite pd 0.49 car il utilise l'objet savestate
+;
+#X text 66 319 rappel / sauvegarde des réglages de scène;
+#X text 19 243 Il assure les fonctions suivantes :;
+#X coords 0 634 1 633 190 70 0;

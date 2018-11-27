@@ -1,15 +1,13 @@
-# PdRacks
-
- <img src="./medias/images/collections/trailer/PdRacksTrailer.png" alt="PdRacksTariler" width=491 height=263>
+<img src="./pdr/doc/img/PdRacksTrailer.png" alt="PdRacksTariler" width=491 height=263>
 
 Environnement de traitement sonore temps réel dans pure data.
 
-S'inspirant de projets comme DIY2 (Matt Davey, aka  hard.off) et ArgoPd (Gérard Paresys), PdRacks propose des modules de traitement/synthèse sonore avec interface graphique utilisateur intégrée, donc avec un niveau d'abstraction et d'accessibilité plus élevé par rapport aux objets de base de puredata. 
-# Tags
+S'inspirant de projets comme DIY2 (Matt Davey, aka  hard.off) et ArgoPd (Gérard Paresys), **PdRacks** propose des modules de traitement/synthèse sonore avec interface graphique utilisateur intégrée, donc avec un niveau d'abstraction et d'accessibilité plus élevé par rapport aux objets de base de puredata. 
+## Tags
 pure-data, lutherie electronique, live patching, rjdj
-# Présentation
+## Présentation
 
-PdRacks se présente sous la forme d'un rack d'effets et d'instruments pouvant être reconfigurés à la volée, en situation de performance. Dans ce mode, il n'est pas nécessaire de câbler à la souris des fils entre chaque module, comme c'est habituellement le cas avec les environnements modulaires (max msp, puredata, reaktor, audiomulch, etc...). Le projet est pensé dans la perspective d'une utilisation avec écran tactile.
+*PdRacks* se présente sous la forme d'un rack d'effets et d'instruments pouvant être reconfigurés à la volée, en situation de performance. Dans ce mode, il n'est pas nécessaire de câbler à la souris des fils entre chaque module, comme c'est habituellement le cas avec les environnements modulaires (max msp, puredata, reaktor, audiomulch, etc...). Le projet est pensé dans la perspective d'une utilisation avec écran tactile.
 
 PdRacks permet la sauvegarde des réglages sous forme de scènes, ainsi que le rappel de préréglages (presets) pour chaque type de module.
 PdRacks intègre une fonction "midilearn" pour l'interfaçage rapide avec un contrôleur midi. Le mapping midi de chaque contrôleur est modifiable, et est sauvegardé avec chaque scène.

@@ -1,0 +1,11 @@
+#N canvas 708 507 972 437 16;
+#X obj 102 153 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 172 68 defining a global send/receive channel \, that becomes
+local to (gran-)parent patch/abstraction if there is a [localspace
+\$0] object inside (gran-)parent patch, f 58;
+#X obj 404 241 glocal.space \$0;
+#X obj 98 213 glocal.dollarzero;
+#X floatatom 98 242 5 0 0 0 - - -;
+#X connect 0 0 3 0;
+#X connect 3 0 4 0;

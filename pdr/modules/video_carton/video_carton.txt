@@ -1,0 +1,21 @@
+# ********************************************;
+# * VIDEO_CARTON MODULE FOR PDR  (PdRacks)   *;
+# ********************************************;
+
+# line of comments begins with a # alone;
+# all lines MUST end with a semicolon ;
+
+# ********************************************************;
+# * declare modules that have to be added to the project *;
+# ********************************************************;
+declare -path ../extensions/video_carton;
+declare -lib gem;
+declare -lib zexy;
+
+# ********************************************************;
+# * objects  that have to be displayed in the popup menu *;
+# * first item : category                                *;
+# * second item : object name                            *;
+# * following items : contextual description of object   *;
+# ********************************************************;
+video_carton midi-controlled gem-based image renderer ;

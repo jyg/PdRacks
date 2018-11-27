@@ -1,0 +1,16 @@
+#N canvas 476 254 928 421 16;
+#X declare -path pdr/modules/basic;
+#X obj 197 43 multitouch.enable;
+#X text 12 15 To enable multitouch inside a patch \, add this object
+:, f 36;
+#X text 9 73 (you may have to do some configuration in order to make
+this working), f 38;
+#X obj 509 44 pdr;
+#N canvas 0 50 450 300 \$0-PdRacks.declare 0;
+#X obj 10 10 declare -path pdr/modules/basic;
+#X obj 10 60 pdr/core/stuff/u_glocal.enable \$0;
+#A saved module basic;
+#X restore 509 89 pd \$0-PdRacks.declare;
+#X obj 508 123 PdRacks.savestate;
+#A saved scene_name ;
+#X obj 175 182 inst_rhodey;

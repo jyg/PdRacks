@@ -1,0 +1,8 @@
+#N canvas 713 56 652 312 10;
+#X obj 41 144 data_ofelia;
+#X text 23 89 candidat pour remplacer data_feuille + session video
+par une solution à l'écran;
+#X text 227 150 raccourcis claviers quand la fenêtre ofelia est au
+premier plan : F1-F8 \, basculement actif/inactif des contours;
+#X text 251 197 espace : start / stop clock;
+#X text 252 227 suppr : clear all contours;

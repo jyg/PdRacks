@@ -1,0 +1,24 @@
+# ****************************************;
+# * VIDEO_UI MODULE FOR PDR  (PdRacks)   *;
+# ****************************************;
+
+# line of comments begins with a # alone;
+# all lines MUST end with a semicolon;  
+
+# ********************************************************;
+# * declare modules that have to be added to the project *;
+# ********************************************************;
+declare -path pdr/modules/video_ui;
+declare -path pdr/modules/video_ui/data_cyclogroove;
+declare -lib ofelia;
+
+# ********************************************************;
+# * objects  that have to be displayed in the popup menu *;
+# * first item : category                                *;
+# * second item : object name                            *;
+# * following items : contextual description of object   *;
+# ********************************************************;
+video_ui data_cyclogroove blob-based sequencer;
+video_ui data_feuille client that communicates with the video instance;
+video_ui data_ofelia video server emulation;
+video_ui data_upic upic-like sequencer;

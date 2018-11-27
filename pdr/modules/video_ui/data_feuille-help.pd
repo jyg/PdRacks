@@ -1,0 +1,54 @@
+#N canvas 313 103 869 482 10;
+#X text 45 309 EXPERIMENTAL ALPHA;
+#X obj 26 309 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X obj 25 372 tgl 15 0 empty empty X 4 8 0 12 -258113 -258113 -1 0
+1;
+#X obj 25 396 tgl 15 0 empty empty ? 4 8 0 12 -260097 -260097 -1 0
+1;
+#X obj 26 339 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
+#X text 47 338 Instances multiples;
+#X obj 42 22 data_feuille;
+#X text 347 151 en connexion avec le subprocess video pd~ 'videoSession2'
+;
+#X text 28 111 le mode Learn permet de mémoriser les paramètres géométriques
+du prochain rectangle détecté par le dispositif, f 33;
+#X text 403 305 Modules compatibles;
+#X text 468 328 - data_upic;
+#X text 26 184 Pour l'instant \, seul un paramètre de taille (size)
+est pris en compte, f 37;
+#X text 31 231 TODO : aspect ratio;
+#N canvas 542 82 739 455 description_technique 0;
+#X text 59 34 Comment cela fonctionne;
+#X text 62 327 Il incombe au module relié en cascade de communiquer
+avec la partie adéquate du subprocess vidéo pour gérer les interactions
+désirées.;
+#X text 195 411 * pour l'instant \, seul le critère de taille / surface
+est pris en charge par data_feuille;
+#X text 57 56 Dans le patch videoSession2 \, le module de détection
+de rectangles est mis en cascade avec un module tracker2 \, qui envoie
+des messages add / remove à la session hôte (audio) \, qui correspondent
+aux instances de grands rectangles détectés dans le champ de la caméra
+;
+#X text 56 128 Chaque instance de data_feuille ecoute les message add
+du tracker2 de rectangles. elle applique ses critères* (tailles /
+aspect ratio / zône de l'écran / présence d'un fiducial) pour se
+verrouiller sur une instance de grand rectangle;
+#X text 58 198 A l'apparition du rectangle ciblé \, elle envoie sur
+son data_outlet le messages 'source listen_to_tracker <SID>' (SID étant
+le numéro d'instance du grand rectangle. Quand le rectangle disparait
+\, elle envoie le message 'source off' sur son data_outlet. Data_feuile
+envoie aussi un message 'source params' suivi de tous les paramètres
+transmis par le module tracker2 lors de la première détection du
+grand rectangle;
+#N canvas 672 318 666 300 format_messages_tracker2 0;
+#X text 6 96 TRACKER <sid> remove, f 76;
+#X text 7 74 TRACKER <sid> add <cog.x> <cog.y> <width> <height> <angle>
+<area> <isHole> <Perimeter>, f 90;
+#X text 17 164 TRACKER <sid> update <cog.x> <cog.y> <width> <height>
+<angle> <area> <isHole> <Perimeter> <index_of_item_in_incoming_list>
+, f 90;
+#X text 8 129 le message suivant \, généré par tracker2 \, n'est
+pas transmis à la session audio par videosession2 :;
+#X restore 498 105 pd format_messages_tracker2;
+#X restore 621 91 pd description_technique;
+#X text 468 348 - data_cyclogroove;

@@ -1,0 +1,82 @@
+#N struct mappings float y symbol module_name symbol param_name float
+ccnum float min float max symbol mapping;
+#N canvas 1 535 745 546 10;
+#X declare -path ./ressources/core;
+#X declare -path ./ressources/rj;
+#X declare -path ./ressources/modules;
+#X declare -path ./ressources/core/fid_abs_vanilia-0.4;
+#X obj 265 400 declare -path ./ressources/core;
+#X obj 265 420 declare -path ./ressources/rj;
+#X obj 265 440 declare -path ./ressources/modules;
+#X obj 265 460 declare -path ./ressources/core/fid_abs_vanilia-0.4
+;
+#X obj 10 0 midi_notein 2;
+#X obj 10 80 midi_arpeggiator 2;
+#X obj 10 160 inst_modular_standalone 2 main;
+#X obj 10 240 fx_chorus 3;
+#X obj 10 320 fx_dubdel2 3;
+#X obj 10 400 fx_dattorroverb 1;
+#X obj 10 480 audio_out 5;
+#X obj 265 0 PdRacks.settings;
+#X obj 265 80 PdRacks.transport;
+#X obj 265 240 PdRacks.midilearn;
+#X obj 265 160 PdRacks.morphing;
+#X obj 265 320 PdRacks.midi 1;
+#X obj 265 500 text define -k scene_preset;
+#A set ctl-assign fx_chorus-2 bypass 6 \; ctl-assign midi_arpeggiator-1
+bypass 1 \; ctl-assign fx_dubdel2-2 del 7 100 1264.78 log 0 \; ctl-assign
+inst_modular-1 CV4 4 0 1 lin \; ctl-assign midi_arpeggiator-1 _bpm
+1 20 400 lin \; ctl-assign fx_chorus-2 freq 6 0.05 4.9476 log 0 \;
+ctl-assign audio_out-4 vol 8 39 100 lin 0 \; ctl-assign bwl-osc-0 bwl-osc-fm-att-s
+5 0 31 lin 0 \; ctl-assign inst_modular-1 CV2 3 0 1 lin \; ctl-assign
+inst_modular-1 CV3 5 0 1 lin \; ctl-assign fx_dubdel2-2 wet 7 0 0.5
+lin 0 \; ctl-assign inst_modular-1 CV1 2 0 1 lin \; ctl-assign fx_chorus-2
+mod 6 0 2 lin \; audio_out-4 slot 18 \; audio_out-4 pan 0 \; audio_out-4
+vol 82.2283 \; audio_out-4 out OUT(1/2) \; fx_dattorroverb-0 slot 17
+\; fx_dattorroverb-0 fbgain 0.534592 \; fx_dattorroverb-0 damping 0.25
+\; fx_dattorroverb-0 bandwidth 0.598367 \; fx_dattorroverb-0 predel
+30 \; fx_dattorroverb-0 wet 0.201222 \; fx_dubdel2-2 noclick_mode 1
+\; fx_dubdel2-2 slot 16 \; fx_dubdel2-2 dell 4 \; fx_dubdel2-2 delr
+3 \; fx_dubdel2-2 sync 1 \; fx_dubdel2-2 del 100 \; fx_dubdel2-2 wet
+0 \; fx_dubdel2-2 fb 0.36558 \; fx_dubdel2-2 bq 2 \; fx_dubdel2-2 bpitch
+75.678 \; fx_chorus-2 slot 15 \; fx_chorus-2 bypass 1 \; fx_chorus-2
+mod 0 \; fx_chorus-2 freq 0.05 \; inst_modular-1 slot 14 \; inst_modular-1
+CV5 0.338583 \; inst_modular-1 CV4 0.0629921 \; inst_modular-1 CV3
+0 \; inst_modular-1 CV2 0.244094 \; inst_modular-1 CV1 0.535433 \;
+inst_modular-1 cvA 0 \; inst_modular-1 modular_name main \; bwl-osc-1
+lp-filter2-fm--/+-s 127 \; bwl-osc-1 lp-filter2-q-s 59 \; bwl-osc-1
+lp-filter2-cutoff-r 11 \; bwl-osc-1 overdrive-tone-s 40 \; bwl-osc-1
+overdrive-drive-s 2 \; bwl-osc-0 ahr-release-s 3.03914 \; bwl-osc-0
+ahr-hold-s 1.27 \; bwl-osc-0 ahr-attack-s 1.27 \; bwl-osc-0 ahr-fast/med/slow-s
+0 \; bwl-osc-0 ahr-cycle-s 0 \; bwl-osc-0 ahr-curve-s 1 \; bwl-osc-1
+bwl-osc-wform-s 0 \; bwl-osc-1 bwl-osc-fm-att-s 31 \; bwl-osc-1 bwl-osc-cv-att-s
+127 \; bwl-osc-1 bwl-osc-pwidth-s 27 \; bwl-osc-1 bwl-osc-pitch-s 12
+\; bwl-osc-0 bwl-osc-wform-s 3 \; bwl-osc-0 bwl-osc-fm-att-s 0 \; bwl-osc-0
+bwl-osc-cv-att-s 54 \; bwl-osc-0 bwl-osc-pwidth-s 12 \; bwl-osc-0 bwl-osc-pitch-s
+17 \; midi_arpeggiator-1 raccent 3.3245 \; midi_arpeggiator-1 _bpm
+94.8031 \; midi_arpeggiator-1 clock_synchro 0 \; midi_arpeggiator-1
+oct 0 \; midi_arpeggiator-1 slot 13 \; midi_arpeggiator-1 bypass 0
+\; midi_arpeggiator-1 prob 0.999903 \; midi_arpeggiator-1 duration
+27.4313 \; midi_arpeggiator-1 beat 3 \; midi_notein-1 midi_chan 1 \;
+midi_notein-1 factor 127 \; midi_notein-1 power 0.175751 \; midi_notein-1
+slot 12 \;;
+#X obj 566 57 r data;
+#X connect 4 0 5 0;
+#X connect 4 1 5 1;
+#X connect 4 2 5 2;
+#X connect 5 0 6 0;
+#X connect 5 1 6 1;
+#X connect 5 2 6 2;
+#X connect 6 0 7 0;
+#X connect 6 1 7 1;
+#X connect 6 2 7 2;
+#X connect 7 0 8 0;
+#X connect 7 1 8 1;
+#X connect 7 2 8 2;
+#X connect 8 0 9 0;
+#X connect 8 1 9 1;
+#X connect 8 2 9 2;
+#X connect 9 0 10 0;
+#X connect 9 1 10 1;
+#X connect 9 2 10 2;
+#X connect 17 0 5 2;

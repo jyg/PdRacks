@@ -1,0 +1,149 @@
+#N canvas 505 142 858 519 10;
+#X declare -path ressources/modules/modular/patch_editor_abs;
+#X declare -path pdr/core;
+#X declare -path pdr/core/stuff;
+#X declare -path pdr/core/rj;
+#X obj 833 20 r \$0-busy;
+#X obj 833 42 switch~;
+#X text 28 8 OBJECTIF : permettre l'interaction avec rackpd d'un patch
+modulaire AUTOMATONISM_1.1 qui devrait pouvoir être chargeable dynamiquement
+;
+#X text 159 207 sont des CVout's convertis dans le domaine discret
+midi (0-127) pouvant être mappés (comme n'importe quel ctlin) avec
+un paramètre d'un autre module;
+#N canvas 0 50 450 300 CVin's(Mess2Sig) 0;
+#X obj 34 88 sig~;
+#X obj 31 110 lop~ 10;
+#X obj 114 88 sig~;
+#X obj 111 110 lop~ 10;
+#X obj 194 88 sig~;
+#X obj 191 110 lop~ 10;
+#X obj 274 88 sig~;
+#X obj 271 110 lop~ 10;
+#X obj 364 88 sig~;
+#X obj 361 110 lop~ 10;
+#X obj 40 65 r \$0-CV1;
+#X obj 120 65 r \$0-CV2;
+#X obj 200 65 r \$0-CV3;
+#X obj 285 65 r \$0-CV4;
+#X obj 370 65 r \$0-CV5;
+#X obj 33 134 s~ \$0-CV1;
+#X obj 113 134 s~ \$0-CV2;
+#X obj 193 134 s~ \$0-CV3;
+#X obj 273 134 s~ \$0-CV4;
+#X obj 363 134 s~ \$0-CV5;
+#X connect 0 0 1 0;
+#X connect 1 0 15 0;
+#X connect 2 0 3 0;
+#X connect 3 0 16 0;
+#X connect 4 0 5 0;
+#X connect 5 0 17 0;
+#X connect 6 0 7 0;
+#X connect 7 0 18 0;
+#X connect 8 0 9 0;
+#X connect 9 0 19 0;
+#X connect 10 0 0 0;
+#X connect 11 0 2 0;
+#X connect 12 0 4 0;
+#X connect 13 0 6 0;
+#X connect 14 0 8 0;
+#X restore 313 401 pd CVin's(Mess2Sig);
+#X msg 360 152 \; pd-\$1.pd vis 1;
+#X obj 47 442 declare -path ressources/modules/modular/patch_editor_abs
+;
+#X obj 609 213 u_parameter \$0 modular_name;
+#X obj 533 374 u_dispatch \$0 cvA;
+#X obj 533 394 u_dispatch \$0 cvB;
+#X obj 533 414 u_dispatch \$0 cvC;
+#X obj 533 434 u_dispatch \$0 cvD;
+#X obj 533 454 u_dispatch \$0 cvE;
+#X obj 673 374 u_dispatch \$0 CV1;
+#X obj 673 394 u_dispatch \$0 CV2;
+#X obj 673 414 u_dispatch \$0 CV3;
+#X obj 673 434 u_dispatch \$0 CV4;
+#X obj 673 454 u_dispatch \$0 CV5;
+#N canvas 296 112 1061 524 CVout's(Sig2Mess) 0;
+#X obj 481 61 metro 100;
+#X obj 482 34 r \$0-busy;
+#X obj 279 62 route showLastUsed;
+#X obj 271 27 r RACK_ADMIN;
+#X obj 275 152 modular/cvout \$0 A 10112;
+#X obj 495 212 modular/cvout \$0 E 10116;
+#X obj 485 152 modular/cvout \$0 B 10113;
+#X obj 306 185 modular/cvout \$0 C 10114;
+#X obj 495 182 modular/cvout \$0 D 10115;
+#X connect 0 0 4 1;
+#X connect 0 0 5 1;
+#X connect 0 0 6 1;
+#X connect 0 0 7 1;
+#X connect 0 0 8 1;
+#X connect 1 0 0 0;
+#X connect 2 0 4 0;
+#X connect 2 0 5 0;
+#X connect 2 0 6 0;
+#X connect 2 0 7 0;
+#X connect 2 0 8 0;
+#X connect 3 0 2 0;
+#X restore 314 380 pd CVout's(Sig2Mess);
+#X obj 608 180 module_loader inst_modular \$0 \$1;
+#X obj 32 219 inlet~;
+#X obj 72 218 inlet~;
+#X obj 118 215 inlet;
+#X obj 40 397 outlet~;
+#X obj 90 397 outlet~;
+#X obj 160 305 outlet;
+#X obj 72 326 receive~ \$0-send-0;
+#X obj 123 354 receive~ \$0-send-1;
+#X obj 368 126 symbol \$2;
+#X obj 227 279 s \$0-data;
+#X obj 101 101 cnv 15 188 68 empty \$0-background inst_modular 0 7
+0 14 -262144 -1 0;
+#X obj 100 125 ui_vs \$0 CV1 0 1;
+#X obj 138 125 ui_vs \$0 CV2 0 1;
+#X obj 176 125 ui_vs \$0 CV3 0 1;
+#X obj 214 125 ui_vs \$0 CV4 0 1;
+#X obj 252 125 ui_vs \$0 CV5 0 1;
+#X obj 215 100 bng 15 250 50 0 \$0-A \$0-A-rcv A 3 7 0 10 -66577 -66577
+-1;
+#X obj 230 100 bng 15 250 50 0 \$0-B \$0-B-rcv B 3 7 0 10 -66577 -66577
+-1;
+#X obj 245 100 bng 15 250 50 0 \$0-C \$0-C-rcv C 3 7 0 10 -66577 -66577
+-1;
+#X obj 260 100 bng 15 250 50 0 \$0-D \$0-D-rcv D 3 7 0 10 -66577 -66577
+-1;
+#X obj 275 100 bng 15 250 50 0 \$0-E \$0-E-rcv E 3 7 0 10 -66577 -66577
+-1;
+#X text 261 62 \$0-CV1 à \$0-CV5 sont des macros utilisables comme
+CVin's dans le patch modulaire;
+#X obj 197 100 bng 15 250 50 0 empty empty empty 17 7 0 10 -203904
+-1 -1;
+#X symbolatom 218 114 10 0 0 0 - #0-modular_name-rcv #0-modular_name
+;
+#N canvas 1 224 294 77 \$0-modular 0;
+#X obj 46 26 modular/\$2 \$0;
+#X restore 50 279 pd \$0-modular;
+#X obj 597 8 declare -path pdr/core;
+#X obj 597 28 declare -path pdr/core/stuff;
+#X obj 597 48 declare -path pdr/core/rj;
+#X connect 0 0 1 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 19 0 7 0;
+#X connect 20 0 23 0;
+#X connect 21 0 24 0;
+#X connect 22 0 25 0;
+#X connect 22 0 19 0;
+#X connect 22 0 29 0;
+#X connect 26 0 23 0;
+#X connect 27 0 24 0;
+#X connect 28 0 5 0;
+#X connect 42 0 28 0;
+#X coords 0 -1 1 1 190 80 2 100 100;

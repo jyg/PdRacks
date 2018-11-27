@@ -1,0 +1,29 @@
+#N struct mappings float y symbol module_name symbol param_name float
+ccnum float min float max symbol mapping;
+#N canvas 441 132 1111 654 16;
+#X declare -path pdr/modules/basic;
+#X declare -path pdr/modules/automatonism;
+#X declare -path pdr/modules/automatonism/modular/patch_editor_abs
+;
+#X obj 509 44 pdr;
+#X obj 75 126 bwl-osc;
+#X obj 436 261 PdRacks.midilearn;
+#X text 35 14 With this patched version of Automatonism \, it's possible
+to assign midi controls to automatonism parameters., f 42;
+#X text 71 548 https://www.automatonism.com/;
+#X text 58 464 Until now \, only few automatonism object are wrapped
+inside Pdracks;
+#X obj 88 319 audio_out;
+#X obj 509 119 PdRacks.savestate;
+#A saved scene_name ;
+#N canvas 0 50 450 300 \$0-PdRacks.declare 0;
+#X obj 10 10 declare -path pdr/modules/basic;
+#X obj 10 60 pdr/core/stuff/u_glocal.enable \$0;
+#A saved module basic;
+#A saved module automatonism;
+#X obj 100 130 declare -path pdr/modules/automatonism;
+#X obj 100 130 declare -path pdr/modules/automatonism/modular/patch_editor_abs
+;
+#X restore 509 89 pd \$0-PdRacks.declare;
+#X connect 1 0 6 0;
+#X connect 1 0 6 1;
