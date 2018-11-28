@@ -1,4 +1,4 @@
-<img src="./pdr/doc/img/PdRacksTrailer.png" alt="PdRacksTariler" width=491 height=263>
+<img src="./pdr/tutorials/img/PdRacksTrailer.png" alt="PdRacksTariler" width=491 height=263>
 
 Environnement de traitement sonore temps réel dans pure data.
 

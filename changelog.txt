@@ -1,6 +1,6 @@
 v 0.6.1
 -Restructuration des dossiers de la racine du projet
-pdr/core, pdr/modules, pdr/doc, pdr/medias pdr/recordings
+pdr/core, pdr/modules, pdr/tutorials, pdr/medias pdr/recordings
 -Possibilité de jouer simultanément plusieurs sessions PdRacks avec des contrôles de présets indépendants
 -amélioration de l'outil [pdr] et de la gestion des sets (collections) de modules
 v 0.6

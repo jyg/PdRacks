@@ -1,12 +1,15 @@
-#N canvas 322 322 1146 493 16;
+#N canvas 322 322 732 493 16;
 #X declare -path pdr/modules/basic;
-#X obj 654 38 pdr;
+#X obj 454 38 pdr;
 #N canvas 0 50 450 300 \$0-PdRacks.declare 0;
 #X obj 10 10 declare -path pdr/modules/basic;
 #X obj 10 60 pdr/core/stuff/u_glocal.enable \$0;
-#A saved module basic;
-#X restore 654 83 pd \$0-PdRacks.declare;
-#X obj 654 125 PdRacks.savestate;
+#A saved modules_set # List of modules to load;
+#A saved modules_set # you can add new sets of modules here;
+#A saved modules_set # (ctrl/cmd + s to save and close);
+#A saved modules_set basic;
+#X restore 454 83 pd \$0-PdRacks.declare;
+#X obj 454 125 PdRacks.savestate;
 #A saved scene_name ;
 #A saved audio_out-0 pan 0;
 #A saved audio_out-0 vol 95.4607;
@@ -51,18 +54,12 @@
 #X obj 88 252 inst_rhodey;
 #X obj 87 71 PdRacks.transport;
 #X obj 87 173 note_16steps;
-#X text 60 18 Here is an example of sequencing;
 #X obj 88 332 audio_out;
-#X text 408 221 TO DO;
-#X text 401 259 menu audioin/audioout : globaliser name pour permettre
-multisessions;
-#X text 402 365 s BPM / CLOCK : globaliser dans tous les objets synchronisés
-;
-#X text 394 315 Pdracks.transport : globaliser pour permettre des tempi
-variables;
-#X connect 3 0 7 0;
-#X connect 3 1 7 1;
-#X connect 3 2 7 2;
+#X text 60 18 Here is an example of patch using a step-sequencer,
+f 34;
+#X connect 3 0 6 0;
+#X connect 3 1 6 1;
+#X connect 3 2 6 2;
 #X connect 5 0 3 0;
 #X connect 5 1 3 1;
 #X connect 5 2 3 2;
