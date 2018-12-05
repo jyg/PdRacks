@@ -9,3 +9,4 @@
 #X text 48 217 applique un multidelay / pitch variable en fonction
 des touch events reçus sur data_inlet (format touchEvent - cf data_fidtouch)
 ;
+#X text 341 61 Dependancies : fiddle~ external;

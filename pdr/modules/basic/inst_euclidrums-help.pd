@@ -1,4 +1,4 @@
-#N canvas 630 149 613 480 10;
+#N canvas 630 149 613 480 12;
 #X obj 360 126 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
 #X text 380 122 Instances multiples;
 #X text 386 155 Synchronisation tempo;
@@ -17,7 +17,7 @@ et ne joue pas tant qu'il n'y a pas de messages reçus sur ce canal.
 #X text 81 263 Jouable avec data_wintablet en entrée \, ou bien avec
 la souris sur le pad virtuel xy;
 #X text 22 431 TO DO : mode contrôleur avec sortie note on/off;
-#X text 92 23 dependancies : needs iemguts;
+#X text 92 23 dependancies : needs iemguts (for xypad);
 #X connect 4 0 5 0;
 #X connect 4 1 5 1;
 #X coords 0 480 1 479 190 70 0;

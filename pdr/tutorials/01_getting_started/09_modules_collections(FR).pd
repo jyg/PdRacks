@@ -20,7 +20,7 @@ dossier à l'emplacement pdr/modules/;
 un projet \, cliquer sur le bouton 'options' (__) du module [pdr] \,
 puis cliquer sur "add module-sets" et décommenter / ajouter le nom
 de la librairie de modules choisie.;
-#X obj 592 61 pdr;
+#X obj 608 49 pdr;
 #N canvas 0 50 450 300 \$0-PdRacks.declare 0;
 #X obj 10 10 declare -path pdr/modules/basic;
 #X obj 10 60 pdr/core/stuff/u_glocal.enable \$0;
@@ -28,6 +28,6 @@ de la librairie de modules choisie.;
 #A saved modules_set # you can add new sets of modules here;
 #A saved modules_set # (ctrl/cmd + s to save and close);
 #A saved modules_set basic;
-#X restore 592 106 pd \$0-PdRacks.declare;
-#X obj 592 136 PdRacks.savestate;
+#X restore 608 94 pd \$0-PdRacks.declare;
+#X obj 608 124 PdRacks.savestate;
 #A saved scene_name ;

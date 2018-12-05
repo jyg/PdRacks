@@ -1,5 +1,11 @@
 #N canvas 169 182 1174 701 16;
 #X declare -path pdr/modules/basic;
+#X declare -path ../../../pdr/modules/basic;
+#X declare -path ../../../pdr/core;
+#X declare -path ../../../pdr/core/stuff;
+#X declare -path ../../../pdr/core/rj;
+#X declare -path ../../../pdr/core/fid_abs_vanilia-0.4;
+#X declare -path ../../../pdr/core/glocal;
 #X obj 193 426 cnv 15 350 200 empty empty empty 20 12 0 14 -261682
 -66577 0;
 #X msg 247 365 \; pd dsp 1;
@@ -198,6 +204,18 @@ easier., f 69;
 , f 75;
 #X text 44 267 Let's create a minimal PdRacks patch with only one module
 : inst_rhodey, f 75;
+#X text 777 28 needs pd >= 0.49;
+#N canvas 0 50 751 488 0.48_retrocompatibility 0;
+#X text 37 21 If you want to use PdRacks with pd 0.48 \, you have to
+put manually those declare objects in your main patch;
+#X obj 38 140 declare -path ../../../pdr/modules/basic;
+#X obj 35 178 declare -path ../../../pdr/core;
+#X obj 33 205 declare -path ../../../pdr/core/stuff;
+#X obj 33 235 declare -path ../../../pdr/core/rj;
+#X obj 31 276 declare -path ../../../pdr/core/fid_abs_vanilia-0.4;
+#X obj 31 306 declare -path ../../../pdr/core/glocal;
+#X text 33 387 You cannot use PdRacks.savestate object;
+#X restore 617 362 pd 0.48_retrocompatibility;
 #X connect 2 0 4 2;
 #X connect 4 0 5 0;
 #X connect 4 1 5 1;

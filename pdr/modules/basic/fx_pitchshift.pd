@@ -2,6 +2,8 @@
 #X declare -path pdr/core;
 #X declare -path pdr/core/rj;
 #X declare -path pdr/core/stuff;
+#X declare -path iemlib;
+#X declare -lib iemlib;
 #X obj 583 310 loadbang;
 #N canvas 172 83 586 377 LICENSE-GPL 0;
 #X text 57 88 This program is free software: you can redistribute it
@@ -400,14 +402,14 @@ in individual files.;
 #X obj 486 351 s \$0-antialiasing;
 #X msg 463 291 30000;
 #X connect 0 0 13 1;
-#X connect 1 0 0 0;
 #X connect 1 0 13 0;
+#X connect 1 0 0 0;
 #X connect 3 0 0 1;
 #X connect 4 0 0 3;
 #X connect 5 0 0 2;
 #X connect 7 0 14 1;
-#X connect 8 0 7 0;
 #X connect 8 0 14 0;
+#X connect 8 0 7 0;
 #X connect 10 0 7 1;
 #X connect 11 0 7 3;
 #X connect 12 0 7 2;
@@ -535,6 +537,8 @@ in individual files.;
 #X obj 649 256 triggered_loadbang \$0-this;
 #X text 644 206 manually trigger loadbang if the instance of abstraction
 is created dynamically, f 29;
+#X obj 661 -11 declare -path iemlib;
+#X obj 667 6 declare -lib iemlib;
 #X connect 0 0 8 0;
 #X connect 4 0 11 0;
 #X connect 5 0 7 0;
