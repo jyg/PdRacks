@@ -74,8 +74,8 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X connect 18 1 17 1;
 #X connect 19 0 18 0;
 #X restore 215 445 pd extract_filename;
-#X obj 139 123 cnv 8 150 15 empty \$0-filename_cnv-rcv Cinquante_cinq_euros-JY_Gratius_&_G_Terrier.wav
-2 8 0 12 -204786 -66577 0;
+#X obj 139 123 cnv 8 150 15 empty \$0-filename_cnv-rcv empty 2 8 0
+12 -204786 -66577 0;
 #X obj 207 498 s \$0-filename_cnv-rcv;
 #X msg 214 474 label \$1;
 #X obj 254 140 bng 30 250 50 0 empty empty OPEN 2 13 0 10 -262144 -1
