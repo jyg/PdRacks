@@ -1,4 +1,4 @@
-#N canvas 844 151 1075 625 10;
+#N canvas 568 87 1075 625 10;
 #X declare -path pdr/core;
 #X declare -path pdr/core/rj;
 #X declare -path pdr/core/stuff;
@@ -29,8 +29,8 @@
 #X obj 644 511 f;
 #X obj 681 528 == 0;
 #X obj 624 464 > 0;
-#X obj 101 101 cnv 15 188 68 empty \$0-background audio_in-0 0 7 0
-14 -262144 -1 0;
+#X obj 101 101 cnv 15 188 68 empty \$0-background audio_in-4 0 7 0
+14 -260818 -1 0;
 #X obj 189 134 cnv 2 65 2 empty \$0-vu -35db 20 5 0 10 -24198 -1 0
 ;
 #X text 197 99 src;
