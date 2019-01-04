@@ -1,13 +1,13 @@
-#N canvas 240 363 893 501 16;
+#N canvas 692 575 893 501 16;
 #X obj 170 156 inst_scratcher;
 #X obj 170 231 dac~;
-#X msg 415 85 speed 1;
-#X msg 416 118 speed 0;
-#X obj 355 261 route feedback;
-#X msg 355 290 set \$1;
-#X obj 48 334 hsl 800 80 -3.14159 3.14159 0 0 empty empty DROP_A_FILE_HERE_AND_SCRATCH
-50 40 0 40 -262144 -1 -4032 0 1;
-#N canvas 0 50 450 300 scratch 0;
+#X msg 404 62 speed 1;
+#X msg 405 95 speed 0;
+#X obj 353 261 route feedback;
+#X msg 353 290 set \$1;
+#X obj 48 328 hsl 800 80 -3.14159 3.14159 0 0 empty empty DROP_A_FILE_HERE_AND_SCRATCH
+50 40 0 40 -262144 -1 -4032 2815 1;
+#N canvas 0 50 805 742 scratch 0;
 #X obj 96 41 inlet;
 #X obj 108 261 outlet;
 #X obj 111 99 t b f b;
@@ -28,8 +28,8 @@
 #X connect 7 0 1 0;
 #X connect 8 0 6 0;
 #X restore 42 450 pd scratch;
-#N canvas 0 50 501 545 deluxe_interface 0;
-#X obj 100 104 jogzone;
+#N canvas 378 93 635 541 deluxe_interface 1;
+#X obj 168 101 jogzone;
 #A saved -back_color 1;
 #A saved -front_color 1;
 #A saved -cursor_color -1;
@@ -70,7 +70,7 @@
 #X connect 8 0 0 0;
 #X connect 10 0 7 0;
 #X coords 0 -1 1 1 323 61 2 100 100;
-#X restore 97 25 pd speed;
+#X restore 177 25 pd speed;
 #X msg 75 459 speed \$1;
 #X obj 3 44 route feedback;
 #X connect 0 0 3 0;
@@ -82,9 +82,14 @@
 #X connect 6 0 7 0;
 #X connect 7 0 2 0;
 #X connect 8 0 5 0;
-#X restore 400 182 pd deluxe_interface;
+#X restore 396 200 pd deluxe_interface;
 #X text 48 36 inst_scratcher : platine à scratcher basique;
 #X msg 661 61 \; pd dsp 1;
+#X text 656 385 (needs dnd pluggin);
+#X msg 633 160 inertia 100;
+#X msg 633 187 inertia 300;
+#X msg 635 133 inertia 50;
+#X text 765 162 (in ms);
 #X connect 0 0 1 0;
 #X connect 0 1 1 1;
 #X connect 0 2 4 0;
@@ -96,4 +101,7 @@
 #X connect 6 0 7 0;
 #X connect 7 0 0 2;
 #X connect 8 0 0 2;
+#X connect 12 0 0 2;
+#X connect 13 0 0 2;
+#X connect 14 0 0 2;
 #X coords 0 501 1 500 190 70 0;
