@@ -64,11 +64,11 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X connect 18 0 10 0;
 #X restore 30 284 pd ring~;
 #X obj 347 352 u_dispatch \$0 freq;
-#X obj 101 101 cnv 15 188 68 empty \$0-background fx_ring-1 0 7 0 14
+#X obj 101 101 cnv 15 188 68 empty \$0-background fx_ring-0 0 7 0 14
 -262144 -1 0;
 #X obj 252 115 ui_vs \$0 wet 0 1;
 #X obj 101 115 ui_vsl \$0 freq 0.1 3000;
-#X obj 346 310 module_loader fx_ring \$0 \$1;
+#X obj 345 308 module_loader fx_ring \$0 \$1;
 #X obj 29 200 inlet~;
 #X obj 125 202 inlet~;
 #X obj 93 317 outlet~;
@@ -90,11 +90,13 @@ is created dynamically, f 29;
 #X obj 139 115 ui_vsl \$0 smooth 0.01 1;
 #X msg 404 230 phase 0 \, smooth 0.01;
 #X obj 347 427 u_dispatch \$0 smooth;
+#X obj 529 285 savestate;
 #X connect 2 0 26 0;
 #X connect 4 0 13 0;
 #X connect 4 1 12 0;
 #X connect 5 0 2 0;
 #X connect 9 0 5 0;
+#X connect 9 1 30 0;
 #X connect 10 0 16 0;
 #X connect 11 0 17 0;
 #X connect 14 0 15 0;
@@ -104,4 +106,6 @@ is created dynamically, f 29;
 #X connect 25 0 28 0;
 #X connect 26 0 29 0;
 #X connect 28 0 9 0;
+#X connect 30 0 9 1;
+#X connect 30 1 9 2;
 #X coords 0 -1 1 1 190 70 1 100 100;

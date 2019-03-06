@@ -97,3 +97,6 @@ local à chaque type de module, f 36;
 sont définis dans le subpatch [pd audio_config];
 #X restore 34 138 pd text_define;
 #X obj 192 39 declare -path pdr/core/rj;
+#X obj 226 124 loadbang;
+#X msg 226 147 \; pd dsp 1;
+#X connect 3 0 4 0;

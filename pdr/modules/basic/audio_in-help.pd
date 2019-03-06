@@ -1,10 +1,7 @@
-#N canvas 432 332 818 388 10;
-#X obj 509 115 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
-#X text 531 117 Instances multiples possibles;
+#N canvas 432 332 818 388 16;
+#X declare -path pdr/modules/basic;
 #X text 16 128 Pour se connecter à une entrée audio physique ou à
 un bus;
-#X obj 509 139 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
-#X text 531 137 PureData Vanilia;
 #X obj 28 212 bng 18 250 50 0 empty empty SetModule-> 0 10 0 10 -261682
 -1 -1;
 #N canvas 489 347 450 300 meta 0;
@@ -12,16 +9,25 @@ un bus;
 audio de la carte son;
 #X text 54 69 <en> input from aux busses and soundcard audio ins;
 #X restore 592 13 pd meta;
-#X obj 65 30 audio_in;
-#X obj 80 302 pdr/core/stuff/slot~ 5;
+#X obj 63 30 audio_in;
+#A saved module-slot 0;
+#A saved gain -17.7469;
+#A saved in IN(1/2);
+#X obj 79 327 pdr/core/stuff/slot~ 5;
 #X text 24 233 En dynamique \, permet de choisir comme entrée audio
 la sortie d'un autre module en cliquant sur son emplacement (slot)
 ;
 #X text 25 269 En statique \, le numéro spécifié connecte audio_in
 à un objet slot~ correspondant \, s'il existe.;
-#X obj 483 266 PdRacks.savestate;
-#A saved scene_name ;
-#X text 447 191 Dépendances : PdRacks.settings ou PdRacks.savestate
+#X text 428 161 Dépendances : PdRacks.settings ou PdRacks.savestate
 ;
-#X text 453 211 Les bus et les entrées physiques sont définies dans
+#X text 428 186 Les bus et les entrées physiques sont définies dans
 PdRacks.settings / Pdracks.savestate;
+#N canvas 0 50 450 300 \$0-PdRacks.declare 0;
+#X obj 10 10 declare -path pdr/modules/basic;
+#X obj 10 60 pdr/core/stuff/u_glocal.enable \$0;
+#A saved modules_set # List of modules to load;
+#A saved modules_set # you can add new sets of modules here;
+#A saved modules_set # (ctrl/cmd + s to save and close);
+#A saved modules_set basic;
+#X restore 420 75 pd \$0-PdRacks.declare;

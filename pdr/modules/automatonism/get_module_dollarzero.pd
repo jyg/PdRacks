@@ -1,0 +1,9 @@
+#N canvas 0 50 450 300 10;
+#X obj 293 64 loadbang;
+#X obj 293 87 f \$0;
+#X obj 293 129 s \$1-module;
+#X obj 293 110 + 1;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 3 0 2 0;
+#X coords 0 300 1 299 85 60 0;

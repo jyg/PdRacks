@@ -158,6 +158,7 @@ else in local mode;
 #X obj 1229 256 triggered_loadbang \$0-this;
 #X text 1224 206 manually trigger loadbang if the instance of abstraction
 is created dynamically, f 29;
+#X obj 785 273 savestate;
 #X connect 0 0 1 0;
 #X connect 0 0 14 0;
 #X connect 0 1 2 0;
@@ -198,5 +199,8 @@ is created dynamically, f 29;
 #X connect 39 0 40 0;
 #X connect 41 0 42 0;
 #X connect 42 0 4 0;
+#X connect 42 1 52 0;
 #X connect 45 0 28 0;
+#X connect 52 0 42 1;
+#X connect 52 1 42 2;
 #X coords 0 -1 1 1 190 70 1 100 100;

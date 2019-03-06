@@ -49,6 +49,7 @@ instruments inst_pcm multisanmple polyphonic player;
 instruments inst_pvoc multisample phase vocoder player;
 instruments inst_rhodey 4-op FM Rhodey piano based on algorithm 5 (STK rhodey);
 instruments inst_sampler monosample loopplayer (with on the fly rec feature);
+instruments inst_scratcher turntable-inspired scratcher;
 instruments inst_soundfile basic file reader;
 instruments inst_tabosc harmonic / table oscillator (with on the fly rec feature);
 instruments inst_turntable turntable player simulator (with on the fly rec feature);

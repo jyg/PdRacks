@@ -1,11 +1,11 @@
-#N struct 1600-symarray float x array symbols 1600-sym;
-#N struct 1600-sym symbol name float on;
-#N struct 1317-symarray float x array symbols 1317-sym;
-#N struct 1317-sym symbol name float on;
-#N struct 1318-symarray float x array symbols 1318-sym;
-#N struct 1318-sym symbol name float on;
-#N struct 1319-symarray float x array symbols 1319-sym;
-#N struct 1319-sym symbol name float on;
+#N struct 15867-symarray float x array symbols 15867-sym;
+#N struct 15867-sym symbol name float on;
+#N struct 15899-symarray float x array symbols 15899-sym;
+#N struct 15899-sym symbol name float on;
+#N struct 15900-symarray float x array symbols 15900-sym;
+#N struct 15900-sym symbol name float on;
+#N struct 15901-symarray float x array symbols 15901-sym;
+#N struct 15901-sym symbol name float on;
 #N canvas 294 212 1624 790 16;
 #X declare -path pdr/modules/basic;
 #X obj 559 297 t b b b b;
@@ -28,7 +28,7 @@
 #X text 68 323 [container 2;
 #X text 68 493 [container 4];
 #X text 59 27 The special module "container" can embed another module
-and dynamically change it., f 68;
+and dynamically change it.;
 #X text 595 270 fill containers;
 #X text 89 714 This is part of PdRacks vanilia for mobile plateform
 project, f 89;
@@ -48,7 +48,7 @@ la memoire de scène, f 28;
 #X msg 642 380 \; container-1 remote embedded inst_pcm;
 #X msg 642 433 \; container-2 remote embedded fx_dattorroverb;
 #X msg 641 489 \; container-3 remote embedded audio_out;
-#X obj 779 128 PdRacks.savestate;
+#X obj 692 66 PdRacks.savestate;
 #A saved scene_name ;
 #A saved audio_out-0 pan 0;
 #A saved audio_out-0 vol 117.452;
@@ -97,7 +97,6 @@ P200_Piano_G#9(L).wav P200_Piano_C10(L).wav;
 #A saved container-2 embedded fx_dattorroverb;
 #A saved container-1 embedded inst_pcm;
 #A saved container-0 embedded data_azerty2midi;
-#X obj 781 44 pdr;
 #N canvas 0 50 450 300 \$0-PdRacks.declare 0;
 #X obj 10 10 declare -path pdr/modules/basic;
 #X obj 10 60 pdr/core/stuff/u_glocal.enable \$0;
@@ -105,7 +104,58 @@ P200_Piano_G#9(L).wav P200_Piano_C10(L).wav;
 #A saved modules_set # you can add new sets of modules here;
 #A saved modules_set # (ctrl/cmd + s to save and close);
 #A saved modules_set basic;
-#X restore 781 89 pd \$0-PdRacks.declare;
+#X restore 694 27 pd \$0-PdRacks.declare;
+#X text 63 83 You can save the changes using a PdRacks.savestate module.
+;
+#X obj 694 110 PdRacks.savestate;
+#A saved scene_name ;
+#A saved audio_out-0 pan 0;
+#A saved audio_out-0 vol 117.452;
+#A saved audio_out-0 out OUT(1/2);
+#A saved fx_dattorroverb-0 fbgain 0.8;
+#A saved fx_dattorroverb-0 damping 0.25;
+#A saved fx_dattorroverb-0 bandwidth 0.6;
+#A saved fx_dattorroverb-0 predel 30;
+#A saved fx_dattorroverb-0 wet 0.5;
+#A saved inst_pcm-0 high_key 108;
+#A saved inst_pcm-0 lhigh_key <subset> 34 30 26 38 42 46 50 54 58 62
+66 70 74 78 84 90 94 99 104 108;
+#A saved inst_pcm-0 low_key 105;
+#A saved inst_pcm-0 llow_key <subset> 31 27 0 35 39 43 47 51 55 59
+63 67 71 75 79 85 91 95 100 105;
+#A saved inst_pcm-0 root_key 108;
+#A saved inst_pcm-0 lroot_key <subset> 34 30 26 38 42 46 50 54 58 62
+66 70 74 78 84 90 94 99 104 108;
+#A saved inst_pcm-0 mode 0;
+#A saved inst_pcm-0 sr 32000;
+#A saved inst_pcm-0 lsr <subset> 32000 32000 32000 32000 32000 32000
+32000 32000 32000 32000 32000 32000 32000 32000 32000 32000 32000 32000
+32000 32000;
+#A saved inst_pcm-0 vol 86.049;
+#A saved inst_pcm-0 lend <subset> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined>;
+#A saved inst_pcm-0 lstart <subset> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined>;
+#A saved inst_pcm-0 path P200_Piano;
+#A saved inst_pcm-0 filename P200_Piano_C10(L).wav;
+#A saved inst_pcm-0 lfilename <subset> P200_Piano_A#2(L).wav P200_Piano_F#2(L).wav
+P200_Piano_D2(L).wav P200_Piano_D3(L).wav P200_Piano_F#3(L).wav P200_Piano_A#3(L).wav
+P200_Piano_D4(L).wav P200_Piano_F#4(L).wav P200_Piano_A#4(L).wav P200_Piano_D5(L).wav
+P200_Piano_F#5(L).wav P200_Piano_A#5(L).wav P200_Piano_D6(L).wav P200_Piano_F#6(L).wav
+P200_Piano_C7(L).wav P200_Piano_F#7(L).wav P200_Piano_A#7(L).wav P200_Piano_D#8(L).wav
+P200_Piano_G#9(L).wav P200_Piano_C10(L).wav;
+#A saved data_azerty2midi-0 az-qw 1;
+#A saved data_azerty2midi-0 enable 1;
+#A saved data_azerty2midi-0 oct 2;
+#A saved data_azerty2midi-0 velo 100;
+#A saved container-3 embedded audio_out;
+#A saved container-2 embedded fx_dattorroverb;
+#A saved container-1 embedded inst_pcm;
+#A saved container-0 embedded data_azerty2midi;
 #X connect 0 0 29 0;
 #X connect 0 1 28 0;
 #X connect 0 2 27 0;

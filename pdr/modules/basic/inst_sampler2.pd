@@ -125,7 +125,7 @@ tous les samples dans des samplebank (à réception de lfilename);
 #X text 668 402 u_multisamplebank modifié;
 #X text 654 421 voir si la création dynamique d'une table ne fait
 pas du glitch;
-#X obj 418 210 module_loader inst_sampler2 \$0;
+#X obj 386 214 module_loader inst_sampler2 \$0;
 #X obj 341 90 module_declare inst_sampler2 \$0;
 #X obj 1094 24 declare -path pdr/core;
 #X obj 1094 54 declare -path pdr/core/rj;
@@ -134,6 +134,7 @@ pas du glitch;
 #X obj 1119 226 triggered_loadbang \$0-this;
 #X text 1114 176 manually trigger loadbang if the instance of abstraction
 is created dynamically, f 29;
+#X obj 479 183 savestate;
 #X connect 3 0 6 0;
 #X connect 3 0 12 0;
 #X connect 6 0 5 0;
@@ -180,5 +181,8 @@ is created dynamically, f 29;
 #X connect 56 0 55 1;
 #X connect 57 0 46 0;
 #X connect 63 0 57 0;
+#X connect 63 1 71 0;
 #X connect 64 0 1 0;
+#X connect 71 0 63 1;
+#X connect 71 1 63 2;
 #X coords 0 -1 1 1 190 70 1 100 100;

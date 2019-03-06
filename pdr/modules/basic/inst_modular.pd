@@ -167,8 +167,10 @@ pour réinitialiser le graphe de rendu dsp;
 #X obj 829 76 triggered_loadbang \$0-this;
 #X text 824 26 manually trigger loadbang if the instance of abstraction
 is created dynamically, f 29;
+#X obj 714 142 savestate;
 #X connect 0 0 1 0;
 #X connect 2 0 24 0;
+#X connect 2 1 47 0;
 #X connect 18 0 20 0;
 #X connect 20 0 21 0;
 #X connect 22 0 26 0;
@@ -185,4 +187,6 @@ is created dynamically, f 29;
 #X connect 35 0 36 0;
 #X connect 38 0 2 0;
 #X connect 38 0 39 0;
+#X connect 47 0 2 1;
+#X connect 47 1 2 2;
 #X coords 0 -1 1 1 190 80 1 100 100;

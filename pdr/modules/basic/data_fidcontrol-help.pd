@@ -36,3 +36,4 @@ FID_CLASSES), f 38;
 #X text 282 130 |;
 #X text 329 168 <- 3;
 #X obj 138 149 data_fidcontrol;
+#A saved fidmin 21;

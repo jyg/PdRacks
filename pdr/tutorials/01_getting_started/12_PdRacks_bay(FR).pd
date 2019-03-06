@@ -1,57 +1,57 @@
 #N struct mappings float y symbol module_name symbol param_name float
 ccnum float min float max symbol mapping;
-#N struct 16929-symarray float x array symbols 16929-sym;
-#N struct 16929-sym symbol name float on;
-#N struct 22299-symarray float x array symbols 22299-sym;
-#N struct 22299-sym symbol name float on;
-#N struct 22418-symarray float x array symbols 22418-sym;
-#N struct 22418-sym symbol name float on;
-#N struct 22660-symarray float x array symbols 22660-sym;
-#N struct 22660-sym symbol name float on;
-#N struct 23181-symarray float x array symbols 23181-sym;
-#N struct 23181-sym symbol name float on;
-#N struct 23246-symarray float x array symbols 23246-sym;
-#N struct 23246-sym symbol name float on;
-#N struct 25420-symarray float x array symbols 25420-sym;
-#N struct 25420-sym symbol name float on;
-#N struct 26185-symarray float x array symbols 26185-sym;
-#N struct 26185-sym symbol name float on;
-#N struct 26186-symarray float x array symbols 26186-sym;
-#N struct 26186-sym symbol name float on;
-#N struct 26187-symarray float x array symbols 26187-sym;
-#N struct 26187-sym symbol name float on;
-#N struct 26504-symarray float x array symbols 26504-sym;
-#N struct 26504-sym symbol name float on;
-#N struct 26505-symarray float x array symbols 26505-sym;
-#N struct 26505-sym symbol name float on;
-#N struct 26506-symarray float x array symbols 26506-sym;
-#N struct 26506-sym symbol name float on;
-#N struct 26811-symarray float x array symbols 26811-sym;
-#N struct 26811-sym symbol name float on;
-#N struct 27263-symarray float x array symbols 27263-sym;
-#N struct 27263-sym symbol name float on;
-#N struct 27633-symarray float x array symbols 27633-sym;
-#N struct 27633-sym symbol name float on;
-#N struct 27634-symarray float x array symbols 27634-sym;
-#N struct 27634-sym symbol name float on;
-#N struct 27635-symarray float x array symbols 27635-sym;
-#N struct 27635-sym symbol name float on;
-#N struct 28062-symarray float x array symbols 28062-sym;
-#N struct 28062-sym symbol name float on;
-#N struct 28063-symarray float x array symbols 28063-sym;
-#N struct 28063-sym symbol name float on;
-#N struct 28064-symarray float x array symbols 28064-sym;
-#N struct 28064-sym symbol name float on;
-#N struct 28264-symarray float x array symbols 28264-sym;
-#N struct 28264-sym symbol name float on;
-#N struct 28265-symarray float x array symbols 28265-sym;
-#N struct 28265-sym symbol name float on;
-#N struct 28266-symarray float x array symbols 28266-sym;
-#N struct 28266-sym symbol name float on;
+#N struct 11531-symarray float x array symbols 11531-sym;
+#N struct 11531-sym symbol name float on;
+#N struct 16956-symarray float x array symbols 16956-sym;
+#N struct 16956-sym symbol name float on;
+#N struct 17075-symarray float x array symbols 17075-sym;
+#N struct 17075-sym symbol name float on;
+#N struct 17317-symarray float x array symbols 17317-sym;
+#N struct 17317-sym symbol name float on;
+#N struct 17838-symarray float x array symbols 17838-sym;
+#N struct 17838-sym symbol name float on;
+#N struct 17894-symarray float x array symbols 17894-sym;
+#N struct 17894-sym symbol name float on;
+#N struct 20059-symarray float x array symbols 20059-sym;
+#N struct 20059-sym symbol name float on;
+#N struct 20824-symarray float x array symbols 20824-sym;
+#N struct 20824-sym symbol name float on;
+#N struct 20825-symarray float x array symbols 20825-sym;
+#N struct 20825-sym symbol name float on;
+#N struct 20826-symarray float x array symbols 20826-sym;
+#N struct 20826-sym symbol name float on;
+#N struct 21143-symarray float x array symbols 21143-sym;
+#N struct 21143-sym symbol name float on;
+#N struct 21144-symarray float x array symbols 21144-sym;
+#N struct 21144-sym symbol name float on;
+#N struct 21145-symarray float x array symbols 21145-sym;
+#N struct 21145-sym symbol name float on;
+#N struct 21450-symarray float x array symbols 21450-sym;
+#N struct 21450-sym symbol name float on;
+#N struct 21902-symarray float x array symbols 21902-sym;
+#N struct 21902-sym symbol name float on;
+#N struct 22272-symarray float x array symbols 22272-sym;
+#N struct 22272-sym symbol name float on;
+#N struct 22273-symarray float x array symbols 22273-sym;
+#N struct 22273-sym symbol name float on;
+#N struct 22274-symarray float x array symbols 22274-sym;
+#N struct 22274-sym symbol name float on;
+#N struct 22733-symarray float x array symbols 22733-sym;
+#N struct 22733-sym symbol name float on;
+#N struct 22734-symarray float x array symbols 22734-sym;
+#N struct 22734-sym symbol name float on;
+#N struct 22735-symarray float x array symbols 22735-sym;
+#N struct 22735-sym symbol name float on;
+#N struct 22935-symarray float x array symbols 22935-sym;
+#N struct 22935-sym symbol name float on;
+#N struct 22936-symarray float x array symbols 22936-sym;
+#N struct 22936-sym symbol name float on;
+#N struct 22937-symarray float x array symbols 22937-sym;
+#N struct 22937-sym symbol name float on;
 #N struct text-help-struct float x float y text z;
-#N struct 28962-symarray float x array symbols 28962-sym;
-#N struct 28962-sym symbol name float on;
-#N canvas 84 100 1701 886 12;
+#N struct 23288-symarray float x array symbols 23288-sym;
+#N struct 23288-sym symbol name float on;
+#N canvas 0 57 1920 1023 16;
 #X declare -path pdr/modules/basic;
 #X declare -path pdr/modules/video_ui;
 #X declare -path pdr/modules/video_ui/data_cyclogroove;
@@ -64,12 +64,10 @@ ccnum float min float max symbol mapping;
 #X obj 884 399 hsl 100 100 0 127 0 0 empty empty empty -2 -8 0 10 -261682
 -261682 -261682 0 1;
 #X msg 880 503 vis 1;
-#X text 886 447 CLIQUER ICI;
-#X text 996 423 CONDUITE SCENES, f 12;
+#X text 886 447 CLIQUER ICI, f 8;
+#X text 999 396 CONDUITE SCENES, f 12;
 #X obj 879 523 s pd-conduite;
 #X text 1138 616 TO do : nettoyer gestion dépendances declare;
-#X text 1138 635 TO do : abstraction paraméwtrable (lignes \, colonnes
-\, objets préchargés), f 39;
 #X text 1127 403 Cette utilisation dynamique nécessite des libs externes
 (iemlib \, ... \, faire la liste et vérifier), f 32;
 #X obj 855 194 PdRacks.savestate;
@@ -98,7 +96,6 @@ ccnum float min float max symbol mapping;
 #X restore 859 168 pd \$0-PdRacks.declare;
 #X obj 859 768 pdr/core/stuff/ExportPatch;
 #X obj 861 714 pdr/core/rj/u_loadmeter;
-#X obj 1198 370 ConduiteTutoriel;
 #X text 886 18 *** HIGHLY EXPERIMENTAL ***;
 #X obj 855 244 PdRacks.savestate;
 #A saved scene_name Euclidrums;
@@ -228,7 +225,7 @@ ccnum float min float max symbol mapping;
 #X connect 6 0 2 0;
 #X connect 7 0 4 0;
 #X connect 8 0 7 0;
-#X restore 1128 573 pd refresh dacs;
+#X restore 1128 583 pd refresh dacs;
 #X obj 1128 521 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 1175 517 If you hear clics or pops or audio djit \, reload
@@ -238,7 +235,7 @@ audio settings, f 27;
 PdRacks.savestate \, peuvent aussi être stockées dans une conduite
 sous forme de datastructures (cliquer pour en savoir plus)->, f 47
 ;
-#X text 1402 377 TO do : Créer une abstraction pour utiliser les datastructures
+#X text 1479 367 TO do : Créer une abstraction pour utiliser les datastructures
 indépendamment de Pdracks.bay, f 29;
 #X text 1074 790 <- outil expérimental pour exporter une scène dynamique
 en une session statique (non mis à jour avec les dernières modifications
@@ -247,6 +244,42 @@ en une session statique (non mis à jour avec les dernières modifications
 de racks (scènes) différentes dans une grille de 9x4 \, de la manière
 la plus douce possible (pas de création dynamique d'objets \, tous
 les modules sont déjà chargés.), f 66;
+#X obj 1205 156 multitouch.enable;
+#X scalar text-help-struct 1507 158 \; fx_ring-2 slot 17 \\\; fx_ring-2
+freq 205.956 \\\; fx_ring-2 wet 0.362205 \\\; fx_dattorroverb-0 slot
+22 \\\; fx_dattorroverb-0 fbgain 0.851361 \\\; fx_dattorroverb-0 damping
+0.80938 \\\; fx_dattorroverb-0 bandwidth 0.61195 \\\; fx_dattorroverb-0
+predel 48.2311 \\\; fx_dattorroverb-0 wet 0.881794 \\\; audio_in-4
+slot 11 \\\; audio_in-4 module-slot 0 \\\; audio_in-4 gain 6.26202
+\\\; audio_in-4 in IN1 \\\; audio_out-4 slot 19 \\\; audio_out-4 pan
+0 \\\; audio_out-4 mute 0 \\\; audio_out-4 vol 100.206 \\\; audio_out-4
+out MASTER \\\; fx_sub-0 slot 16 \\\; fx_sub-0 wet 0.889764 \\\; fx_sub-0
+bypass 0 \\\; fx_sub-0 direct 68.9009 \\\; fx_sub-0 oct2 63.1705 \\\;
+fx_sub-0 oct1 62.732 \\\; fx_compressor-1 lookahead 6 \\\; fx_compressor-1
+response 51 \\\; fx_compressor-1 gain 7.27489 \\\; fx_compressor-1
+ratio 19.2766 \\\; fx_compressor-1 thresh -7.78365 \\\; fx_compressor-1
+rmspeak 0 \\\; fx_compressor-1 slot 14 \\\; audio_out-3 slot 23 \\\;
+audio_out-3 pan -0.0102041 \\\; audio_out-3 vol 106.038 \\\; audio_out-3
+out OUT(1/2) \\\; fx_dubdel2-2 noclick_mode 1 \\\; fx_dubdel2-2 slot
+18 \\\; fx_dubdel2-2 dell 4 \\\; fx_dubdel2-2 delr 4 \\\; fx_dubdel2-2
+sync 0 \\\; fx_dubdel2-2 del 105.502 \\\; fx_dubdel2-2 wet 0.510136
+\\\; fx_dubdel2-2 fb 0.217208 \\\; fx_dubdel2-2 bq 2 \\\; fx_dubdel2-2
+bpitch 75.0783 \\\; fx_lowhip-3 slot 13 \\\; fx_lowhip-3 f.Q 0.228346
+\\\; fx_lowhip-3 f.freq 0.141732 \\\; fx_reverse-1 speed 0.5 \\\; fx_reverse-1
+reverse 1 \\\; fx_reverse-1 loop 1 \\\; fx_reverse-1 time 0.60712 \\\;
+fx_reverse-1 rev-att 0.00037813 \\\; fx_reverse-1 slot 15 \\\; audio_in-3
+slot 12 \\\; audio_in-3 module-slot 0 \\\; audio_in-3 mute 0 \\\; audio_in-3
+gain -100 \\\; audio_in-3 in MASTER \\\; audio_in-2 slot 21 \\\; audio_in-2
+module-slot 0 \\\; audio_in-2 mute 0 \\\; audio_in-2 gain -24.8149
+\\\; audio_in-2 in MASTER \\\; ctl-assign fx_sub-0 wet 3 0 1 lin \\\;
+ctl-assign fx_lowhip-3 f.Q 8 0 1 lin \\\; ctl-assign fx_lowhip-3 f.freq
+7 0 1 lin \\\; ctl-assign fx_dubdel2-2 del 4 100 3000 log \\\; ctl-assign
+audio_in-3 gain 1 -100 27 lin \\\; ctl-assign fx_ring-2 wet 6 0 1 lin
+\\\; ctl-assign fx_ring-2 freq 5 0.1 3000 log \\\; \;;
+#X obj 1362 321 pdr/medias/data/conduite_robosonik;
+#X text 1557 160 larsen;
+#X text 1138 635 TO do : abstraction paramétrable (lignes \, colonnes
+\, objets préchargés), f 39;
 #X connect 4 0 5 0;
 #X connect 5 0 8 0;
-#X connect 21 0 20 0;
+#X connect 19 0 18 0;

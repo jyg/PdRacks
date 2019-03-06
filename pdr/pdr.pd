@@ -212,7 +212,7 @@ abstraction \, that must contain the [triggered_loadbang] object.;
 #X obj 119 308 s \$0-pdr-rcv;
 #X msg 129 272 label autocomplete;
 #X obj 137 195 select 1 0 2;
-#N canvas 0 57 1920 1023 create_dynamic_m_instance 1;
+#N canvas 0 57 1920 1023 create_dynamic_m_instance 0;
 #X obj 355 103 route 1;
 #X obj 361 79 route key motion;
 #X obj 289 337 list append;
@@ -351,10 +351,10 @@ abstraction \, that must contain the [triggered_loadbang] object.;
 #X obj 460 74 spigot;
 #X obj 527 54 == 2;
 #X msg 728 243 1;
-#X obj 101 121 cnv 5 118 16 empty \$0-pdr-rcv autocomplete 2 8 0 12
--204786 -66577 0;
+#X obj 101 121 cnv 5 118 16 empty \$0-pdr-rcv empty 2 8 0 12 -204786
+-66577 0;
 #X obj 139 100 hradio 20 1 0 3 empty empty empty 0 -8 0 10 -4032 -4160
--1 1;
+-1 0;
 #X msg 171 612 vis 1;
 #N canvas 585 175 470 272 \$0-options 0;
 #X obj 7 9 cnv 15 450 250 empty empty empty 20 12 0 14 -261682 -66577

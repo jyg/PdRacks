@@ -1,0 +1,10 @@
+#N canvas 0 50 450 300 10;
+#X obj 292 96 r \$0-module;
+#X floatatom 292 119 5 0 0 0 - - -;
+#X obj 213 209 get_module_dollarzero \$0;
+#X obj 66 176 next_module;
+#X text 157 174 <- this object has to be created immediately after
+that ->, f 28;
+#X text 61 33 [get_module_dollarzero] is used to gess the \$0 value
+of next created object in this patch;
+#X connect 0 0 1 0;

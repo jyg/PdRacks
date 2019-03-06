@@ -109,9 +109,9 @@ CUTOFF 133 7 0 10 -262144 -1 -1 0 1;
 #X obj 104 128 cnv 5 5 5 empty empty LP-FILTER 0 0 0 12 -262144 -66577
 0;
 #X obj 258 109 cnv 5 5 5 empty empty Q 0 0 0 8 -262144 -66577 0;
-#X obj 176 128 cnv 5 5 5 empty \$0-instance-num 2 0 0 0 12 -262144
+#X obj 176 128 cnv 5 5 5 empty \$0-instance-num 1 0 0 0 12 -262144
 -66577 0;
-#X floatatom 103 182 5 0 0 0 - - -, f 5;
+#X floatatom 103 182 5 0 0 0 - - -;
 #X obj 584 111 t f f;
 #N canvas 100 22 593 735 state-saving-multiple-instances 0;
 #X obj 164 26 loadbang;
@@ -297,7 +297,7 @@ CUTOFF 133 7 0 10 -262144 -1 -1 0 1;
 #X obj 157 193 r NUDGE-RANGE;
 #X obj 247 308 inlet;
 #X obj 232 397 outlet;
-#X floatatom 316 396 5 0 0 0 - - -, f 5;
+#X floatatom 316 396 5 0 0 0 - - -;
 #X connect 0 0 4 0;
 #X connect 1 0 2 0;
 #X connect 2 0 14 0;
@@ -416,8 +416,6 @@ Q 133 7 0 10 -262144 -1 -1 0 1;
 #X obj 426 450 line~;
 #X obj 310 497 clip~ -1 1;
 #X obj 310 466 *~ 2;
-#X text 47 21 PdRacks Wrapper;
-#X obj 44 42 pdracks_wrapper/lp-filter \$0 \$1;
 #X connect 0 0 50 0;
 #X connect 1 0 41 0;
 #X connect 3 0 11 0;

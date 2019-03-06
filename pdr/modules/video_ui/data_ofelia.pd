@@ -5,9 +5,9 @@
 #X declare -path pdr/core/stuff;
 #X declare -path pdr/core/rj;
 #X obj 101 101 cnv 15 188 68 empty \$0-background data_ofelia-0 0 7
-0 14 -260818 -1 0;
+0 14 -262144 -1 0;
 #X obj 101 101 cnv 15 188 68 empty \$0-background data_ofelia-0 0 7
-0 14 -260818 -1 0;
+0 14 -262144 -1 0;
 #X obj 29 257 inlet~;
 #X obj 108 257 inlet~;
 #X obj 28 284 outlet~;
@@ -236,7 +236,7 @@
 #X connect 60 0 0 0;
 #X connect 61 0 24 0;
 #X restore 128 196 pd stuff;
-#X obj 260 140 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 260 140 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 487 74 r \$0-busy;
 #X msg 487 96 set \$1;
@@ -283,9 +283,11 @@ is created dynamically, f 29;
 #X obj 1134 156 declare -path pdr/core;
 #X obj 1134 179 declare -path pdr/core/stuff;
 #X obj 1134 208 declare -path pdr/core/rj;
+#X obj 568 320 savestate;
 #X connect 2 0 4 0;
 #X connect 3 0 5 0;
 #X connect 6 0 7 0;
+#X connect 8 1 52 0;
 #X connect 10 0 9 2;
 #X connect 10 0 13 0;
 #X connect 11 0 12 0;
@@ -309,4 +311,6 @@ is created dynamically, f 29;
 #X connect 39 0 40 0;
 #X connect 41 0 9 1;
 #X connect 42 0 41 0;
+#X connect 52 0 8 1;
+#X connect 52 1 8 2;
 #X coords 0 -1 1 1 190 70 1 100 100;

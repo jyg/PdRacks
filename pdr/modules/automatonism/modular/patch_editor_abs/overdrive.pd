@@ -88,7 +88,7 @@ DRIVE 135 7 0 10 -262144 -1 -1 0 1;
 ;
 #X obj 22 456 s \$0-instance-num;
 #X obj 22 408 makefilename %d;
-#X obj 177 123 cnv 5 5 5 empty \$0-instance-num 0 0 0 0 12 -262144
+#X obj 177 123 cnv 5 5 5 empty \$0-instance-num 1 0 0 0 12 -262144
 -66577 0;
 #X msg 22 433 label \$1;
 #N canvas 225 22 1117 745 state-saving-via-preset-manager-module 0
@@ -325,8 +325,6 @@ DRIVE 135 7 0 10 -262144 -1 -1 0 1;
 #X obj 317 261 * 499;
 #X obj 382 332 *~ 499;
 #X obj 302 395 +~ 0.1;
-#X obj 44 42 pdracks_wrapper/overdrive \$0 \$1;
-#X text 47 21 PdRacks Wrapper;
 #X connect 0 0 40 0;
 #X connect 1 0 88 0;
 #X connect 2 0 44 0;

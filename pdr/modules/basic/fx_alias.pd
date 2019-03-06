@@ -108,14 +108,18 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 1229 256 triggered_loadbang \$0-this;
 #X text 1224 206 manually trigger loadbang if the instance of abstraction
 is created dynamically, f 29;
+#X obj 516 230 savestate;
 #X connect 2 0 8 0;
 #X connect 3 0 12 0;
 #X connect 6 0 7 0;
 #X connect 6 0 9 0;
 #X connect 8 0 4 0;
 #X connect 9 0 10 0;
+#X connect 9 1 23 0;
 #X connect 10 0 11 0;
 #X connect 12 0 5 0;
 #X connect 15 0 16 0;
 #X connect 16 0 9 0;
+#X connect 23 0 9 1;
+#X connect 23 1 9 2;
 #X coords 0 -1 1 1 190 70 1 100 100;

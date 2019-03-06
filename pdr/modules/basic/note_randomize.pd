@@ -81,7 +81,7 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 90 403 outlet~;
 #X obj 208 206 inlet data;
 #X obj 202 459 outlet data;
-#X obj 487 241 module_loader note_randomize \$0 \$1;
+#X obj 481 239 module_loader note_randomize \$0 \$1;
 #N canvas 1 56 571 463 audio_stuff 0;
 #X obj 29 70 inlet~;
 #X obj 30 266 outlet~;
@@ -222,6 +222,7 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 769 76 triggered_loadbang \$0-this;
 #X text 764 26 manually trigger loadbang if the instance of abstraction
 is created dynamically, f 29;
+#X obj 592 194 savestate;
 #X connect 2 0 6 0;
 #X connect 2 1 18 0;
 #X connect 4 0 10 0;
@@ -239,6 +240,7 @@ is created dynamically, f 29;
 #X connect 15 0 20 1;
 #X connect 17 0 2 0;
 #X connect 19 0 4 0;
+#X connect 19 1 43 0;
 #X connect 20 0 14 0;
 #X connect 20 1 16 0;
 #X connect 21 0 22 0;
@@ -250,4 +252,6 @@ is created dynamically, f 29;
 #X connect 29 0 26 1;
 #X connect 35 0 7 0;
 #X connect 36 0 35 1;
+#X connect 43 0 19 1;
+#X connect 43 1 19 2;
 #X coords 0 -1 1 1 190 70 1 100 100;

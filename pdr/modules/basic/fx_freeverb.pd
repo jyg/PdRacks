@@ -145,6 +145,7 @@ in individual files.;
 #X obj 1229 256 triggered_loadbang \$0-this;
 #X text 1224 206 manually trigger loadbang if the instance of abstraction
 is created dynamically, f 29;
+#X obj 405 345 savestate;
 #X connect 0 0 38 0;
 #X connect 0 1 39 0;
 #X connect 2 0 3 0;
@@ -172,7 +173,10 @@ is created dynamically, f 29;
 #X connect 33 0 32 1;
 #X connect 34 0 27 0;
 #X connect 35 0 2 0;
+#X connect 35 1 49 0;
 #X connect 36 0 0 0;
 #X connect 37 0 0 1;
 #X connect 40 0 41 0;
+#X connect 49 0 35 1;
+#X connect 49 1 35 2;
 #X coords 0 -1 1 1 190 70 1 100 100;

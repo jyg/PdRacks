@@ -9,7 +9,7 @@
 #X msg 498 401 scene_name scene1 \, fx_hip-0 Q 8.85069 \, fx_hip-0
 freq 3952.38;
 #X msg 498 451 scene_name scene2 \, fx_hip-0 Q 8.95921 \, fx_hip-0
-freq 436.926;
+freq 80.8356;
 #X obj 97 132 pdr;
 #N canvas 0 50 450 300 \$0-PdRacks.declare 0;
 #X obj 10 10 declare -path pdr/modules/basic;
@@ -19,10 +19,14 @@ freq 436.926;
 #A saved scene_name scene1;
 #A saved fx_hip-0 Q 8.85069;
 #A saved fx_hip-0 freq 3952.38;
+#A saved fx_hip-0 Q 8.85069;
+#A saved fx_hip-0 freq 3952.38;
+#A saved fx_hip-0 Q 8.85069;
+#A saved fx_hip-0 freq 3952.38;
 #X obj 266 444 PdRacks.savestate;
 #A saved scene_name scene2;
 #A saved fx_hip-0 Q 8.95921;
-#A saved fx_hip-0 freq 436.926;
+#A saved fx_hip-0 freq 80.8356;
 #N canvas 0 50 751 488 0.48_declare_paths 0;
 #X obj 91 203 declare -path ../../../pdr/modules/basic;
 #X obj 87 231 declare -path ../../../pdr/core;
@@ -58,9 +62,11 @@ freq 441.172;
 #X connect 1 0 2 0;
 #X restore 497 543 pd message_box;
 #X obj 109 602 fx_hip;
-#X text 205 498 or \, in a more compact manner :;
+#A saved Q 8.95921;
+#A saved freq 80.8356;
 #X text 97 322 Before exporting your patch \, re-open \, test and save
 it on a pd-0.48 machine., f 77;
+#X text 205 498 or \, in a more compact way :;
 #X connect 0 0 4 1;
 #X connect 1 0 5 1;
 #X connect 4 1 0 0;

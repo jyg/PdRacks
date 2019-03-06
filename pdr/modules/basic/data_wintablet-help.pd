@@ -10,6 +10,8 @@
 du cc, f 17;
 #X obj 26 322 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
 #X obj 140 180 data_wintablet;
+#A saved velocity_out 0.0405609;
+#A saved wintabmode 0;
 #X text 16 16 Convertit les mouvements du stylet sur tablette graphique
 wacom en messages ctl sur le canal CTLIN;
 #X text 19 52 Renvoie sur sa sortie data_out les messages délivrés

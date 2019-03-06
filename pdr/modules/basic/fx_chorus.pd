@@ -187,10 +187,8 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 14 -262144 -1 0;
 #X obj 138 115 ui_vsl \$0 freq 0.05 10;
 #X obj 100 115 ui_vs \$0 mod 0 2;
-#X obj 220 102 vsl 70 17 1 0 0 0 \$0-presets \$0-presets-rcv PRESETS
-2 5 0 10 -232576 -232576 -1 0 1;
 #X obj 182 130 tgl 40 1 \$0-bypass \$0-bypass-rcv BYPASS 17 7 0 10
--262144 -1 -1 0 1;
+-262144 -1 -1 1 1;
 #X obj 29 260 inlet~;
 #X obj 127 259 inlet~;
 #X obj 30 316 outlet~;
@@ -205,16 +203,20 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 1229 256 triggered_loadbang \$0-this;
 #X text 1224 206 manually trigger loadbang if the instance of abstraction
 is created dynamically, f 29;
-#X connect 0 0 19 0;
-#X connect 0 1 20 0;
+#X obj 557 215 savestate;
+#X connect 0 0 18 0;
+#X connect 0 1 19 0;
 #X connect 1 0 2 0;
 #X connect 2 0 8 0;
 #X connect 3 0 4 0;
 #X connect 4 0 1 0;
 #X connect 9 0 11 0;
 #X connect 11 0 10 0;
-#X connect 17 0 0 0;
-#X connect 18 0 0 1;
-#X connect 21 0 1 0;
-#X connect 22 0 23 0;
+#X connect 16 0 0 0;
+#X connect 17 0 0 1;
+#X connect 20 0 1 0;
+#X connect 20 1 29 0;
+#X connect 21 0 22 0;
+#X connect 29 0 20 1;
+#X connect 29 1 20 2;
 #X coords 0 -1 1 1 190 70 1 100 100;

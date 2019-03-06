@@ -49,7 +49,7 @@ module, f 40;
 #X obj 85 92 inlet;
 #X obj 85 117 u_dispatch \$0 vol;
 #X connect 0 0 1 0;
-#X restore 471 324 pd parameters_saving;
+#X restore 475 325 pd parameters_saving;
 #N canvas 0 50 924 478 about_guis 0;
 #X obj 34 145 ui_vs \$0 vol 0 100;
 #X text 85 157 [ui_vs \$0 vol 0 100] : vertical slider with linear
@@ -73,6 +73,7 @@ comments and guis) have to be kept.;
 #X obj 749 206 triggered_loadbang \$0-this;
 #X text 744 156 manually trigger loadbang if the instance of abstraction
 is created dynamically, f 29;
+#X obj 748 291 savestate;
 #X connect 2 0 8 0;
 #X connect 3 0 8 1;
 #X connect 6 0 8 2;
@@ -81,4 +82,7 @@ is created dynamically, f 29;
 #X connect 8 1 5 0;
 #X connect 8 2 7 0;
 #X connect 14 0 15 0;
+#X connect 14 1 27 0;
+#X connect 27 0 14 1;
+#X connect 27 1 14 2;
 #X coords 0 -1 1 1 190 70 1 100 100;

@@ -36,3 +36,4 @@ again \, the new object you are creating will be automatically connected
 to the former. (But you can also use the new connect functionnalities
 of pd-0.49 : ctrl/cmd + k), f 37;
 #X restore 151 674 pd remark;
+#X text 354 463 in [pdr] box;

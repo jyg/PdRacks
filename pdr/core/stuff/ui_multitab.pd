@@ -12,7 +12,7 @@ heught xmargin ymargin;
 #X obj 283 141 f 100;
 #X obj 168 40 r \$1-guitab;
 #X obj 37 138 s \$1-guitab-rcv;
-#X obj 274 230 s \$1-multitab;
+#X obj 272 443 s \$1-multitab;
 #X text 612 205 momentary disable Graph on Parent to force redrawing
 in parent canvas;
 #X text 567 404 re-enable graph on parent with new values;

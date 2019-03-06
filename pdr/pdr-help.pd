@@ -16,13 +16,15 @@ add a [pdr] object in this subpatch.;
 #N canvas 0 50 450 300 \$0-PdRacks.declare 0;
 #X obj 10 10 declare -path pdr/modules/basic;
 #X obj 10 60 pdr/core/stuff/u_glocal.enable \$0;
-#A saved module basic;
 #X restore 97 252 pd \$0-PdRacks.declare;
 #X text 206 167 object_list-mode;
 #X text 206 149 autoconmpletion-mode;
-#X text 417 124 (needs iemguts + iemlib);
+#X text 388 219 (needs iemguts + iemlib);
 #X text 53 299 2) object_list mode let you choose objects from a window
 with list of all objects \, (as in Automatonism);
-#X text 28 21 [pdr] is an autocompletion tool that helps you to choose
+#X text 29 70 [pdr] is an autocompletion tool that helps you to choose
 PdRacks modules quickly from a menu list \, sorted by categories. When
 active \, press <Insert> key (or ctrl+i).;
+#X text 29 12 [pdr] is part of PdRacks modular ecosystem. For more
+information about PdRacks \, please refer to files located in pdr/tutorials
+folder.;

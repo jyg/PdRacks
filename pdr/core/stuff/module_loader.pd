@@ -6,7 +6,7 @@
 #X obj 272 531 text get \$0-list-presets;
 #X msg 272 595 label \$1;
 #X obj 14 143 s \$0-size;
-#N canvas 388 438 386 286 \$0-presets 1;
+#N canvas 388 468 386 286 \$0-presets 0;
 #X obj 5 1 cnv 15 350 250 empty empty \$1 20 12 0 14 -233017 -66577
 0;
 #X obj 238 68 bng 40 250 50 0 \$0-ok empty empty 17 30 0 15 -4034 -1
@@ -16,7 +16,7 @@
 #X obj 238 116 bng 40 250 50 0 \$0-save empty empty 2 30 0 15 -258113
 -1 -1;
 #X obj 166 35 vsl 150 25 1 0 0 0 \$2-presets \$2-presets-rcv Preset2
-2 15 0 14 -232576 -232576 -1 240 1;
+2 15 0 14 -232576 -232576 -1 0 1;
 #X text 7 42 Que veux-tu faire avec;
 #X text 318 40 ?;
 #X text 53 218 ANNULER;
@@ -178,7 +178,11 @@
 #X obj 611 52 r \$2-presets;
 #X obj 996 89 s \$2-SSSAD_ADMIN;
 #X obj 802 226 r \$2-SSSAD_ADMIN;
-#X msg 807 505 Preset3 vol 20.8163 @;
+#X msg 807 505 Preset3 vol 20.8163 @ vol 90.2752 @ bd 7 @ sn 13 @ hh
+22 @ vol 90.2752 @ bd 7 @ sn 13 @ hh 22 @ vol 90.2752 @ bd 7 @ sn 13
+@ hh 22 @ vol 90.2752 @ bd 7 @ sn 13 @ hh 22 @ vol 90.2752 @ bd 7 @
+sn 13 @ hh 22 @ vol 90.2752 @ bd 7 @ sn 13 @ hh 22 @ vol 90.2752 @
+bd 7 @ sn 13 @ hh 22 @;
 #X obj 720 474 s \$2-SSSAD_ADMIN;
 #X msg 716 452 getValuesInto local;
 #X obj 138 344 r \$2-preset-search;
@@ -581,7 +585,7 @@ pour obtenir les caractéristiques du mapping, f 27;
 #X obj 574 518 t b;
 #X msg 91 528 1;
 #X obj 50 552 s \$2-busy;
-#X obj 30 110 inlet;
+#X obj 27 34 inlet;
 #X obj 22 169 list split 1;
 #X obj 19 193 select \$1;
 #X obj 19 240 list append;
@@ -652,6 +656,51 @@ setFBchannel getSssadChannel;
 #X obj 687 285 glocal/glocal.send RACK_ADMIN;
 #X obj 173 37 r \$2-busy;
 #X obj 126 69 spigot 1;
+#X obj 1665 506 outlet savestate;
+#X obj 1673 380 r \$2-SSSAD_ADMIN;
+#X obj 1668 323 s \$2-SSSAD_ADMIN;
+#X obj 1673 426 list;
+#X obj 1426 335 list trim;
+#X text 1463 124 local statesaving (pd-0.49);
+#X obj 27 106 spigot 1;
+#X obj 37 71 r \$0-savestate;
+#X msg 1667 283 getValuesInto savestate;
+#X obj 1673 403 route savestate;
+#X obj 1518 284 s \$0-savestate;
+#X msg 1514 262 0;
+#X obj 1544 238 delay 10;
+#X msg 1545 261 1;
+#X obj 1436 226 t l b;
+#N canvas 0 50 1038 601 pipe 0;
+#X obj 226 66 inlet;
+#X obj 260 313 outlet;
+#X obj 41 103 text define \$0-pipe;
+#X obj 253 166 text insert \$0-pipe;
+#X obj 280 112 t l b b;
+#X msg 420 143 1;
+#X msg 305 147 1e+07;
+#X obj 405 261 text get \$0-pipe;
+#X msg 398 194 0;
+#X obj 321 204 t f f;
+#X obj 260 235 text delete \$0-pipe;
+#X obj 415 164 pipe f 20;
+#X connect 0 0 4 0;
+#X connect 4 0 3 0;
+#X connect 4 1 6 0;
+#X connect 4 2 5 0;
+#X connect 5 0 11 0;
+#X connect 6 0 3 1;
+#X connect 7 0 1 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 9 1 7 0;
+#X connect 11 0 8 0;
+#X restore 1424 307 pd pipe list 20;
+#X obj 1449 193 inlet savestate_outlet1;
+#X obj 1684 202 inlet savestate_outlet2;
+#X text 1522 310 delay messages after loadbang time, f 20;
+#X text 1605 238 block loadbang init messages if savestate data, f
+27;
 #X connect 1 0 74 0;
 #X connect 2 0 0 0;
 #X connect 4 0 11 0;
@@ -690,7 +739,7 @@ setFBchannel getSssadChannel;
 #X connect 47 0 57 0;
 #X connect 47 0 72 0;
 #X connect 48 0 49 0;
-#X connect 50 0 55 0;
+#X connect 50 0 83 0;
 #X connect 51 0 52 0;
 #X connect 51 1 53 1;
 #X connect 52 0 53 0;
@@ -721,3 +770,19 @@ setFBchannel getSssadChannel;
 #X connect 73 0 61 0;
 #X connect 75 0 76 1;
 #X connect 76 0 73 0;
+#X connect 78 0 86 0;
+#X connect 80 0 77 0;
+#X connect 81 0 0 0;
+#X connect 83 0 55 0;
+#X connect 84 0 83 1;
+#X connect 85 0 79 0;
+#X connect 86 0 80 0;
+#X connect 88 0 87 0;
+#X connect 89 0 90 0;
+#X connect 90 0 87 0;
+#X connect 91 0 92 0;
+#X connect 91 1 88 0;
+#X connect 91 1 89 0;
+#X connect 92 0 81 0;
+#X connect 93 0 91 0;
+#X connect 94 0 85 0;

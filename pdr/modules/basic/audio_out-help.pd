@@ -1,20 +1,20 @@
-#N canvas 716 402 797 385 10;
-#X obj 489 184 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
-#X text 511 182 Instances multiples possibles;
-#X obj 489 204 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
-#X text 511 202 PureData Vanilia;
+#N canvas 716 402 797 385 16;
+#X declare -path pdr/modules/basic;
 #X text 19 213 Pour se connecter à une sortie audio physique ou à
 un bus;
 #N canvas 489 347 450 300 meta 0;
 #X text 54 39 connexion en sortie aux bus auxiliaires et sorties audio
 de la carte son;
-#X restore 572 97 pd meta;
-#X text 427 246 Dépendances : PdRacks.settings;
-#X text 433 266 Les bus et les entrées physiques sont définies dans
-PdRacks.settings;
+#X restore 659 63 pd meta;
+#N canvas 0 50 450 300 \$0-PdRacks.declare 0;
+#X obj 10 10 declare -path pdr/modules/basic;
+#X obj 10 60 pdr/core/stuff/u_glocal.enable \$0;
+#A saved modules_set # List of modules to load;
+#A saved modules_set # you can add new sets of modules here;
+#A saved modules_set # (ctrl/cmd + s to save and close);
+#A saved modules_set basic;
+#X restore 359 63 pd \$0-PdRacks.declare;
 #X obj 32 116 audio_out;
-#X obj 345 95 PdRacks.savestate;
-#A saved scene_name ;
-#A saved audio_out-0 pan 0;
-#A saved audio_out-0 vol 95.8767;
-#A saved audio_out-0 out OUT(1/3);
+#A saved pan 0;
+#A saved vol 95.8767;
+#A saved out OUT(1/3);

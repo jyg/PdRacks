@@ -400,7 +400,7 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 322 265 outlet data;
 #X obj 101 101 cnv 15 188 68 empty \$0-background inst_8bits-0 0 7
 0 14 -262144 -1 0;
-#X obj 467 239 module_loader inst_8bits \$0 \$1;
+#X obj 459 174 module_loader inst_8bits \$0 \$1;
 #X obj 101 121 bng 30 250 50 0 \$0-edit empty EDIT 0 20 0 10 -262144
 -1 -1;
 #X obj 35 137 r \$0-oct;
@@ -419,6 +419,7 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 649 256 triggered_loadbang \$0-this;
 #X text 644 206 manually trigger loadbang if the instance of abstraction
 is created dynamically, f 29;
+#X obj 571 135 savestate;
 #X connect 0 0 24 0;
 #X connect 0 0 38 0;
 #X connect 0 1 25 0;
@@ -447,5 +448,8 @@ is created dynamically, f 29;
 #X connect 26 0 20 0;
 #X connect 26 0 27 0;
 #X connect 29 0 18 0;
+#X connect 29 1 45 0;
 #X connect 31 0 6 0;
+#X connect 45 0 29 1;
+#X connect 45 1 29 2;
 #X coords 0 -1 1 1 190 70 1 100 100;

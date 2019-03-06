@@ -1,4 +1,4 @@
-#N canvas 440 369 1085 840 10;
+#N canvas 440 369 1085 840 16;
 #X obj 93 133 hsl 128 30 0 1 0 0 \$0-morph \$0-morph-rcv A<--------->B
 10 15 0 14 -204786 -1 -1 0 1;
 #X obj 84 180 bng 20 250 50 0 MORPH-setA empty A 4 10 0 10 -261234
@@ -12,7 +12,7 @@
 #X text 64 30 PdRacks.morphing;
 #X text 86 94 Permet l'interpolation en live entre deux valeurs de
 réglages distinctes (instantanés);
-#N canvas 0 50 450 300 TO_DO 1;
+#N canvas 0 50 450 300 TO_DO 0;
 #X text 40 87 TO DO : interpolation entre 3/4 instantanés;
 #X restore 460 238 pd TO_DO;
 #X text 45 252 TODO : imaginer une matrice entre presets et A / B;
@@ -31,5 +31,5 @@ réglages distinctes (instantanés);
 #X text 134 296 V;
 #X obj 371 323 PdRacks.morphing;
 #X obj 698 180 fx_ring;
-#X text 207 474 comment;
+#X text 177 450 comment;
 #X coords 0 840 1 839 190 70 0;

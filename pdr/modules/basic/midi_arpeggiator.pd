@@ -1,4 +1,4 @@
-#N canvas 1 438 1470 643 10;
+#N canvas 106 589 1470 643 10;
 #X declare -path pdr/core;
 #X declare -path pdr/core/stuff;
 #X declare -path pdr/core/rj;
@@ -368,7 +368,7 @@
 -1 -1 0 1;
 #X obj 624 267 module_loader midi_arpeggiator \$0 \$1;
 #X obj 149 155 hradio 15 1 0 3 \$0-oct \$0-oct-rcv OCT_1_2 0 9 0 10
--24198 -1 -1 0;
+-262144 -1 -1 0;
 #X obj 654 406 u_parameter \$0 oct;
 #X obj 329 445 midi-colors \$0 oct \$0-oct-rcv 0 2 lin;
 #X obj 215 421 spigot 1;
@@ -430,6 +430,8 @@
 #X obj 1229 256 triggered_loadbang \$0-this;
 #X text 1224 206 manually trigger loadbang if the instance of abstraction
 is created dynamically, f 29;
+#X obj 116 323 route note;
+#X obj 845 237 savestate;
 #X connect 3 0 7 0;
 #X connect 6 0 90 0;
 #X connect 7 0 31 0;
@@ -452,10 +454,11 @@ is created dynamically, f 29;
 #X connect 41 0 47 0;
 #X connect 42 0 43 0;
 #X connect 44 0 45 0;
-#X connect 46 0 38 0;
+#X connect 46 0 141 0;
 #X connect 52 0 53 0;
 #X connect 83 0 27 0;
 #X connect 86 0 3 0;
+#X connect 86 1 142 0;
 #X connect 88 0 99 0;
 #X connect 90 0 47 0;
 #X connect 91 0 90 1;
@@ -484,4 +487,8 @@ is created dynamically, f 29;
 #X connect 132 0 133 0;
 #X connect 133 0 130 0;
 #X connect 133 1 129 0;
+#X connect 141 0 27 0;
+#X connect 141 1 86 0;
+#X connect 142 0 86 1;
+#X connect 142 1 86 2;
 #X coords 0 0 1 1 190 70 1 100 100;

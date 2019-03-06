@@ -5,3 +5,5 @@
 #X text 360 159 Instances multiples;
 #X text 23 29 aliasing effect;
 #X obj 29 106 fx_alias;
+#A saved wet 0.533971;
+#A saved alias 5.37875;

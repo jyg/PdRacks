@@ -400,6 +400,7 @@ playresume;
 #X obj 769 76 triggered_loadbang \$0-this;
 #X text 764 26 manually trigger loadbang if the instance of abstraction
 is created dynamically, f 29;
+#X obj 810 203 savestate;
 #X connect 0 0 8 0;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
@@ -443,6 +444,9 @@ is created dynamically, f 29;
 #X connect 29 0 15 0;
 #X connect 32 0 33 0;
 #X connect 50 0 10 0;
+#X connect 50 1 60 0;
 #X connect 51 0 3 0;
 #X connect 52 0 4 0;
+#X connect 60 0 50 1;
+#X connect 60 1 50 2;
 #X coords 0 -1 1 1 190 70 1 100 100;

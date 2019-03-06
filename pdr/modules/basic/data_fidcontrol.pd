@@ -475,6 +475,7 @@ de se mettre à jour;
 #X obj 1229 256 triggered_loadbang \$0-this;
 #X text 1224 206 manually trigger loadbang if the instance of abstraction
 is created dynamically, f 29;
+#X obj 559 137 savestate;
 #X connect 1 0 2 0;
 #X connect 2 0 17 0;
 #X connect 10 0 11 1;
@@ -522,5 +523,8 @@ is created dynamically, f 29;
 #X connect 72 0 73 0;
 #X connect 72 0 74 0;
 #X connect 74 0 1 0;
+#X connect 74 1 84 0;
 #X connect 76 0 47 0;
+#X connect 84 0 74 1;
+#X connect 84 1 74 2;
 #X coords 0 -1 1 1 190 70 1 100 100;

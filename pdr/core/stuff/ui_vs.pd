@@ -8,19 +8,19 @@
 #X msg 110 514 label;
 #X obj 233 250 m_scale 0 127 \$3 \$4;
 #X obj 243 290 s \$1-\$2;
-#X obj 169 309 r \$1-\$2;
+#X obj 167 283 r \$1-\$2;
 #X obj 305 364 m_scale \$3 \$4 0 127;
 #X obj 183 392 * 100;
 #X obj 194 460 * 0.01;
-#X obj 100 102 vsl 38 50 0 127 0 0 empty \$0-rcv f.freq 0 20 0 10 -166441
--1 -1 1138 1;
-#X obj 100 130 cnv 1 1 1 empty \$0-cnv =0.23 0 12 0 10 -233017 -66577
+#X obj 100 102 vsl 38 50 0 127 0 0 empty \$0-rcv gain 0 20 0 10 -166441
+-1 -1 0 1;
+#X obj 100 130 cnv 1 1 1 empty \$0-cnv =-19.68 0 12 0 10 -233017 -66577
 0;
 #X obj 326 200 midi-colors \$1 \$2 \$0-rcv \$3 \$4 lin;
 #X obj 169 360 speed_lim;
 #X obj 380 18 speed_lim;
 #X msg 40 300 label;
-#N canvas 0 50 902 900 muultitouch.listener 1;
+#N canvas 0 50 902 900 muultitouch.listener 0;
 #X obj 518 365 v MULTITOUCH.SLOT.ID;
 #X msg 594 505 symbol \$1-slot;
 #X obj 521 415 select 0;
@@ -107,6 +107,7 @@
 #X connect 34 0 18 0;
 #X restore 147 55 pd muultitouch.listener y 0.4 0.3;
 #X floatatom 124 338 5 0 0 0 - - -;
+#X obj 178 315 pipe f 1;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 13 0;
@@ -114,9 +115,8 @@
 #X connect 4 0 5 0;
 #X connect 6 0 5 0;
 #X connect 7 0 8 0;
-#X connect 9 0 10 0;
-#X connect 9 0 16 0;
 #X connect 9 0 20 0;
+#X connect 9 0 21 0;
 #X connect 10 0 17 0;
 #X connect 11 0 3 0;
 #X connect 12 0 4 0;
@@ -127,4 +127,6 @@
 #X connect 18 0 13 0;
 #X connect 19 0 13 0;
 #X connect 19 1 7 0;
+#X connect 21 0 16 0;
+#X connect 21 0 10 0;
 #X coords 0 -1 1 1 38 55 2 100 100;

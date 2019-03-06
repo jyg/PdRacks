@@ -604,7 +604,7 @@
 #X obj 225 416 outlet~;
 #X obj 331 493 inlet data;
 #X obj 358 529 outlet data;
-#X obj 596 303 module_loader inst_tabosc \$0 \$1;
+#X obj 595 303 module_loader inst_tabosc \$0 \$1;
 #X obj 544 34 declare -path pdr/core;
 #X obj 544 64 declare -path pdr/core/rj;
 #X obj 544 94 declare -path pdr/core/stuff;
@@ -615,6 +615,7 @@
 #X obj 929 196 triggered_loadbang \$0-this;
 #X text 924 146 manually trigger loadbang if the instance of abstraction
 is created dynamically, f 29;
+#X obj 744 277 savestate;
 #X connect 0 0 76 0;
 #X connect 1 0 0 0;
 #X connect 2 0 1 1;
@@ -657,6 +658,9 @@ is created dynamically, f 29;
 #X connect 69 0 12 0;
 #X connect 69 0 70 0;
 #X connect 71 0 3 0;
+#X connect 71 1 80 0;
 #X connect 76 0 6 0;
 #X connect 76 1 6 1;
+#X connect 80 0 71 1;
+#X connect 80 1 71 2;
 #X coords 0 -1 1 1 190 70 1 100 100;

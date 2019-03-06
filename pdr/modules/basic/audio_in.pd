@@ -29,9 +29,9 @@
 #X obj 644 511 f;
 #X obj 681 528 == 0;
 #X obj 624 464 > 0;
-#X obj 101 101 cnv 15 188 68 empty \$0-background audio_in-4 0 7 0
-14 -260818 -1 0;
-#X obj 189 134 cnv 2 65 2 empty \$0-vu -35db 20 5 0 10 -24198 -1 0
+#X obj 101 101 cnv 15 188 68 empty \$0-background audio_in-0 0 7 0
+14 -262144 -1 0;
+#X obj 189 134 cnv 2 58 2 empty \$0-vu -42db 20 5 0 10 -24198 -1 0
 ;
 #X text 197 99 src;
 #X obj 139 130 tgl 40 0 \$0-mute \$0-mute-rcv MUTE 17 7 0 10 -262144
@@ -296,6 +296,7 @@ else in local mode;
 #X obj 1229 256 triggered_loadbang \$0-this;
 #X text 1224 206 manually trigger loadbang if the instance of abstraction
 is created dynamically, f 29;
+#X obj 985 237 savestate;
 #X connect 0 0 3 0;
 #X connect 1 0 4 0;
 #X connect 2 0 10 0;
@@ -364,6 +365,7 @@ is created dynamically, f 29;
 #X connect 59 0 31 0;
 #X connect 60 0 65 0;
 #X connect 63 0 2 0;
+#X connect 63 1 81 0;
 #X connect 64 0 63 0;
 #X connect 66 0 3 0;
 #X connect 67 0 4 0;
@@ -372,4 +374,6 @@ is created dynamically, f 29;
 #X connect 75 1 76 0;
 #X connect 76 0 77 0;
 #X connect 77 0 39 0;
+#X connect 81 0 63 1;
+#X connect 81 1 63 2;
 #X coords 0 -1 1 1 190 70 1 100 100;

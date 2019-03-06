@@ -1,3 +1,5 @@
+#N struct 1569-symarray float x array symbols 1569-sym;
+#N struct 1569-sym symbol name float on;
 #N canvas 293 350 1158 668 10;
 #X declare -path pdr/core;
 #X declare -path pdr/core/stuff;
@@ -8,7 +10,7 @@
 #X obj 583 548 outlet~;
 #X obj 664 360 inlet data;
 #X obj 664 550 outlet data;
-#X obj 101 101 cnv 15 188 68 empty \$0-background data_cyclogroove
+#X obj 101 101 cnv 15 188 68 empty \$0-background data_cyclogroove-0
 0 7 0 12 -262144 -1 0;
 #N canvas 0 50 909 300 gestion_messages(data_feuille) 0;
 #X obj 88 23 inlet;
@@ -59,9 +61,9 @@
 #X text 106 113 -|+;
 #X floatatom 101 152 5 0 0 0 - #0-measure_display-rcv -;
 #X obj 452 33 namecanvas \$0-multitab;
-#X obj 101 301 cnv 15 188 68 empty \$0-background data_cyclogroove
+#X obj 101 301 cnv 15 188 68 empty \$0-background data_cyclogroove-0
 0 7 0 12 -262144 -1 0;
-#X obj 101 201 cnv 15 188 68 empty \$0-background data_cyclogroove
+#X obj 101 201 cnv 15 188 68 empty \$0-background data_cyclogroove-0
 0 7 0 12 -262144 -1 0;
 #X obj 230 200 hradio 15 1 0 2 \$0-guitab_mode0 \$0-guitab_mode0-rcv
 empty 0 -8 0 10 -191407 -1 -1 0;
@@ -69,7 +71,7 @@ empty 0 -8 0 10 -191407 -1 -1 0;
 #X obj 773 434 module_loader data_cyclogroove \$0 \$1;
 #X obj 230 300 hradio 15 1 0 3 \$0-guitab_mode1 \$0-guitab_mode1-rcv
 empty 0 -8 0 10 -191407 -1 -1 0;
-#X obj 101 401 cnv 15 188 68 empty \$0-background data_cyclogroove
+#X obj 101 401 cnv 15 188 68 empty \$0-background data_cyclogroove-0
 0 7 0 12 -262144 -1 0;
 #X obj 230 400 hradio 15 1 0 3 \$0-guitab_mode1 \$0-guitab_mode1-rcv
 empty 0 -8 0 10 -191407 -1 -1 0;
@@ -434,7 +436,7 @@ a# \, b;
 #X msg 794 224 blob all remove;
 #X text 163 352 grain;
 #X obj 137 327 tgl 15 0 \$0-grid_enable \$0-grid_enable-rcv empty 17
-7 0 10 -262144 -1 -1 0 1;
+7 0 10 -262144 -1 -1 1 1;
 #X floatatom 162 327 10 0 127 2 base_note #0-root_key-rcv #0-root_key
 ;
 #X symbolatom 190 327 6 0 0 0 - #0-root_key_display-rcv -;
@@ -546,7 +548,7 @@ a# \, b;
 #X obj 769 157 route 0 1 2;
 #X obj 583 162 route 0 1 2;
 #X text 310 530 <- mode 2;
-#X obj 101 501 cnv 15 188 68 empty \$0-background data_cyclogroove
+#X obj 101 501 cnv 15 188 68 empty \$0-background data_cyclogroove-0
 0 7 0 12 -262144 -1 0;
 #X obj 230 500 hradio 15 1 0 2 \$0-guitab_mode2 \$0-guitab_mode2-rcv
 empty 0 -8 0 10 -191407 -1 -1 0;
@@ -634,7 +636,7 @@ empty 0 -8 0 10 -191407 -1 -1 0;
 #X text 194 124 note;
 #X text 194 140 aftertouch;
 #X text 194 153 touchEvent;
-#X obj 101 601 cnv 15 188 68 empty \$0-background data_cyclogroove
+#X obj 101 601 cnv 15 188 68 empty \$0-background data_cyclogroove-0
 0 7 0 12 -262144 -1 0;
 #X obj 230 600 hradio 15 1 0 3 \$0-guitab_mode2 \$0-guitab_mode2-rcv
 empty 0 -8 0 10 -191407 -1 -1 0;
@@ -655,6 +657,7 @@ is created dynamically, f 29;
 #X obj 1033 12 declare -path pdr/core;
 #X obj 1033 35 declare -path pdr/core/stuff;
 #X obj 1033 64 declare -path pdr/core/rj;
+#X obj 949 387 savestate;
 #X connect 0 0 1 0;
 #X connect 2 0 3 0;
 #X connect 4 0 5 0;
@@ -669,6 +672,7 @@ is created dynamically, f 29;
 #X connect 15 0 127 0;
 #X connect 23 0 15 0;
 #X connect 33 0 49 0;
+#X connect 33 1 135 0;
 #X connect 42 0 7 0;
 #X connect 42 1 33 0;
 #X connect 44 0 45 1;
@@ -706,4 +710,6 @@ is created dynamically, f 29;
 #X connect 113 2 112 0;
 #X connect 125 0 126 0;
 #X connect 127 0 83 0;
+#X connect 135 0 33 1;
+#X connect 135 1 33 2;
 #X coords 0 0 1 1 190 70 1 100 100;
