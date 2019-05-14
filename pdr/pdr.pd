@@ -351,10 +351,10 @@ abstraction \, that must contain the [triggered_loadbang] object.;
 #X obj 460 74 spigot;
 #X obj 527 54 == 2;
 #X msg 728 243 1;
-#X obj 101 121 cnv 5 118 16 empty \$0-pdr-rcv empty 2 8 0 12 -204786
--66577 0;
+#X obj 101 121 cnv 5 118 16 empty \$0-pdr-rcv autocomplete 2 8 0 12
+-204786 -66577 0;
 #X obj 139 100 hradio 20 1 0 3 empty empty empty 0 -8 0 10 -4032 -4160
--1 0;
+-1 1;
 #X msg 171 612 vis 1;
 #N canvas 585 175 470 272 \$0-options 0;
 #X obj 7 9 cnv 15 450 250 empty empty empty 20 12 0 14 -261682 -66577
@@ -468,7 +468,7 @@ enabling morphing netween 2 values \; utils PdRacks.presets simple
 session \; utils PdRacks.transport clock unit (with abl_link~ external)
 \; utils container container for dynamically storing a module \;;
 #X text 1022 118 OBSOLETE;
-#N canvas 319 92 1173 976 startup 0;
+#N canvas 319 92 1173 976 startup 1;
 #X obj 317 70 canvasdollarzero 2;
 #X obj 318 10 loadbang;
 #X msg 314 127 symbol \$1-u_glocal;
@@ -495,7 +495,7 @@ session \; utils PdRacks.transport clock unit (with abl_link~ external)
 #X text 325 150 Est-ce que l'objet pd-pdRacks.declare existe déjà
 ?;
 #X text 205 198 oui;
-#N canvas 0 50 776 607 create_PdRacks.declare 0;
+#N canvas 0 50 776 607 create_PdRacks.declare 1;
 #X obj 54 46 inlet;
 #X obj 447 417 outlet;
 #X msg 434 377 obj \$1 \$2 pd \\\$0-PdRacks.declare;
@@ -510,7 +510,7 @@ pdr/core/stuff/u_glocal.enable \\\$0 \, vis 0 \, loadbang, f 47;
 #X obj 81 227 pack f f;
 #X obj 171 235 pack f f;
 #X obj 54 70 t b b b;
-#X msg 124 278 obj \$1 \$2 PdRacks.savestate;
+#X msg 445 323 obj \$1 \$2 PdRacks.savestate;
 #X obj 33 163 t b f;
 #X obj 24 281 delay 10;
 #X obj 24 306 s TRIGGER_LOADBANG;
@@ -530,7 +530,6 @@ pdr/core/stuff/u_glocal.enable \\\$0 \, vis 0 \, loadbang, f 47;
 #X connect 12 0 9 0;
 #X connect 12 1 4 0;
 #X connect 12 2 8 0;
-#X connect 13 0 1 0;
 #X connect 14 0 15 0;
 #X connect 14 1 10 0;
 #X connect 15 0 16 0;

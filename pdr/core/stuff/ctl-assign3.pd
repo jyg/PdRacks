@@ -523,8 +523,8 @@
 #X obj 568 362 s \$2-SSSAD_ADMIN;
 #X obj 572 277 list prepend ctl-assign;
 #X obj 569 187 spigot;
-#X obj 75 40 r \$0-enable_preset_saving;
 #X obj 26 79 spigot 1;
+#X obj 75 40 r \$2-enable_preset_saving;
 #X connect 0 0 3 0;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
@@ -540,7 +540,7 @@
 #X connect 9 0 4 0;
 #X connect 10 0 1 0;
 #X connect 10 1 1 0;
-#X connect 11 0 25 0;
+#X connect 11 0 24 0;
 #X connect 13 0 0 1;
 #X connect 13 0 16 1;
 #X connect 14 0 15 0;
@@ -553,8 +553,8 @@
 #X connect 20 1 17 1;
 #X connect 22 0 17 0;
 #X connect 23 0 16 0;
-#X connect 24 0 25 1;
-#X connect 25 0 10 0;
+#X connect 24 0 10 0;
+#X connect 25 0 24 1;
 #X restore 1065 192 pd rj-state-saving;
 #N canvas 0 50 706 446 mapping 0;
 #X obj 160 47 inlet;

@@ -1,4 +1,4 @@
-#N canvas 1138 324 885 711 16;
+#N canvas 223 276 885 711 16;
 #X declare -path pdr/modules/basic;
 #X obj 533 11 pdr;
 #N canvas 0 50 450 300 \$0-PdRacks.declare 0;
@@ -32,12 +32,15 @@ presets values, f 45;
 #X text 53 357 * To save a preset \, click one of the pink h-radios
 buttons. IMPORTANT : Don't forget to global-save in the parent patch
 by pressing ctrl+s;
-#X text 86 418 (or \, if you prefer \, by clicking red Save button
+#X text 83 417 (or \, if you prefer \, by clicking red Save button
 in one of the PdRacks.savestate);
 #X text 46 85 A special object lets you save 8 different states for
 your patch : PdRacks.presets., f 45;
 #X text 50 149 You can store those multipresets either in the main
 patch \, or in a bank of presets (see 03c).;
+#X text 82 411 __________________________________________________________
+;
+#X text 85 431 ______________________;
 #X connect 2 0 3 0;
 #X connect 2 1 3 1;
 #X connect 4 0 2 2;

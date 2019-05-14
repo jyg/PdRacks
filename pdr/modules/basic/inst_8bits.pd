@@ -1,4 +1,4 @@
-#N canvas 302 56 767 480 10;
+#N canvas 302 56 767 480 12;
 #X declare -path pdr/core;
 #X declare -path pdr/core/rj;
 #X declare -path pdr/core/stuff;
@@ -407,10 +407,10 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 131 115 ui_vs \$0 oct -10.2 10.2;
 #X obj 170 114 ui_vs \$0 A 1 256;
 #X obj 220 102 vsl 70 17 1 0 0 0 \$0-presets \$0-presets-rcv Preset1
-2 7 0 10 -232576 -232576 -1 0 1;
+2 7 0 10 -232576 -232576 -1 160 1;
 #X obj 209 115 ui_vs \$0 B 1 256;
 #X obj 252 115 ui_vs \$0 vol 0 127;
-#X symbolatom 100 155 26 0 0 0 - #0-chain-rcv #0-chain;
+#X symbolatom 101 151 26 0 0 0 - #0-chain-rcv #0-chain;
 #X obj 258 365 tabwrite~ \$0-scope;
 #X obj 524 34 declare -path pdr/core;
 #X obj 524 64 declare -path pdr/core/rj;

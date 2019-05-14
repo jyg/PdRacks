@@ -1,8 +1,14 @@
-#N canvas 809 141 893 501 16;
-#X obj 170 156 inst_scratcher;
-#X obj 170 231 dac~;
-#X msg 404 62 speed 1;
-#X msg 405 95 speed 0;
+#N canvas 809 141 904 869 16;
+#X obj 170 204 inst_scratcher;
+#A saved inertia 100;
+#A saved from 0;
+#A saved to 1;
+#A saved vol 102.093;
+#A saved filename /home/jyg/Documents/Pd/externals/pdr/medias/sounds/soundfonts/others/Cello.wav
+;
+#X obj 170 279 dac~;
+#X msg 404 110 speed 1;
+#X msg 405 143 speed 0;
 #N canvas 257 500 635 541 deluxe_interface 0;
 #X obj 255 88 jogzone;
 #A saved -back_color 1;
@@ -14,7 +20,7 @@
 #X obj 46 13 inlet;
 #X msg 94 253 touch \$1;
 #X msg 117 294 rotate \$1;
-#X msg 48 101 set \$1;
+#X msg 46 129 set \$1;
 #X msg 66 211 speed \$1;
 #N canvas 0 50 657 604 speed 0;
 #X obj 160 120 hsl 200 40 0.8 1.2 1 0 empty empty MOTOR_SPEED_=_1 0
@@ -84,7 +90,7 @@
 #X connect 5 0 3 1;
 #X connect 6 0 1 0;
 #X restore 41 387 pd feedback_gui;
-#X obj 48 38 route rotate speed feedback_gui, f 13;
+#X obj 64 40 route rotate speed feedback_gui, f 13;
 #X connect 0 0 2 0;
 #X connect 0 1 3 0;
 #X connect 1 0 8 0;
@@ -96,16 +102,16 @@
 #X connect 8 0 4 0;
 #X connect 8 1 6 0;
 #X connect 8 2 7 1;
-#X restore 509 324 pd deluxe_interface;
-#X text 48 36 inst_scratcher : platine à scratcher basique;
-#X msg 661 61 \; pd dsp 1;
-#X msg 633 160 inertia 100;
-#X msg 633 187 inertia 300;
-#X msg 635 133 inertia 50;
-#X text 765 162 (in ms);
-#X text 95 323 Interfacing : you can use this interface;
-#X obj 724 360 bng 15 250 50 0 empty empty g 4 5 0 12 -4034 -1 -1;
-#X text 125 357 or the internal interface \, clicking on the green
+#X restore 509 372 pd deluxe_interface;
+#X text 48 84 inst_scratcher : platine à scratcher basique;
+#X msg 661 109 \; pd dsp 1;
+#X msg 633 208 inertia 100;
+#X msg 633 235 inertia 300;
+#X msg 635 181 inertia 50;
+#X text 765 210 (in ms);
+#X text 95 371 Interfacing : you can use this interface;
+#X obj 724 408 bng 15 250 50 0 empty empty g 4 5 0 12 -4034 -1 -1;
+#X text 125 405 or the internal interface \, clicking on the green
 'g' button, f 61;
 #X connect 0 0 1 0;
 #X connect 0 1 1 1;
@@ -115,4 +121,4 @@
 #X connect 7 0 0 2;
 #X connect 8 0 0 2;
 #X connect 9 0 0 2;
-#X coords 0 501 1 500 190 70 0;
+#X coords 0 869 1 868 190 70 0;

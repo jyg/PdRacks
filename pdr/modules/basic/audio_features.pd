@@ -1,4 +1,4 @@
-#N canvas 1 56 1042 595 10;
+#N canvas 0 57 1920 1023 10;
 #X declare -path pdr/core;
 #X declare -path pdr/core/stuff;
 #X declare -path pdr/core/rj;
@@ -160,7 +160,7 @@
 #X obj 741 299 u_parameter \$0 send_data;
 #X obj 282 505 spigot;
 #X obj 320 479 r \$0-send_data;
-#N canvas 508 50 636 571 ctl_conversion 0;
+#N canvas 508 50 636 571 ctl_conversion 1;
 #X obj 147 255 r \$0-ccx;
 #X obj 96 283 pack f f 1;
 #X obj 186 283 pack f f 1;
@@ -176,15 +176,15 @@
 #X obj 55 65 r \$0-testy;
 #X obj 55 85 r \$0-testz;
 #X obj 166 113 spigot;
-#X obj 201 87 r \$0-ccx_enable;
+#X obj 201 37 r \$0-ccx_enable;
 #X obj 280 115 spigot;
-#X obj 315 89 r \$0-ccy_enable;
+#X obj 315 39 r \$0-ccy_enable;
 #X obj 436 113 spigot;
 #X obj 165 18 r \$0-env;
 #X obj 280 16 r \$0-harmo;
 #X obj 436 3 r \$0-bright;
 #X obj 184 381 outlet;
-#X obj 475 93 r \$0-ccz_enable;
+#X obj 475 43 r \$0-ccz_enable;
 #X obj 68 426 s \$0-cca_cnv-rcv;
 #N canvas 0 50 450 300 speed_lim 0;
 #X obj 87 20 inlet;
@@ -495,6 +495,9 @@
 #X connect 13 0 3 0;
 #X connect 14 0 6 0;
 #X restore 457 146 pd display_clipping;
+#X obj 201 60 > 0.99;
+#X obj 326 70 > 0.99;
+#X obj 481 77 > 0.99;
 #X connect 0 0 1 1;
 #X connect 1 0 8 0;
 #X connect 2 0 8 0;
@@ -512,18 +515,18 @@
 #X connect 14 0 25 0;
 #X connect 14 0 1 0;
 #X connect 14 0 37 0;
-#X connect 15 0 14 1;
+#X connect 15 0 40 0;
 #X connect 16 0 2 0;
 #X connect 16 0 26 0;
 #X connect 16 0 38 0;
-#X connect 17 0 16 1;
+#X connect 17 0 41 0;
 #X connect 18 0 4 0;
 #X connect 18 0 28 0;
 #X connect 18 0 39 0;
 #X connect 19 0 14 0;
 #X connect 20 0 16 0;
 #X connect 21 0 18 0;
-#X connect 23 0 18 1;
+#X connect 23 0 42 0;
 #X connect 25 0 33 0;
 #X connect 26 0 34 0;
 #X connect 28 0 35 0;
@@ -536,7 +539,10 @@
 #X connect 36 0 32 0;
 #X connect 36 0 31 0;
 #X connect 36 0 30 0;
-#X restore 525 202 pd ctl_conversion;
+#X connect 40 0 14 1;
+#X connect 41 0 16 1;
+#X connect 42 0 18 1;
+#X restore 556 206 pd ctl_conversion;
 #X obj 730 345 u_parameter \$0 learn;
 #X msg 217 426 env \$1;
 #X msg 322 428 harmo \$1;
@@ -551,16 +557,16 @@
 -1 -1;
 #X obj 225 155 bng 14 250 50 0 \$0-testz empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 129 131 tgl 15 0 empty \$0-detect-rcv detect 2 7 0 10 -250685
--250685 -1 0 1;
+#X obj 129 131 tgl 15 0 empty \$0-detect-rcv detect 2 7 0 10 -262144
+-262144 -1 0 1;
 #X text 196 124 env.;
 #X text 179 139 harmon.;
 #X text 185 154 brill.;
 #X obj 129 146 tgl 15 0 \$0-send_data \$0-send_data-rcv send 17 7 0
 10 -262144 -1 -1 0 1;
 #X obj 100 122 vsl 25 45 0 100 0 0 \$0-seuil \$0-seuil-rcv seuil 0
-14 0 10 -232576 -1 -1 0 1;
-#X obj 240 122 cnv 2 3 14 empty \$0-cca_cnv-rcv empty 20 12 0 14 -260097
+14 0 10 -232576 -1 -1 3000 1;
+#X obj 240 122 cnv 2 1 14 empty \$0-cca_cnv-rcv empty 20 12 0 14 -260097
 -66577 0;
 #X obj 240 138 cnv 2 13 14 empty \$0-ccb_cnv-rcv empty 20 12 0 14 -260097
 -66577 0;
@@ -570,20 +576,20 @@
 #X floatatom 239 137 5 0 127 1 - #0-ccy-rcv #0-ccy;
 #X floatatom 239 153 5 0 127 1 - #0-ccz-rcv #0-ccz;
 #N canvas 500 223 525 113 \$0-autoscale_gui 0;
-#X obj 22 12 hsl 128 15 0 127 0 0 \$0-env-min \$0-env-min-rcv env-min:76.7211
-5 7 0 10 -262144 -1 -1 0 1;
-#X obj 22 32 hsl 128 15 0 127 0 0 \$0-env-max \$0-env-max-rcv env-max:92.2114
-5 7 0 10 -262144 -1 -1 0 1;
+#X obj 22 12 hsl 128 15 0 127 0 0 \$0-env-min \$0-env-min-rcv env-min:67.6205
+5 7 0 10 -262144 -1 -1 6762 1;
+#X obj 22 32 hsl 128 15 0 127 0 0 \$0-env-max \$0-env-max-rcv env-max:99.1441
+5 7 0 10 -262144 -1 -1 9914 1;
 #X obj 162 12 hsl 128 15 0 127 0 0 \$0-harmo-min \$0-harmo-min-rcv
-harmo-min:60.0373 5 7 0 10 -262144 -1 -1 0 1;
+harmo-min:56.0568 5 7 0 10 -262144 -1 -1 5606 1;
 #X obj 302 12 hsl 128 15 0 127 0 0 \$0-bright-min \$0-bright-min-rcv
-bright-min:15.4868 5 7 0 10 -262144 -1 -1 0 1;
+bright-min:82.8256 5 7 0 10 -262144 -1 -1 8283 1;
 #X obj 162 32 hsl 128 15 0 127 0 0 \$0-harmo-max \$0-harmo-max-rcv
-harmo-max:92.9464 5 7 0 10 -262144 -1 -1 0 1;
+harmo-max:89.8643 5 7 0 10 -262144 -1 -1 8986 1;
 #X obj 302 32 hsl 128 15 0 127 0 0 \$0-bright-max \$0-bright-max-rcv
-bright-max:123.348 5 7 0 10 -262144 -1 -1 0 1;
-#X obj 22 52 hsl 128 15 0 1000 0 0 \$0-env-filt \$0-env-filt-rcv env-filtering:0
-5 7 0 10 -262144 -1 -1 0 1;
+bright-max:90.8431 5 7 0 10 -262144 -1 -1 9084 1;
+#X obj 22 52 hsl 128 15 0 1000 0 0 \$0-env-filt \$0-env-filt-rcv env-filtering:196
+5 7 0 10 -262144 -1 -1 2500 1;
 #X obj 162 52 hsl 128 15 0 127 0 0 \$0-harmo-filt \$0-harmo-filt-rcv
 harmo-filtering:0 5 7 0 10 -262144 -1 -1 0 1;
 #X obj 302 52 hsl 128 15 0 127 0 0 \$0-bright-filt \$0-bright-filt-rcv
@@ -645,6 +651,9 @@ bright-filtering:0 5 7 0 10 -262144 -1 -1 0 1;
 #X text 939 220 manually trigger loadbang if the instance of abstraction
 is created dynamically, f 29;
 #X obj 891 111 savestate;
+#X obj 460 703 morphing \$0 ccx_enable lin;
+#X obj 470 723 morphing \$0 ccy_enable lin;
+#X obj 470 743 morphing \$0 ccz_enable lin;
 #X connect 3 0 4 0;
 #X connect 4 0 5 0;
 #X connect 5 0 6 0;

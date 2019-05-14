@@ -9,57 +9,54 @@
 #A saved modules_set # (ctrl/cmd + s to save and close);
 #A saved modules_set basic;
 #X restore 454 83 pd \$0-PdRacks.declare;
-#X obj 454 125 PdRacks.savestate;
-#A saved scene_name ;
-#A saved audio_out-0 pan 0;
-#A saved audio_out-0 vol 95.4607;
-#A saved audio_out-0 out OUT(1/2);
-#A saved note_16steps-0 ticks 0;
-#A saved note_16steps-0 vol 100;
-#A saved note_16steps-0 sustain 0.8;
-#A saved note_16steps-0 lrandoms <sublist> <undefined> <undefined>
-<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
-<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
-<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
-<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
-<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
-<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
-<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
-<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
-<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
-<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
-<undefined> <undefined>;
-#A saved note_16steps-0 div 0;
-#A saved note_16steps-0 cycle 16;
-#A saved note_16steps-0 lcycle <subset> 16 16 16 16;
-#A saved note_16steps-0 steps 20.3 13 9.66667 9.66667 9.66667 5 29
-8.70002 17.8833 29 9.66669 15.4667 12.5667 13.5333 6 27.0667;
-#A saved note_16steps-0 lsteps <sublist> 20.3 13 9.66667 9.66667 9.66667
-5 29 8.70002 17.8833 29 9.66669 15.4667 12.5667 13.5333 6 27.0667 20.3
-13 9.66667 9.66667 9.66667 5 29 8.70002 17.8833 29 9.66669 15.4667
-12.5667 13.5333 6 27.0667 20.3 13 9.66667 9.66667 9.66667 5 29 8.70002
-17.8833 29 9.66669 15.4667 12.5667 13.5333 6 27.0667 20.3 13 9.66667
-9.66667 9.66667 5 29 8.70002 17.8833 29 9.66669 15.4667 12.5667 13.5333
-6 27.0667;
-#A saved note_16steps-0 xpose 0;
-#A saved note_16steps-0 lxpose <subset> 0 0 0 0;
-#A saved note_16steps-0 offset 50;
-#A saved note_16steps-0 loffset <subset> 50 50 50 50;
-#A saved note_16steps-0 scale 0;
-#A saved note_16steps-0 lscale <subset> 0 0 0 0;
-#A saved inst_rhodey-0 vol 77.4487;
-#A saved inst_rhodey-0 midiNoteIn 1;
-#A saved inst_rhodey-0 tone 0.509879;
-#A saved inst_rhodey-0 decay 1641.48;
 #X obj 88 252 inst_rhodey;
+#A saved vol 77.4487;
+#A saved midiNoteIn 1;
+#A saved tone 0.509879;
+#A saved decay 1641.48;
 #X obj 87 71 PdRacks.transport;
 #X obj 87 173 note_16steps;
+#A saved ticks 0;
+#A saved vol 100;
+#A saved sustain 0.8;
+#A saved lrandoms <sublist> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+;
+#A saved div 0;
+#A saved cycle 16;
+#A saved lcycle <subset> 16 16 16 16;
+#A saved steps 20.3 13 9.66667 9.66667 9.66667 5 29 8.70002 17.8833
+29 9.66669 15.4667 12.5667 13.5333 6 27.0667;
+#A saved lsteps <sublist> 20.3 13 9.66667 9.66667 9.66667 5 29 8.70002
+17.8833 29 9.66669 15.4667 12.5667 13.5333 6 27.0667 20.3 13 9.66667
+9.66667 9.66667 5 29 8.70002 17.8833 29 9.66669 15.4667 12.5667 13.5333
+6 27.0667 20.3 13 9.66667 9.66667 9.66667 5 29 8.70002 17.8833 29 9.66669
+15.4667 12.5667 13.5333 6 27.0667 20.3 13 9.66667 9.66667 9.66667 5
+29 8.70002 17.8833 29 9.66669 15.4667 12.5667 13.5333 6 27.0667;
+#A saved xpose 0;
+#A saved lxpose <subset> 0 0 0 0;
+#A saved offset 50;
+#A saved loffset <subset> 50 50 50 50;
+#A saved scale 0;
+#A saved lscale <subset> 0 0 0 0;
 #X obj 88 332 audio_out;
+#A saved pan 0;
+#A saved vol 95.4607;
+#A saved out OUT(1/2);
 #X text 60 18 Here is an example of patch using a step-sequencer,
 f 34;
-#X connect 3 0 6 0;
-#X connect 3 1 6 1;
-#X connect 3 2 6 2;
-#X connect 5 0 3 0;
-#X connect 5 1 3 1;
-#X connect 5 2 3 2;
+#X connect 2 0 5 0;
+#X connect 2 1 5 1;
+#X connect 2 2 5 2;
+#X connect 4 0 2 0;
+#X connect 4 1 2 1;
+#X connect 4 2 2 2;

@@ -29,5 +29,3 @@ de la librairie de modules choisie.;
 #A saved modules_set # (ctrl/cmd + s to save and close);
 #A saved modules_set basic;
 #X restore 608 94 pd \$0-PdRacks.declare;
-#X obj 608 124 PdRacks.savestate;
-#A saved scene_name ;

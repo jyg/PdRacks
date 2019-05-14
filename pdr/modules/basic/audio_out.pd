@@ -87,7 +87,7 @@
 #X obj 229 432 *~ 0;
 #X obj 279 432 *~ 0;
 #X obj 588 403 u_parameter \$0 pan;
-#X obj 736 179 loadbang;
+#X obj 744 132 loadbang;
 #X obj 706 219 s \$0-pan;
 #X msg 692 192 0;
 #X obj 101 101 cnv 15 188 68 empty \$0-background audio_out-0 0 7 0

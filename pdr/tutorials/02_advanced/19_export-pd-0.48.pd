@@ -2,10 +2,10 @@
 #X declare -path pdr/modules/basic;
 #X declare -path ../../../pdr/modules/basic;
 #X declare -path ../../../pdr/core;
-#X declare -path ../../../pdr/core/stuff;
 #X declare -path ../../../pdr/core/rj;
 #X declare -path ../../../pdr/core/fid_abs_vanilia-0.4;
 #X declare -path ../../../pdr/core/glocal;
+#X declare -path ../../../pdr/core/stuff;
 #X msg 498 401 scene_name scene1 \, fx_hip-0 Q 8.85069 \, fx_hip-0
 freq 3952.38;
 #X msg 498 451 scene_name scene2 \, fx_hip-0 Q 8.95921 \, fx_hip-0
@@ -16,31 +16,18 @@ freq 80.8356;
 #X obj 10 60 pdr/core/stuff/u_glocal.enable \$0;
 #X restore 97 203 pd \$0-PdRacks.declare;
 #X obj 266 394 PdRacks.savestate;
-#A saved scene_name scene1;
-#A saved fx_hip-0 Q 8.85069;
-#A saved fx_hip-0 freq 3952.38;
-#A saved fx_hip-0 Q 8.85069;
-#A saved fx_hip-0 freq 3952.38;
-#A saved fx_hip-0 Q 8.85069;
-#A saved fx_hip-0 freq 3952.38;
 #X obj 266 444 PdRacks.savestate;
-#A saved scene_name scene2;
-#A saved fx_hip-0 Q 8.95921;
-#A saved fx_hip-0 freq 80.8356;
-#N canvas 0 50 751 488 0.48_declare_paths 0;
+#N canvas 239 165 751 488 0.48_declare_paths 0;
 #X obj 91 203 declare -path ../../../pdr/modules/basic;
 #X obj 87 231 declare -path ../../../pdr/core;
-#X obj 85 258 declare -path ../../../pdr/core/stuff;
 #X obj 85 286 declare -path ../../../pdr/core/rj;
 #X obj 85 315 declare -path ../../../pdr/core/fid_abs_vanilia-0.4;
 #X obj 86 347 declare -path ../../../pdr/core/glocal;
 #X text 71 146 According to the path of your main .pd file \, you have
 to adjust the paths below to access to pdr ressources.;
+#X obj 85 258 declare -path ../../../pdr/core/stuff;
 #X restore 735 79 pd 0.48_declare_paths;
 #X obj 261 533 PdRacks.savestate;
-#A saved scene_name scene3;
-#A saved fx_hip-0 Q 1.09565;
-#A saved fx_hip-0 freq 441.172;
 #X text 86 7 Some pd-apps (mobmuplat \, camomille \, pof \, etc ...)
 are built on libpd \, that itself is built against pd 0.48 :;
 #X text 233 136 you can use pdr for editing purpose \, but you can
@@ -62,8 +49,6 @@ freq 441.172;
 #X connect 1 0 2 0;
 #X restore 497 543 pd message_box;
 #X obj 109 602 fx_hip;
-#A saved Q 8.95921;
-#A saved freq 80.8356;
 #X text 97 322 Before exporting your patch \, re-open \, test and save
 it on a pd-0.48 machine., f 77;
 #X text 205 498 or \, in a more compact way :;

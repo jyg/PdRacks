@@ -30,10 +30,13 @@ press [Insert] key or Ctrl/Cmd + i. You get a popup menu.;
 vertical arrows to select objects.;
 #X text 77 621 6) When you found your object in the menu \, press <Enter>.
 The object is created.;
-#N canvas 428 467 449 247 remark 0;
+#X text 354 463 in [pdr] box;
+#N canvas 428 467 449 247 autoconnect_to_previously_selected_object
+0;
 #X text 23 37 If you select the just created object and press [Insert]
 again \, the new object you are creating will be automatically connected
 to the former. (But you can also use the new connect functionnalities
 of pd-0.49 : ctrl/cmd + k), f 37;
-#X restore 151 674 pd remark;
-#X text 354 463 in [pdr] box;
+#X restore 151 674 pd autoconnect_to_previously_selected_object;
+#X text 82 242 _____________________________________________________________
+, f 61;
