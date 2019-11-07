@@ -1,13 +1,26 @@
 #N canvas 713 50 613 434 10;
-#X declare -path ../core;
-#X declare -path ../rj;
-#X obj 346 65 declare -path ../core;
-#X obj 346 95 declare -path ../rj;
 #X obj 390 230 tgl 15 0 empty empty V 4 8 0 12 -4034 -4034 -1 0 1;
 #X obj 390 267 tgl 15 0 empty empty X 4 8 0 12 -258113 -258113 -1 0
 1;
 #X text 410 226 Instances multiples;
 #X obj 32 117 note_16steps;
+#A saved ticks 0;
+#A saved vol 100;
+#A saved sustain 0.8;
+#A saved lrandoms <sublist>;
+#A saved div 0;
+#A saved cycle 9;
+#A saved lcycle <subset> 16 16 16 16;
+#A saved steps 16.4333 19.3333 20.3 20.3 20.3 20.3 20.3 20.3 19.3333
+19.3333 19.3333 19.3333 19.3333 19.3333 19.3333 19.3333;
+#A saved lsteps <sublist>;
+#A saved xpose 0;
+#A saved lxpose <subset> 0 0 0 0;
+#A saved offset 50;
+#A saved loffset <subset> 50 50 50 50;
+#A saved scale 0;
+#A saved lscale <subset> 0 0 0 0;
+#A saved SID 0;
 #X obj 50 252 hsl 64 15 0 127 0 1 \$0-scale \$0-scale-rcv dorian 3
 7 0 10 -203904 -228856 -1 800 1;
 #X obj 49 272 hsl 47 15 0 11 0 1 \$0-xpose \$0-xpose-rcv Xpose 3 7
@@ -17,7 +30,7 @@
 #X text 130 230 décalage d'ambitus;
 #X text 130 250 mode;
 #X text 130 270 transposition (semitones);
-#X floatatom 73 207 5 1 16 0 steps #0-cycle-rcv #0-cycle, f 5;
+#X floatatom 73 207 5 1 16 0 steps #0-cycle-rcv #0-cycle;
 #X text 132 209 périodicité;
 #X obj 48 309 vradio 10 1 0 4 empty empty empty 0 -8 0 10 -204786 -1
 -1 1;

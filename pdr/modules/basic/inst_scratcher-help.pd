@@ -1,15 +1,15 @@
 #N canvas 809 141 904 869 16;
-#X obj 170 204 inst_scratcher;
+#X obj 169 205 inst_scratcher;
 #A saved inertia 100;
-#A saved from 0;
-#A saved to 1;
-#A saved vol 102.093;
-#A saved filename /home/jyg/Documents/Pd/externals/pdr/medias/sounds/soundfonts/others/Cello.wav
+#A saved from 0.141604;
+#A saved to 0.2008;
+#A saved vol 99.3175;
+#A saved filename /home/jyg/Documents/Pd/externals/pdr/medias/sounds/soundfonts/others/Dj.wav
 ;
 #X obj 170 279 dac~;
 #X msg 404 110 speed 1;
 #X msg 405 143 speed 0;
-#N canvas 257 500 635 541 deluxe_interface 0;
+#N canvas 257 500 635 541 deluxe_interface 1;
 #X obj 255 88 jogzone;
 #A saved -back_color 1;
 #A saved -front_color 1;
@@ -27,7 +27,7 @@
 32 0 18 -262144 -1 -1 10952 1;
 #X msg 147 303 speed \$1;
 #X msg 258 302 speed 0;
-#X obj 383 120 tgl 40 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 383 120 tgl 40 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 139 260 f;
 #X obj 262 216 select 1 0;

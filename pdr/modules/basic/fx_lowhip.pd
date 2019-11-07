@@ -116,7 +116,7 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 14 -262144 -1 0;
 #X obj 214 115 ui_vs \$0 f.freq 0 1;
 #X obj 252 115 ui_vs \$0 f.Q 0 1;
-#X obj 101 153 cnv 15 100 16 empty \$0-freq-rcv HIP:688Hz 1 10 0 12
+#X obj 101 153 cnv 15 100 16 empty \$0-freq-rcv HIP:109Hz 1 10 0 12
 -233017 -66577 0;
 #X obj 412 273 module_loader fx_lowhip \$0 \$1;
 #X obj 31 246 inlet~;
@@ -141,6 +141,7 @@ is created dynamically, f 29;
 #X connect 12 0 5 0;
 #X connect 13 0 5 1;
 #X connect 16 0 17 0;
+#X connect 16 0 11 0;
 #X connect 24 0 11 1;
 #X connect 24 1 11 2;
 #X coords 0 -1 1 1 190 70 1 100 100;

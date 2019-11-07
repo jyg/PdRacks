@@ -18,4 +18,4 @@
 0 10 -191407 -1 -1 0;
 #X obj 524 5 ui_multitab \$0;
 #X text 126 44 gestion d'onglet multipes dans un GOP;
-#X coords 0 0 1 1 190 70 1 100 100;
+#X coords 0 0 190 70 190 70 2 100 100;

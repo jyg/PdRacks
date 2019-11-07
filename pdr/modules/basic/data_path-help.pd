@@ -7,10 +7,12 @@ d'un fichier \; File path reminder \\\; \; \\\; \;;
 0;
 #X obj 601 2 pdr/core/stuff/language;
 #X obj 42 136 data_path;
+#A saved fullpath ;
 #X scalar comment 41 294.866 200 \; Fonction Drag & Drop (compatible
 avec dnd-plugin) \; Drag & Drop feature (dnd-plugin enabled) \\\; \;
 \\\; \;;
-#X obj 690 393 data_path;
+#X obj 686 396 data_path;
+#A saved fullpath ;
 #X text 424 333 https://github.com/jyg/pd-dnd-plugin;
 #X scalar comment 23 399.866 200 \; 1) Faire glisser un fichier de
 l'explorateur et le déposer ici -> \; 1) From your file browser :

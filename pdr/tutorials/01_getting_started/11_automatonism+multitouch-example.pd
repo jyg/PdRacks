@@ -29,13 +29,74 @@ ccnum float min float max symbol mapping;
 ;
 #X restore 488 87 pd \$0-PdRacks.declare;
 #X obj 100 158 bwl-osc;
+#A saved bwl-osc-pitch 23;
+#A saved bwl-osc-wform 0;
+#A saved bwl-osc-fm-att 0;
+#A saved bwl-osc-cv-att 0;
+#A saved bwl-osc-pwidth 50;
 #X obj 104 476 audio_out;
+#A saved pan 0;
+#A saved vol 95.1531;
+#A saved out OUT(1/2);
 #X obj 508 214 PdRacks.midilearn;
+#A saved preset_saving 0;
 #X text 386 348 https://www.automatonism.com/;
 #X obj 284 79 bwl-osc;
+#A saved bwl-osc-pitch 62;
+#A saved bwl-osc-wform 0;
+#A saved bwl-osc-fm-att 0;
+#A saved bwl-osc-cv-att 0;
+#A saved bwl-osc-pwidth 0;
 #X obj 77 289 fx_dubdel2;
+#A saved noclick_mode 0;
+#A saved dell 4;
+#A saved delr 4;
+#A saved sync 1;
+#A saved del 362.932;
+#A saved wet 0.640648;
+#A saved fb 0.132653;
+#A saved bq 2;
+#A saved bpitch 60;
 #X obj 103 389 fx_dattorroverb;
+#A saved fbgain 0.8;
+#A saved damping 0.25;
+#A saved bandwidth 0.6;
+#A saved predel 30;
+#A saved wet 0.5;
 #X obj 28 24 note_16steps;
+#A saved ticks 0;
+#A saved vol 100;
+#A saved sustain 0.8;
+#A saved randoms 0 0 0 1 0 1 0 1 0 0 1 1 0 1 0 1;
+#A saved lrandoms <sublist> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+<undefined> <undefined> <undefined> <undefined> <undefined> <undefined>
+;
+#A saved div 0;
+#A saved cycle 16;
+#A saved lcycle <subset> 16 16 16 16;
+#A saved steps 20.3 13 17.4 13 14.5001 5 12.5666 16 12.5666 12.5666
+20 12 14.5 27 14.5 1;
+#A saved lsteps <sublist> 20.3 13 9.66667 27 9.66667 11 22.7166 18.8499
+13.05 29 12 15.4667 12.5667 13.5333 25 27.0667 20.3 13 9.66667 27 9.66667
+11 22.7166 18.8499 13.05 29 12 15.4667 12.5667 13.5333 25 27.0667 20.3
+13 9.66667 27 9.66667 11 22.7166 18.8499 13.05 29 12 15.4667 12.5667
+13.5333 25 27.0667 20.3 13 9.66667 27 9.66667 11 22.7166 18.8499 13.05
+29 12 15.4667 12.5667 13.5333 25 27.0667;
+#A saved xpose 4.71429;
+#A saved lxpose <subset> 0 0 0 0;
+#A saved offset 53.0612;
+#A saved loffset <subset> 50 50 50 50;
+#A saved scale 1.85714;
+#A saved lscale <subset> 0 0 0 0;
 #X obj 253 8 route note;
 #X obj 253 35 unpack f f;
 #X obj 253 61 spigot;

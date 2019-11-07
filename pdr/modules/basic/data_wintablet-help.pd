@@ -1,4 +1,4 @@
-#N canvas 238 92 980 845 16;
+#N canvas 238 92 981 901 16;
 #X obj 73 259 data_wintablet;
 #A saved device_id 0;
 #A saved velocity_out 0.0405609;
@@ -65,4 +65,13 @@ start;
 #A saved sn 13;
 #A saved hh 22;
 #X obj 55 343 print;
+#X text 74 784 z-Hysteresis : valeur de pression minimale pour considérer
+que le stylet est en contact avec le pad. (def.=0 \, max =255). Permet
+de corriger un défaut sur certains stylets., f 61;
+#X text 395 865 voir aussi;
+#X text 563 864 pentablet2udp;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X coords 0 1 100 -1 180 30 1 0 0;
+#X restore 545 862 graph;
 #X connect 0 2 33 0;
+#X connect 0 2 32 2;

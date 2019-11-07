@@ -21,7 +21,7 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X text 35 69 ui_hsl \$0 name min max;
 #X obj 347 374 u_dispatch \$0 wet;
 #X text 51 17 ring modulator abstraction;
-#N canvas 0 50 590 548 ring~ 0;
+#N canvas 0 50 590 548 ring~ 1;
 #X obj 75 336 outlet~;
 #X obj 64 80 inlet~;
 #X obj 100 232 *~;
@@ -31,7 +31,7 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 159 230 *~;
 #X obj 68 286 c_xfade;
 #X obj 141 285 c_xfade;
-#X obj 259 260 r \$0-wet;
+#X obj 214 204 r \$0-wet;
 #X obj 397 114 phasor~;
 #X obj 219 133 cos~;
 #X obj 344 208 cos~;
@@ -41,6 +41,7 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X msg 503 66 1 \$1;
 #X obj 503 89 /;
 #X obj 401 79 lop~ 100;
+#X msg 228 234 \$1 10;
 #X connect 1 0 2 0;
 #X connect 1 0 7 0;
 #X connect 2 0 7 1;
@@ -50,8 +51,7 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X connect 6 0 8 1;
 #X connect 7 0 0 0;
 #X connect 8 0 4 0;
-#X connect 9 0 8 2;
-#X connect 9 0 7 2;
+#X connect 9 0 19 0;
 #X connect 10 0 11 0;
 #X connect 10 0 13 0;
 #X connect 11 0 2 1;
@@ -62,9 +62,11 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X connect 16 0 17 0;
 #X connect 17 0 18 1;
 #X connect 18 0 10 0;
+#X connect 19 0 8 2;
+#X connect 19 0 7 2;
 #X restore 30 284 pd ring~;
 #X obj 347 352 u_dispatch \$0 freq;
-#X obj 101 101 cnv 15 188 68 empty \$0-background fx_ring-0 0 7 0 14
+#X obj 101 101 cnv 15 188 68 empty \$0-background fx_ring-1 0 7 0 14
 -262144 -1 0;
 #X obj 252 115 ui_vs \$0 wet 0 1;
 #X obj 101 115 ui_vsl \$0 freq 0.1 3000;

@@ -1,9 +1,9 @@
-#N struct 1006-symarray float x array symbols 1006-sym;
-#N struct 1006-sym symbol name float on;
-#N struct 1010-symarray float x array symbols 1010-sym;
-#N struct 1010-sym symbol name float on;
+#N struct 1008-symarray float x array symbols 1008-sym;
+#N struct 1008-sym symbol name float on;
+#N struct 1009-symarray float x array symbols 1009-sym;
+#N struct 1009-sym symbol name float on;
 #N canvas 281 100 721 759 10;
-#X floatatom 113 383 5 0 0 0 - - -;
+#X floatatom 113 383 5 0 0 0 - - -, f 5;
 #X msg 258 377 1 one \, 2 two \, 4 four;
 #X msg 258 345 0 null;
 #X obj 113 319 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
@@ -11,7 +11,7 @@
 #X text 240 318 lookup data by index;
 #X obj 271 532 hradio 15 1 0 12 empty empty empty 0 -8 0 10 -262144
 -1 -1 0;
-#X symbolatom 271 723 10 0 0 0 - - -;
+#X symbolatom 271 723 10 0 0 0 - - -, f 10;
 #N canvas 473 338 450 300 count 0;
 #X obj 131 154 f 0;
 #X obj 156 153 + 1;
@@ -34,7 +34,7 @@
 a# \, b;
 #X obj 359 624 t a b;
 #X obj 359 673 list prepend;
-#X symbolatom 113 480 10 0 0 0 - - -;
+#X symbolatom 113 480 10 0 0 0 - - -, f 10;
 #X msg 61 397 reset;
 #X obj 113 502 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;

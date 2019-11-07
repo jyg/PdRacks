@@ -78,7 +78,7 @@ and window-msec (analysis window size in seconds and msec).;
 #X obj 18 431 *~;
 #X obj 51 432 *~;
 #X obj 426 644 block~;
-#X obj 19 349 +~ 1e-015;
+#X obj 19 349 +~ 1e-15;
 #X obj 19 598 *~;
 #X obj 52 598 tabreceive~ \$0-hann;
 #X msg 426 619 set \$1 4;
@@ -89,14 +89,14 @@ sound.;
 #X obj 19 325 +~;
 #X obj 125 331 +~;
 #X text 247 66 divide by the magnitude to make a unit-magnitude complex
-amplitude (phase only). The 1e-020 is to prevent overflows. q8_rsqrt~
+amplitude (phase only). The 1e-20 is to prevent overflows. q8_rsqrt~
 is reciprocal square root.;
 #X text 247 165 Take FT of the window in back. Multiply its conjugate
 by the normalized previous output. The result has the magnitude of
 the input sound and phase (previous output phase) minus (back window
 phase).;
 #X text 249 370 Normalize again \, this time taking care to salt each
-channel with 1e-015 so that we get a unit complex number even if everything
+channel with 1e-15 so that we get a unit complex number even if everything
 was zero heretofore.;
 #X text 288 427 Now take the FT of the forward window and multiply
 it by the unit complex number from above. The magnitude will be that
@@ -140,7 +140,7 @@ shifts the signal to the left or right depending on its argument.)
 #X obj 156 394 *;
 #X text 188 394 reading location (samples);
 #X obj 51 597 / 4;
-#X floatatom 364 498 7 0 0 0 - - -, f 7;
+#X floatatom 364 498 7 0 0 0 - - -;
 #X obj 364 474 *;
 #X obj 502 369 * 0.01;
 #X obj 504 390 + 69;
@@ -152,7 +152,7 @@ shifts the signal to the left or right depending on its argument.)
 #X obj 218 664 tabreceive~ \$0-hann;
 #X text 432 498 stretched window size (samples);
 #X obj 178 347 r \$0-insamprate;
-#X floatatom 111 187 5 0 0 0 - - -, f 5;
+#X floatatom 111 187 5 0 0 0 - - -;
 #X obj 102 115 t f b;
 #X obj 142 139 samplerate~;
 #X obj 102 208 / 4;
@@ -181,9 +181,9 @@ by "location". If "speed" is nonzero \, "location" automatically precesses.
 #X obj 364 448 r \$0-window-size;
 #X obj 705 455 r \$0-setarray;
 #X msg 705 476 set \$1;
-#X floatatom 209 258 5 0 0 0 - - -, f 5;
+#X floatatom 209 258 5 0 0 0 - - -;
 #X msg 534 214;
-#X floatatom 502 204 5 0 0 0 - - -, f 5;
+#X floatatom 502 204 5 0 0 0 - - -;
 #X obj 777 335 r \$0-shift;
 #X obj 17 637 tabread4~ \$1;
 #X obj 194 637 tabread4~ \$1;
@@ -248,7 +248,7 @@ by "location". If "speed" is nonzero \, "location" automatically precesses.
 #X obj 89 69 *~;
 #X obj 89 91 +~;
 #X obj 159 94 q8_rsqrt~;
-#X obj 159 71 +~ 1e-020;
+#X obj 159 71 +~ 1e-20;
 #X obj 73 119 *~;
 #X obj 19 118 *~;
 #X obj 46 289 *~;
@@ -267,7 +267,7 @@ by "location". If "speed" is nonzero \, "location" automatically precesses.
 #X obj 153 269 lrshift~ -1;
 #X obj 426 595 r \$0-window-size;
 #X obj 273 577 r \$0-window-size;
-#X floatatom 313 598 5 0 0 0 - - -, f 5;
+#X floatatom 313 598 5 0 0 0 - - -;
 #X connect 0 0 2 1;
 #X connect 1 0 2 0;
 #X connect 2 0 8 0;
@@ -367,17 +367,16 @@ by "location". If "speed" is nonzero \, "location" automatically precesses.
 #X obj 836 329 outlet~;
 #X text 349 190 location(ms);
 #X msg 684 384;
-#X floatatom 653 465 5 0 0 0 - - -, f 5;
+#X floatatom 653 465 5 0 0 0 - - -;
 #X obj 652 517 s \$0-transpo;
 #X obj 564 195 s \$0-insamprate;
 #X msg 559 172 44100;
 #X obj 597 103 loadbang;
-#X obj 489 235 s \$0-shift;
+#X obj 477 247 s \$0-shift;
 #X obj 187 152 route setarray locking location_ms transpo insamprate
 pitch;
-#X obj 840 79 inlet~ pitch;
-#X obj 817 136 snapshot~;
-#X obj 925 128 bang~;
+#X obj 484 219 f;
+#X obj 464 192 bang~;
 #X connect 2 0 23 0;
 #X connect 3 0 23 0;
 #X connect 4 0 23 0;
@@ -399,7 +398,6 @@ pitch;
 #X connect 36 2 10 0;
 #X connect 36 3 31 0;
 #X connect 36 4 32 0;
-#X connect 36 5 35 0;
-#X connect 37 0 38 0;
-#X connect 38 0 35 0;
-#X connect 39 0 38 0;
+#X connect 36 5 37 1;
+#X connect 37 0 35 0;
+#X connect 38 0 37 0;

@@ -1,4 +1,4 @@
-#N canvas 24 50 1106 642 10;
+#N canvas 896 93 1106 642 10;
 #N canvas 424 366 478 366 pmosc 0;
 #X obj 119 199 cos~;
 #X obj 119 167 +~;
@@ -170,6 +170,11 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 223 563 outlet~;
 #X obj 133 537 e_pan;
 #X obj 301 499 / 127;
+#X obj 235 164 t b f;
+#X obj 253 130 r \$0-pbend;
+#X obj 840 230 u_dispatch \$0 pbend;
+#X floatatom 266 194 5 0 0 0 - - -;
+#X obj 102 146 * 1;
 #X connect 0 0 1 1;
 #X connect 1 0 41 1;
 #X connect 2 0 59 0;
@@ -195,8 +200,7 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X connect 17 0 15 0;
 #X connect 18 0 9 0;
 #X connect 19 0 10 0;
-#X connect 20 0 4 0;
-#X connect 20 0 69 0;
+#X connect 20 0 74 0;
 #X connect 20 1 21 0;
 #X connect 22 0 20 0;
 #X connect 35 0 44 0;
@@ -228,7 +232,14 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X connect 61 0 62 0;
 #X connect 62 0 46 0;
 #X connect 63 0 40 3;
+#X connect 64 0 72 0;
 #X connect 65 0 39 3;
 #X connect 68 0 5 0;
 #X connect 68 1 67 0;
 #X connect 69 0 68 1;
+#X connect 70 0 74 0;
+#X connect 70 1 74 1;
+#X connect 70 1 73 0;
+#X connect 71 0 70 0;
+#X connect 74 0 4 0;
+#X connect 74 0 69 0;

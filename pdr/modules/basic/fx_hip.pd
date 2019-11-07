@@ -55,8 +55,6 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 -262144 -1 0;
 #X obj 100 115 ui_vsl \$0 freq 20 20000;
 #X obj 142 115 ui_vs \$0 Q 0 10;
-#X obj 220 102 vsl 70 17 1 0 0 0 \$0-presets \$0-presets-rcv PRESETS
-2 5 0 10 -232576 -232576 -1 0 1;
 #X obj 347 323 module_loader fx_hip \$0 \$1;
 #X obj 29 260 inlet~;
 #X obj 111 258 inlet~;
@@ -69,22 +67,22 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X obj 504 34 declare -path pdr/core;
 #X obj 504 64 declare -path pdr/core/rj;
 #X obj 504 94 declare -path pdr/core/stuff;
-#X obj 1231 279 namecanvas \$0-this;
-#X obj 1229 256 triggered_loadbang \$0-this;
-#X text 1224 206 manually trigger loadbang if the instance of abstraction
+#X obj 761 99 namecanvas \$0-this;
+#X obj 759 76 triggered_loadbang \$0-this;
+#X text 754 26 manually trigger loadbang if the instance of abstraction
 is created dynamically, f 29;
 #X obj 518 288 savestate;
 #X connect 0 0 4 0;
-#X connect 3 0 13 0;
-#X connect 3 1 14 0;
-#X connect 10 0 0 0;
-#X connect 10 1 25 0;
-#X connect 11 0 3 0;
-#X connect 12 0 3 1;
-#X connect 15 0 16 0;
-#X connect 15 0 10 0;
-#X connect 17 0 18 0;
-#X connect 18 0 10 0;
-#X connect 25 0 10 1;
-#X connect 25 1 10 2;
+#X connect 3 0 12 0;
+#X connect 3 1 13 0;
+#X connect 9 0 0 0;
+#X connect 9 1 24 0;
+#X connect 10 0 3 0;
+#X connect 11 0 3 1;
+#X connect 14 0 15 0;
+#X connect 14 0 9 0;
+#X connect 16 0 17 0;
+#X connect 17 0 9 0;
+#X connect 24 0 9 1;
+#X connect 24 1 9 2;
 #X coords 0 -1 1 1 190 70 1 100 100;

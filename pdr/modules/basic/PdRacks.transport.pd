@@ -4,7 +4,7 @@
 #X declare -path pdr/core/rj;
 #X obj 237 459 i;
 #X obj 237 488 change;
-#N canvas 433 118 468 537 audio_feedback 0;
+#N canvas 433 118 468 537 audio_feedback 1;
 #X obj 132 400 *~;
 #X obj 196 298 line~;
 #X obj 186 213 t b b;
@@ -28,8 +28,8 @@
 #X obj 317 14 r \$0-click;
 #X obj 56 98 r QUANTUM;
 #X obj 56 120 * 24;
-#X msg 24 290 880;
-#X msg 80 292 1600;
+#X msg 24 290 1600;
+#X msg 80 292 880;
 #X connect 0 0 15 0;
 #X connect 0 0 15 1;
 #X connect 0 0 15 2;
@@ -450,7 +450,7 @@ pour atteindre la nouvelle valeur;
 -99865 0;
 #X obj 310 86 spigot 1;
 #X obj 251 100 tgl 39 0 \$0-playBtn \$0-playBtn-rcv || 2 20 0 30 -24198
--24198 -1 0 1;
+-24198 -1 1 1;
 #X obj 246 141 ui_tgl \$0 midiout 1 -1 18;
 #X obj 203 130 cnv 15 40 40 empty empty empty 20 12 0 14 -257985 -66577
 0;
@@ -462,13 +462,13 @@ pour atteindre la nouvelle valeur;
 -1 -33289 2;
 #X obj 136 191 r \$0-clock-rcv;
 #X obj 104 114 hsl 40 12 0 92 0 0 \$0-click empty CLICK 4 5 0 8 -262144
--1 -1 0 1;
+-1 -1 3100 1;
 #X obj 146 112 bng 15 250 50 0 \$0-grv empty G 5 7 0 10 -232576 -1
 -1;
 #X obj 165 113 hsl 40 12 6 9 0 1 \$0-swing empty swing 2 6 0 10 -232576
 -1 -1 1500 1;
-#X obj 101 149 cnv 15 85 20 empty \$0-transport-rcv 96:1:1 4 12 0 14
--233017 -66577 0;
+#X obj 101 149 cnv 15 85 20 empty \$0-transport-rcv 62:2:23 4 12 0
+14 -233017 -66577 0;
 #X obj 101 127 bng 25 250 50 0 TAP empty TAP 2 10 0 14 -232576 -1 -159808
 ;
 #X floatatom 129 139 5 20 300 2 bpm #0-bpm-rcv #0-bpm;

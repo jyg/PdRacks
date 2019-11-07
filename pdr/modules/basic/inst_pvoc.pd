@@ -1,10 +1,10 @@
-#N struct 5042-symarray float x array symbols 5042-sym;
-#N struct 5042-sym symbol name float on;
-#N struct 5043-symarray float x array symbols 5043-sym;
-#N struct 5043-sym symbol name float on;
-#N struct 5044-symarray float x array symbols 5044-sym;
-#N struct 5044-sym symbol name float on;
-#N canvas 1 59 1280 691 10;
+#N struct 2227-symarray float x array symbols 2227-sym;
+#N struct 2227-sym symbol name float on;
+#N struct 2228-symarray float x array symbols 2228-sym;
+#N struct 2228-sym symbol name float on;
+#N struct 2229-symarray float x array symbols 2229-sym;
+#N struct 2229-sym symbol name float on;
+#N canvas 0 57 1920 1023 10;
 #X declare -path ../../ressources/core/fid_abs_vanilia-0.4;
 #X declare -path pdr/core;
 #X declare -path pdr/core/rj;
@@ -16,55 +16,25 @@
 14 -262144 -1 0;
 #X obj 101 117 vsl 70 17 1 0 0 0 \$0-presets \$0-presets-rcv TestDj
 2 5 0 10 -232576 -232576 -1 0 1;
-#N canvas 675 54 685 529 multitab 0;
-#X obj 131 80 r \$0-guitab;
-#X obj 65 124 s \$0-guitab-rcv;
-#X msg 38 100 set \$1;
-#X text 232 279 Xunits/pixel Yunits/px gop xfrom yfrom xto yto width
-heught xmargin ymargin;
-#X obj 191 162 t f b;
-#X obj 274 230 s \$0-multitab;
-#X obj 160 199 * 100;
-#X obj 162 220 + 100;
-#X msg 152 400 donecanvasdialog 1 -1 1 0 0 1 1 190 70 100 \$1 \, dirty
-0;
-#X obj 110 298 t b f;
-#X obj 162 242 pipe 100;
-#X msg 230 194 donecanvasdialog 1 -1 0 0 0 1 1 190 70 100 \$1;
-#X obj 283 141 f 100;
-#X connect 0 0 2 0;
-#X connect 0 0 4 0;
-#X connect 2 0 1 0;
-#X connect 4 0 6 0;
-#X connect 4 1 12 0;
-#X connect 6 0 7 0;
-#X connect 7 0 10 0;
-#X connect 7 0 12 1;
-#X connect 8 0 5 0;
-#X connect 9 1 8 0;
-#X connect 10 0 9 0;
-#X connect 11 0 5 0;
-#X connect 12 0 11 0;
-#X restore 603 51 pd multitab;
 #X obj 526 25 namecanvas \$0-multitab;
 #X obj 101 301 cnv 15 188 68 empty \$0-background inst_pvoc-0 0 7 0
 14 -262144 -1 0;
-#X floatatom 163 325 10 0 127 0 root_key #0-root_key-rcv #0-root_key
+#X floatatom 163 339 10 0 127 0 root_key #0-root_key-rcv #0-root_key
 ;
-#X symbolatom 191 325 6 0 0 0 - #0-root_key_display-rcv -;
-#X floatatom 163 339 10 0 127 0 low_key #0-low_key-rcv #0-low_key;
-#X symbolatom 191 339 6 0 0 0 - #0-low_key_display-rcv -;
-#X floatatom 163 353 10 0 127 0 high_key #0-high_key-rcv #0-high_key
+#X symbolatom 191 339 6 0 0 0 - #0-root_key_display-rcv -;
+#X floatatom 163 353 10 0 127 0 low_key #0-low_key-rcv #0-low_key;
+#X symbolatom 191 353 6 0 0 0 - #0-low_key_display-rcv -;
+#X floatatom 163 325 10 0 127 0 high_key #0-high_key-rcv #0-high_key
 ;
-#X symbolatom 191 353 6 0 0 0 - #0-high_key_display-rcv -;
+#X symbolatom 191 325 6 0 0 0 - #0-high_key_display-rcv -;
 #X obj 101 401 cnv 15 188 68 empty \$0-background inst_pvoc-0 0 7 0
 14 -262144 -1 0;
 #X obj 101 201 cnv 15 188 68 empty \$0-background inst_pvoc-0 0 7 0
 14 -262144 -1 0;
 #X obj 175 200 hradio 15 1 0 5 \$0-guitab \$0-guitab-rcv empty 0 -8
 0 10 -191407 -1 -1 0;
-#X obj 104 242 cnv 12 1 1 empty \$0-samplename-rcv Dj.wav 2 6 0 10
--262144 -66577 0;
+#X obj 104 242 cnv 12 1 1 empty \$0-samplename-rcv CrosiereSamuse.wav
+2 6 0 10 -262144 -66577 0;
 #X obj 183 219 bng 20 250 50 0 \$0-load_sample empty CHANGE 2 10 0
 10 -262144 -1 -1;
 #X obj 244 114 ui_vs \$0 vol 0 127;
@@ -80,8 +50,8 @@ heught xmargin ymargin;
 0 10 -191407 -1 -1 0;
 #X obj 175 500 hradio 15 1 0 5 \$0-guitab \$0-guitab-rcv empty 0 -8
 0 10 -191407 -1 -1 0;
-#X obj 108 518 cnv 12 1 1 empty \$0-samplename-rcv Dj.wav 2 6 0 10
--262144 -66577 0;
+#X obj 108 518 cnv 12 1 1 empty \$0-samplename-rcv CrosiereSamuse.wav
+2 6 0 10 -262144 -66577 0;
 #X obj 120 537 bng 15 250 50 0 \$0-append empty append 17 7 0 10 -262144
 -1 -1;
 #X obj 185 554 bng 15 250 50 0 \$0-reset empty reset_all 17 7 0 10
@@ -121,7 +91,7 @@ heught xmargin ymargin;
 -1 -1;
 #X text 111 222 SAMPLE;
 #X obj 386 203 module_loader inst_pvoc \$0 \$1;
-#N canvas 0 50 632 411 load_samples 0;
+#N canvas 579 125 632 411 load_samples 0;
 #X obj 246 28 r \$0-index;
 #X msg 241 55 set \$1;
 #X obj 241 77 s \$0-index-rcv;
@@ -143,6 +113,7 @@ heught xmargin ymargin;
 #X obj 89 221 symbol;
 #X obj 23 136 splitfilename /;
 #X obj 413 144 splitfilename /;
+#X msg 190 284 label;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 3 0 4 0;
@@ -160,6 +131,7 @@ heught xmargin ymargin;
 #X connect 18 0 7 0;
 #X connect 19 1 5 0;
 #X connect 20 1 12 0;
+#X connect 21 0 9 0;
 #X restore 622 205 pd load_samples;
 #N canvas 0 50 605 422 sauvegarde_parametres 0;
 #X obj 132 25 inlet;
@@ -230,6 +202,7 @@ après message append;
 #X obj 126 207 u_parameter_subset \$0 pos;
 #X obj 126 269 u_parameter_subset \$0 transpose;
 #X obj 126 296 u_parameter \$0 module-slot;
+#X obj 148 326 u_parameter \$0 locking;
 #X connect 0 0 6 0;
 #X connect 1 0 2 0;
 #X connect 1 1 8 0;
@@ -241,6 +214,7 @@ après message append;
 #X connect 7 0 10 0;
 #X connect 10 0 11 0;
 #X connect 11 0 12 0;
+#X connect 12 0 13 0;
 #X restore 386 226 pd sauvegarde_parametres;
 #N canvas 458 61 643 448 midi2notename 0;
 #N canvas 473 338 450 300 count 0;
@@ -526,12 +500,12 @@ gain \$1 15 \, \$2 pitch \$3 \, \$2 sampleLength \$6 \, \$2 playAtPos
 #X connect 24 0 17 0;
 #X restore 620 361 pd traduction_parmameters;
 #X obj 615 266 route note aftertouch;
-#X obj 235 342 tgl 14 0 \$0-learn_low \$0-learn_low-rcv empty 17 7
+#X obj 235 356 tgl 14 0 \$0-learn_low \$0-learn_low-rcv empty 17 7
 0 10 -262144 -1 -1 0 1;
-#X obj 235 328 tgl 14 0 \$0-learn_root \$0-learn_root-rcv learn -10
+#X obj 235 342 tgl 14 0 \$0-learn_root \$0-learn_root-rcv empty -10
 -6 0 10 -262144 -1 -1 0 1;
-#X obj 235 356 tgl 14 0 \$0-learn_high \$0-learn_high-rcv empty 17
-7 0 10 -262144 -1 -1 0 1;
+#X obj 235 328 tgl 14 0 \$0-learn_high \$0-learn_high-rcv learn -10
+-6 0 10 -262144 -1 -1 0 1;
 #N canvas 512 50 776 443 learn_keys 0;
 #X obj 51 45 inlet;
 #X obj 62 161 spigot;
@@ -576,8 +550,8 @@ gain \$1 15 \, \$2 pitch \$3 \, \$2 sampleLength \$6 \, \$2 playAtPos
 #X connect 15 0 9 1;
 #X connect 16 0 12 1;
 #X restore 378 384 pd learn_keys;
-#X obj 105 316 tgl 15 0 \$0-transpose \$0-transpose-rcv transpose 17
-7 0 10 -262144 -1 -1 0 1;
+#X obj 100 315 tgl 15 0 \$0-transpose \$0-transpose-rcv transpose 17
+7 0 10 -262144 -1 -1 1 1;
 #X obj 859 175 r STOP;
 #X msg 859 197 stop;
 #X obj 101 137 bng 18 250 50 0 empty empty RecIn> 0 10 0 10 -261682
@@ -657,7 +631,7 @@ gain \$1 15 \, \$2 pitch \$3 \, \$2 sampleLength \$6 \, \$2 playAtPos
 #X connect 26 0 25 0;
 #X restore 1159 331 pd live_recording;
 #X obj 1207 269 r \$0-rec;
-#X obj 173 129 tgl 25 0 \$0-rec \$0-rec-rcv REC 2 5 0 10 -262131 -262131
+#X obj 173 129 tgl 25 0 \$0-rec \$0-rec-rcv REC 2 5 0 10 -262144 -1
 -1 0 1;
 #X obj 1265 21 midi-colors \$0 rec \$0-rec-rcv;
 #X obj 1264 81 s \$0-rec;
@@ -665,8 +639,8 @@ gain \$1 15 \, \$2 pitch \$3 \, \$2 sampleLength \$6 \, \$2 playAtPos
 #X obj 1265 41 > 30;
 #X obj 1303 265 list split 1;
 #X obj 1015 391 s \$0-samplename-rcv;
-#X obj 101 156 cnv 12 1 1 empty \$0-samplename-rcv Dj.wav 2 6 0 10
--262144 -66577 0;
+#X obj 101 156 cnv 12 1 1 empty \$0-samplename-rcv CrosiereSamuse.wav
+2 6 0 10 -262144 -66577 0;
 #X msg 999 362 label ext_smpl(\$1ms);
 #X obj 777 18 r \$0-rec;
 #X obj 778 68 s \$0-rec-rcv;
@@ -1018,69 +992,79 @@ gain \$1 15 \, \$2 pitch \$3 \, \$2 sampleLength \$6 \, \$2 playAtPos
 #X text 1574 26 manually trigger loadbang if the instance of abstraction
 is created dynamically, f 29;
 #X obj 494 169 savestate;
-#X connect 19 0 21 0;
-#X connect 21 0 20 0;
-#X connect 49 0 51 0;
-#X connect 49 1 133 0;
-#X connect 55 0 56 0;
-#X connect 55 0 63 0;
+#X obj 573 51 ui_multitab \$0;
+#X msg 822 360 all locking \$1;
+#X obj 860 338 r \$0-locking;
+#X obj 620 428 *~ 2;
+#X obj 694 439 *~ 2;
+#X connect 18 0 20 0;
+#X connect 20 0 19 0;
+#X connect 48 0 50 0;
+#X connect 48 1 132 0;
+#X connect 54 0 55 0;
+#X connect 54 0 62 0;
+#X connect 56 0 58 0;
 #X connect 57 0 59 0;
-#X connect 58 0 60 0;
-#X connect 62 0 121 0;
-#X connect 63 0 67 0;
-#X connect 63 0 96 0;
-#X connect 63 0 123 0;
-#X connect 63 1 116 0;
-#X connect 69 0 70 0;
-#X connect 70 0 116 0;
-#X connect 71 0 73 0;
-#X connect 72 0 108 0;
-#X connect 72 0 128 0;
-#X connect 73 0 75 0;
-#X connect 74 0 129 0;
-#X connect 75 0 74 0;
-#X connect 77 1 78 0;
-#X connect 78 0 79 0;
-#X connect 79 1 80 0;
-#X connect 80 1 82 0;
-#X connect 80 1 90 0;
-#X connect 82 0 81 1;
-#X connect 83 0 81 0;
-#X connect 83 1 93 0;
-#X connect 84 0 83 2;
-#X connect 86 0 89 0;
+#X connect 61 0 120 0;
+#X connect 62 0 66 0;
+#X connect 62 0 95 0;
+#X connect 62 0 122 0;
+#X connect 62 1 115 0;
+#X connect 62 2 48 0;
+#X connect 68 0 69 0;
+#X connect 69 0 115 0;
+#X connect 70 0 72 0;
+#X connect 71 0 107 0;
+#X connect 71 0 127 0;
+#X connect 72 0 74 0;
+#X connect 73 0 128 0;
+#X connect 74 0 73 0;
+#X connect 76 1 77 0;
+#X connect 77 0 78 0;
+#X connect 78 1 79 0;
+#X connect 79 1 81 0;
+#X connect 79 1 89 0;
+#X connect 81 0 80 1;
+#X connect 82 0 80 0;
+#X connect 82 1 92 0;
+#X connect 83 0 82 2;
+#X connect 85 0 88 0;
+#X connect 87 0 86 0;
 #X connect 88 0 87 0;
-#X connect 89 0 88 0;
-#X connect 90 0 83 3;
-#X connect 93 0 91 0;
-#X connect 94 0 100 0;
-#X connect 94 0 107 0;
-#X connect 96 0 97 0;
-#X connect 97 1 98 0;
-#X connect 98 0 99 0;
-#X connect 100 0 95 0;
-#X connect 101 0 95 0;
-#X connect 102 0 95 0;
-#X connect 107 0 101 0;
-#X connect 107 1 102 0;
-#X connect 108 0 109 0;
-#X connect 108 1 110 0;
-#X connect 109 0 111 0;
-#X connect 110 0 111 1;
+#X connect 89 0 82 3;
+#X connect 92 0 90 0;
+#X connect 93 0 99 0;
+#X connect 93 0 106 0;
+#X connect 95 0 96 0;
+#X connect 96 1 97 0;
+#X connect 97 0 98 0;
+#X connect 99 0 94 0;
+#X connect 100 0 94 0;
+#X connect 101 0 94 0;
+#X connect 106 0 100 0;
+#X connect 106 1 101 0;
+#X connect 107 0 108 0;
+#X connect 107 1 109 0;
+#X connect 108 0 110 0;
+#X connect 109 0 110 1;
+#X connect 110 0 111 0;
 #X connect 111 0 112 0;
-#X connect 112 0 113 0;
-#X connect 116 0 62 0;
-#X connect 117 0 121 0;
-#X connect 118 0 117 0;
+#X connect 115 0 61 0;
+#X connect 116 0 120 0;
+#X connect 117 0 116 0;
+#X connect 118 0 119 0;
 #X connect 119 0 120 0;
-#X connect 120 0 121 0;
-#X connect 121 0 59 0;
-#X connect 121 1 60 0;
-#X connect 122 0 117 0;
-#X connect 123 0 77 0;
-#X connect 123 0 116 0;
-#X connect 128 0 83 0;
-#X connect 128 1 83 1;
-#X connect 133 0 49 1;
-#X connect 133 1 49 2;
-#X coords 0 0 1 1 190 70 1 100 100;
+#X connect 120 0 136 0;
+#X connect 120 1 137 0;
+#X connect 121 0 116 0;
+#X connect 122 0 76 0;
+#X connect 122 0 115 0;
+#X connect 127 0 82 0;
+#X connect 127 1 82 1;
+#X connect 132 0 48 1;
+#X connect 132 1 48 2;
+#X connect 134 0 120 0;
+#X connect 135 0 134 0;
+#X connect 136 0 58 0;
+#X connect 137 0 59 0;
+#X coords 0 0 190 70 190 70 2 100 100;

@@ -8,7 +8,7 @@
 # ********************************************************;
 # * declare modules that have to be added to the project *;
 # ********************************************************;
-declare -path ../extensions/video_carton;
+declare -path pdr/modules/video_carton;
 declare -lib gem;
 declare -lib zexy;
 
@@ -18,4 +18,4 @@ declare -lib zexy;
 # * second item : object name                            *;
 # * following items : contextual description of object   *;
 # ********************************************************;
-video_carton midi-controlled gem-based image renderer ;
+video_carton video_carton midi-controlled gem-based image renderer ;
