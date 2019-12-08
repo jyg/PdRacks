@@ -1,0 +1,11 @@
+#N canvas 409 429 450 300 16;
+#X declare -path pdr/modules/basic;
+#X declare -path ./;
+#X obj 254 39 pdr;
+#N canvas 0 50 450 300 \$0-PdRacks.declare 0;
+#X obj 10 10 declare -path pdr/modules/basic;
+#X obj 10 60 pdr/core/stuff/u_glocal.enable \$0;
+#X obj 37 118 declare -path ./;
+#X restore 254 84 pd \$0-PdRacks.declare;
+#X obj 28 170 fx_ring;
+#X obj 248 124 MobMuPlat ExamplePatch;

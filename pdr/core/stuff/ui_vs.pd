@@ -23,9 +23,9 @@
 #N canvas 562 135 1118 679 vfader 0;
 #X obj 814 354 - 127;
 #X obj 100 102 vsl 38 50 0 127 0 0 empty \$0-slider empty 0 -9 0 10
--24198 -24198 -1 4028 1;
+-24198 -24198 -1 0 1;
 #X obj 810 649 s \$0-cnv;
-#X obj 101 101 cnv 1 36 53 empty \$0-cnv empty 2 12 0 10 -225271 -66577
+#X obj 101 101 cnv 1 36 53 empty \$0-cnv oct2 2 12 0 10 -225271 -66577
 0;
 #X obj 547 15 inlet;
 #X obj 605 280 t f f;

@@ -21,7 +21,7 @@
 #X text 1234 226 manually trigger loadbang if the instance of abstraction
 is created dynamically, f 29;
 #X obj 670 44 module_loader inst_scratcher \$0 \$1;
-#N canvas 0 50 1263 963 openpanel 1;
+#N canvas 0 50 1263 963 openpanel 0;
 #X obj 283 15 inlet;
 #X obj 160 809 outlet;
 #X obj 191 59 openpanel;
@@ -561,6 +561,27 @@ we are reading in pairs);
 #X restore 194 202 pd tosymbol;
 #X text 289 195 <- avoid white space problems;
 #X msg 34 306 symbol ../externals/pdr/medias/sounds/soundfonts;
+#N canvas 0 50 450 300 getdir 0;
+#X obj 114 59 inlet;
+#X obj 114 84 t b;
+#X msg 104 184 dir \$1;
+#X obj 104 209 pdcontrol;
+#X obj 114 134 + 1;
+#X obj 104 234 outlet;
+#X text 178 117 <- parent depth;
+#X text 158 141 + this subpatch level;
+#X obj 114 109 f 3;
+#X connect 0 0 1 0;
+#X connect 1 0 8 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 4 0 2 0;
+#X connect 8 0 4 0;
+#X restore 47 175 pd getdir 3;
+#X msg 47 200 set \$1;
+#X msg 47 225 /home/jyg/Documents/Pd/patches;
+#X obj 49 114 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X connect 0 0 10 0;
 #X connect 2 0 7 0;
 #X connect 2 0 10 0;
@@ -598,6 +619,10 @@ we are reading in pairs);
 #X connect 32 1 12 0;
 #X connect 33 0 28 0;
 #X connect 35 0 2 0;
+#X connect 36 0 2 0;
+#X connect 36 0 37 0;
+#X connect 37 0 38 0;
+#X connect 39 0 36 0;
 #X restore 280 331 pd openpanel;
 #X obj 274 100 bng 15 250 50 0 empty empty o 4 7 0 13 -262144 -1 -258113
 ;
@@ -606,8 +631,8 @@ we are reading in pairs);
 0 10 -261682 -1 -1 14500 1;
 #X obj 104 150 hsl 146 20 0 1 0 0 \$0-from \$0-from-rcv empty -2 -8
 0 10 -261682 -1 -1 0 1;
-#X obj 105 135 hsl 146 15 0 1 0 0 \$0-seek \$0-seek-rcv 0:0 12 0 0
-40 -204786 -1 -159808 0 0;
+#X obj 105 135 hsl 146 15 0 1 0 0 \$0-seek \$0-seek-rcv 0:3 12 0 0
+40 -204786 -1 -159808 5500 0;
 #X obj 672 69 u_dispatch \$0 filename;
 #X obj 252 115 ui_vs \$0 vol 0 127;
 #X obj 670 94 u_dispatch \$0 vol;
@@ -1170,7 +1195,7 @@ we are reading in pairs);
 #X coords 0 -1 1 1 323 61 2 100 100;
 #X restore 289 59 pd speed;
 #X obj 17 152 hsl 800 80 -3.14159 3.14159 0 0 empty empty DROP_A_FILE_HERE_AND_SCRATCH
-50 40 0 40 -262144 -1 -4032 0 1;
+50 40 0 40 -262144 -1 -4032 30307 1;
 #X obj 289 38 inlet;
 #X obj 290 119 outlet;
 #X text 511 212 (drop n'click feature requires dnd pluggin);

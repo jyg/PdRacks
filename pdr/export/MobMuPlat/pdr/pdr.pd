@@ -178,8 +178,6 @@
 #X obj 194 586 s TRIGGER_LOADBANG;
 #X text 347 582 manually trigger a loadbang message in the created
 abstraction \, that must contain the [triggered_loadbang] object.;
-#X obj 351 652 pdr/core/stuff/triggered_loadbang;
-#X text 600 652 <- see help file;
 #X obj 500 242 route 9;
 #X connect 1 0 2 0;
 #X connect 3 0 4 0;
@@ -200,12 +198,12 @@ abstraction \, that must contain the [triggered_loadbang] object.;
 #X connect 15 1 10 0;
 #X connect 16 0 17 0;
 #X connect 17 0 18 0;
-#X connect 17 1 27 0;
+#X connect 17 1 25 0;
 #X connect 18 0 1 0;
 #X connect 19 0 15 0;
 #X connect 21 0 22 0;
 #X connect 22 0 23 0;
-#X connect 27 0 18 0;
+#X connect 25 0 18 0;
 #X restore 490 354 pd add&insert;
 #X obj 826 51 loadbang;
 #X obj 433 191 == 1;
@@ -373,10 +371,10 @@ abstraction \, that must contain the [triggered_loadbang] object.;
 #X obj 491 147 spigot;
 #X obj 531 119 == 2;
 #X msg 728 243 1;
-#X obj 101 121 cnv 5 118 16 empty \$0-pdr-rcv autocomplete 2 8 0 12
--204786 -66577 0;
+#X obj 101 121 cnv 5 118 16 empty \$0-pdr-rcv empty 2 8 0 12 -204786
+-66577 0;
 #X obj 139 100 hradio 20 1 0 3 empty empty empty 0 -8 0 10 -4032 -4160
--1 1;
+-1 0;
 #X msg 171 612 vis 1;
 #N canvas 640 301 470 272 \$0-options 0;
 #X obj 7 9 cnv 15 450 250 empty empty empty 20 12 0 14 -261682 -66577
@@ -541,9 +539,10 @@ session \; utils PdRacks.transport clock unit (with abl_link~ external)
 #X obj 381 62 loadbang;
 #X text 442 100 $;
 #X msg 57 348 0;
-#X msg 37 435 obj 10 10 declare -path pdr/modules/basic \, obj 10 60
-pdr/core/stuff/u_glocal.enable \$2\$1 \, vis 0 \, loadbang, f 47;
 #X obj 57 374 pack f s;
+#X msg 37 435 obj 10 10 declare -path pdr/modules/basic \, obj 10 60
+pdr/core/stuff/u_glocal.enable \$2\$1 \, obj 10 200 declare -path ./
+\, vis 0 \, loadbang, f 47;
 #X connect 0 0 9 0;
 #X connect 3 0 7 1;
 #X connect 3 0 14 0;
@@ -563,12 +562,12 @@ pdr/core/stuff/u_glocal.enable \$2\$1 \, vis 0 \, loadbang, f 47;
 #X connect 14 0 15 0;
 #X connect 15 0 1 0;
 #X connect 16 0 14 2;
-#X connect 16 0 22 1;
+#X connect 16 0 21 1;
 #X connect 17 0 16 0;
 #X connect 18 0 17 0;
-#X connect 20 0 22 0;
-#X connect 21 0 2 0;
-#X connect 22 0 21 0;
+#X connect 20 0 21 0;
+#X connect 21 0 22 0;
+#X connect 22 0 2 0;
 #X restore 574 250 pd create_PdRacks.declare;
 #X obj 745 300 iemguts/sendcanvas 2;
 #X obj 597 315 s;

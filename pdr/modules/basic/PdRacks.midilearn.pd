@@ -6,7 +6,7 @@ ccnum float min float max symbol mapping;
 #X declare -path pdr/core/rj;
 #X obj 260 140 bng 30 250 50 0 \$0-mappings empty Edit_Mappings...
 -80 20 0 10 -261682 -1 -1;
-#X obj 100 123 tgl 30 0 \$0-midi_learn \$0-midi_learn-rcv midi-learn
+#X obj 100 123 tgl 30 0 \$0-midi_learn \$0-midi_learn-rcv midi-learn(1:cc13)
 2 7 0 10 -261682 -1 -1 0 1;
 #N canvas 1075 205 656 229 \$0-midi_devices 0;
 #X obj 307 12 bng 20 250 50 0 empty empty REFRESH 22 7 0 10 -262144
@@ -204,7 +204,7 @@ ccnum float min float max symbol mapping;
 #X msg 186 243 vis 1;
 #X obj 186 265 s pd-\$0-midi_devices;
 #X obj 19 48 onlyone FWDCTLIN fwd_ctlin;
-#N canvas 139 108 1920 1023 midi-learn 1;
+#N canvas 139 108 1920 1023 midi-learn 0;
 #X msg 153 493 showLastUsed \$1;
 #X msg 181 423 0;
 #X obj 18 504 route lastUsed;
@@ -415,7 +415,7 @@ float ccnum float min float max symbol mapping;
 #X msg 315 370 label midi-learn(\$1:cc\$2);
 #X obj 151 314 bng 30 250 50 0 \$0-mappings empty Mappings... 2 7 0
 10 -262144 -1 -1;
-#N canvas 669 122 752 256 \$0-dynamic-ctl-assign 0;
+#N canvas 669 122 752 256 \$0-dynamic-ctl-assign 1;
 #X obj 0 0 r \$0-MIDI_CTL_IN;
 #X obj 0 20 ctl-assign3 0 \$0;
 #X obj 0 40 ctl-assign3 1 \$0;
